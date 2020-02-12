@@ -136,10 +136,10 @@ Moves: ; 41afb
 	move LICK,         EFFECT_PARALYZE_HIT,       20, GHOST,     100, 30,  30
 	move SMOG,         EFFECT_POISON_HIT,         20, POISON,      70, 20,  40
 	move SLUDGE,       EFFECT_POISON_HIT,         65, POISON,     100, 20,  30
-	move BONE_CLUB,    EFFECT_FLINCH_HIT,         65, GROUND,     85, 20,  10
+	move BONE_CLUB,    EFFECT_FLINCH_HIT,         65, ROCK,     85, 20,  10
 	move FIRE_BLAST,   EFFECT_BURN_HIT,          110, FIRE,        85,  5,  30
 	move WATERFALL,    EFFECT_FLINCH_HIT,         80, WATER,     100, 15,  20
-	move CLAMP,        EFFECT_TRAP_TARGET,        35, WATER,      75, 10,   0
+	move CLAMP,        EFFECT_DEFENSE_DOWN_HIT,   85, WATER,     100, 15,  20
 	move SWIFT,        EFFECT_ALWAYS_HIT,         60, NORMAL,     100, 20,   0
 	move SKULL_BASH,   EFFECT_SKULL_BASH,        100, NORMAL,    100, 15,   0
 	move SPIKE_CANNON, EFFECT_MULTI_HIT,          20, NORMAL,    100, 15,   0
@@ -168,11 +168,11 @@ Moves: ; 41afb
 	move FURY_SWIPES,  EFFECT_MULTI_HIT,          18, DARK,     80, 15,   0
 	move BONEMERANG,   EFFECT_DOUBLE_HIT,         50, GROUND,     90, 10,   0
 	move REST,         EFFECT_HEAL,                0, PSYCHIC,     100, 10,   0
-	move ROCK_SLIDE,   EFFECT_FLINCH_HIT,         75, ROCK,       90, 10,  30
+	move ROCK_SLIDE,   EFFECT_RECOIL_HIT,         75, ROCK,      100, 10,   0
 	move HYPER_FANG,   EFFECT_FLINCH_HIT,         80, NORMAL,     90, 15,  40
 	move SHARPEN,      EFFECT_ATTACK_UP,           0, NORMAL,      100, 30,   0
 	move CONVERSION,   EFFECT_CONVERSION,          0, NORMAL,      100, 30,   0
-	move TRI_ATTACK,   EFFECT_TRI_ATTACK,         80, NORMAL,     100, 10,  33
+	move TRI_ATTACK,   EFFECT_TRI_ATTACK,         80, NORMAL,     100, 10,  45
 	move SUPER_FANG,   EFFECT_SUPER_FANG,          1, NORMAL,     90, 10,   0
 	move SLASH,        EFFECT_NORMAL_HIT,         70, NORMAL,    100, 20,   0
 	move SUBSTITUTE,   EFFECT_SUBSTITUTE,          0, NORMAL,      100, 10,   0
@@ -222,7 +222,7 @@ Moves: ; 41afb
 	move MILK_DRINK,   EFFECT_HEAL,                0, NORMAL,      100, 10,   0
 	move SPARK,        EFFECT_PARALYZE_HIT,       65, ELECTRIC,  100, 20,  30
 	move FURY_CUTTER,  EFFECT_FURY_CUTTER,        40, BUG,        95, 20,   0
-	move STEEL_WING,   EFFECT_DEFENSE_UP_HIT,     70, STEEL,      90, 25,  10
+	move STEEL_WING,   EFFECT_DEFENSE_UP_HIT,     70, STEEL,      90, 25,  40
 	move MEAN_LOOK,    EFFECT_MEAN_LOOK,           0, NORMAL,      100,  5,   0
 	move ATTRACT,      EFFECT_ATTRACT,             0, NORMAL,      100, 15,   0
 	move SLEEP_TALK,   EFFECT_SLEEP_TALK,          0, NORMAL,      100, 10,   0

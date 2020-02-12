@@ -4683,7 +4683,7 @@ BattleTowerMons9:
 
 	db SNORLAX
 	db MIRACLEBERRY
-	db FIRE_BLAST, SURF, EARTHQUAKE, HYPER_BEAM
+	db REST, CURSE, EARTHQUAKE, HYPER_BEAM
 	dw 0 ; OT ID
 	dt 729000 ; Exp
 	; Stat exp
@@ -4696,7 +4696,7 @@ BattleTowerMons9:
 	db 5, 15, 10, 5 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 90 ; Level
+	db 100 ; Level
 	db 0, 0 ; Status
 	bigdw 455 ; HP
 	bigdw 455 ; Max HP
@@ -4709,7 +4709,7 @@ BattleTowerMons9:
 
 	db ARCANINE
 	db MINT_BERRY
-	db SUNNY_DAY, FLAMETHROWER, EXTREMESPEED, REST
+	db ZAP_CANNON, FLAME_WHEEL, EXTREMESPEED, REST
 	dw 0 ; OT ID
 	dt 729000 ; Exp
 	; Stat exp
@@ -4787,7 +4787,7 @@ BattleTowerMons9:
 
 	db SKARMORY
 	db QUICK_CLAW
-	db SANDSTORM, STEEL_WING, TOXIC, RETURN
+	db SANDSTORM, STEEL_WING, TOXIC, SOFTBOILED
 	dw 0 ; OT ID
 	dt 729000 ; Exp
 	; Stat exp
@@ -4839,7 +4839,7 @@ BattleTowerMons9:
 
 	db FLAREON
 	db MINT_BERRY
-	db HYPER_BEAM, FLAMETHROWER, SHADOW_BALL, ROAR
+	db HYPER_BEAM, FIRE_SPIN, SHADOW_BALL, ROAR
 	dw 0 ; OT ID
 	dt 729000 ; Exp
 	; Stat exp
@@ -4865,7 +4865,7 @@ BattleTowerMons9:
 
 	db MILTANK
 	db LEFTOVERS
-	db MILK_DRINK, EARTHQUAKE, ATTRACT, BODY_SLAM
+	db MILK_DRINK, EARTHQUAKE, CURSE, BODY_SLAM
 	dw 0 ; OT ID
 	dt 729000 ; Exp
 	; Stat exp
@@ -4942,7 +4942,7 @@ BattleTowerMons9:
 	db "BETOBETON@@"
 
 
-BattleTowerMons10:
+;BattleTowerMons10:
 
 	db HOUNDOOM
 	db MINT_BERRY
@@ -4971,7 +4971,7 @@ BattleTowerMons10:
 	db "HERUGA-@@@@"
 
 	db MACHAMP
-	db MIRACLE_BERRY
+	db MIRACLEBERRY
 	db CROSS_CHOP, EARTHQUAKE, HYPER_BEAM, MEDITATE
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
@@ -5076,7 +5076,7 @@ BattleTowerMons10:
 
 	db ARCANINE
 	db LEFTOVERS
-	db FLAMETHROWER, EXTREMESPEED, IRON_TAIL, HYPER_BEAM
+	db SACRED_FIRE, EXTREMESPEED, IRON_TAIL, HYPER_BEAM
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
@@ -5127,7 +5127,7 @@ BattleTowerMons10:
 	db "RIZA-DON@@@"
 
 	db ELECTRODE
-	db BRIGHTPOWDER
+	db MAGNET
 	db THUNDER_WAVE, THUNDERBOLT, EXPLOSION, MIRROR_COAT
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
@@ -5154,7 +5154,7 @@ BattleTowerMons10:
 
 	db RHYDON
 	db MIRACLEBERRY
-	db SURF, EARTHQUAKE, HYPER_BEAM, ROCK_SLIDE
+	db WATERFALL, EARTHQUAKE, AGILITY, ROCK_SLIDE
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
@@ -5180,7 +5180,7 @@ BattleTowerMons10:
 
 	db STEELIX
 	db LEFTOVERS
-	db EARTHQUAKE, HYPER_BEAM, SWAGGER, CRUNCH
+	db EARTHQUAKE, HYPER_BEAM, CURSE, CRUNCH
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp

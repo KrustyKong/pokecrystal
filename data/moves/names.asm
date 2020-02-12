@@ -3,7 +3,7 @@ MoveNames::
 	db "KARATE CHOP@"
 	db "DOUBLESLAP@"
 	db "COMET PUNCH@"
-	db "MEGA PUNCH@"	;MEGA PUNCH
+	db "MEGATON PUNCH@"	;MEGA PUNCH
 	db "PAY DAY@"
 	db "FIRE PUNCH@"
 	db "ICE PUNCH@"
@@ -30,7 +30,7 @@ MoveNames::
 	db "HEADBUTT@"
 	db "HORN ATTACK@"
 	db "FURY ATTACK@"
-	db "HORN DRILL@"
+	db "DRILL RUN@"		;HORN DRILL
 	db "TACKLE@"
 	db "BODY SLAM@"
 	db "WRAP@"
@@ -75,12 +75,12 @@ MoveNames::
 	db "GROWTH@"
 	db "RAZOR LEAF@"
 	db "SOLARBEAM@"
-	db "LEAF BLADE@"	;POISONPOWDER
+	db "LEAF BLADE@"		;POISONPOWDER
 	db "STUN SPORE@"
 	db "SLEEP POWDER@"
 	db "PETAL DANCE@"
 	db "STRING SHOT@"
-	db "DRAGON CLAW@"	;DRAGON RAGE
+	db "DRAGON CLAW@"		;DRAGON RAGE
 	db "FIRE SPIN@"
 	db "THUNDERSHOCK@"
 	db "THUNDERBOLT@"
@@ -88,13 +88,13 @@ MoveNames::
 	db "THUNDER@"
 	db "ROCK THROW@"
 	db "EARTHQUAKE@"
-	db "EARTH POWER@"	; FISSURE
+	db "EARTH POWER@"		; FISSURE
 	db "DIG@"
 	db "TOXIC@"
-	db "MIND POWER@" ;CONFUSION
+	db "MIND POWER@" 		;CONFUSION
 	db "PSYCHIC@"
 	db "HYPNOSIS@"
-	db "MEDITATE@"
+	db "MEDITATE@"			;MEDITATE
 	db "AGILITY@"
 	db "QUICK ATTACK@"
 	db "RAGE@"
@@ -126,7 +126,7 @@ MoveNames::
 	db "BONE CLUB@"
 	db "FIRE BLAST@"
 	db "WATERFALL@"
-	db "CLAMP@"
+	db "LIQUIDATION@"			;CLAMP
 	db "SWIFT@"
 	db "SKULL BASH@"
 	db "SPIKE CANNON@"
@@ -141,9 +141,9 @@ MoveNames::
 	db "BARRAGE@"
 	db "LEECH LIFE@"
 	db "LOVELY KISS@"
-	db "BRAVE BIRD@" ;SKY ATTACK
+	db "BRAVE BIRD@" 		;SKY ATTACK
 	db "TRANSFORM@"
-	db "SCALD@"	;BUBBLE
+	db "SCALD@"				;BUBBLE
 	db "DIZZY PUNCH@"
 	db "SPORE@"
 	db "FLASH@"
@@ -176,15 +176,15 @@ MoveNames::
 	db "FLAIL@"
 	db "CONVERSION2@"
 	db "AEROBLAST@"
-	db "COTTON GUARD@"	;COTTON SPORE
+	db "COTTON GUARD@"		;COTTON SPORE
 	db "REVERSAL@"
 	db "SPITE@"
-	db "DISCHARGE@"		;POWDER SNOW
+	db "DISCHARGE@"			;POWDER SNOW
 	db "PROTECT@"
 	db "MACH PUNCH@"
 	db "SCARY FACE@"
-	db "FEINT ATTACK@"	;FAINT ATTACK
-	db "SWEET KISS@"	;SWEET KISS
+	db "FEINT ATTACK@"		;FAINT ATTACK
+	db "SWEET KISS@"		;SWEET KISS
 	db "BELLY DRUM@"
 	db "SLUDGE BOMB@"
 	db "MUD-SLAP@"
@@ -195,8 +195,8 @@ MoveNames::
 	db "DESTINY BOND@"
 	db "PERISH SONG@"
 	db "ICY WIND@"
-	db "DETECT@"
-	db "BONE RUSH@"		;BONE RUSH
+	db "BULK UP@"			;DECTECT
+	db "BONE RUSH@"			;BONE RUSH
 	db "LOCK-ON@"
 	db "OUTRAGE@"
 	db "SANDSTORM@"

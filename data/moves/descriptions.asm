@@ -769,12 +769,12 @@ FireBlastDescription:
 	next "may cause a burn.@"
 
 WaterfallDescription:
-	db   "An aquatic charge"
-	next "attack.@"
+	db   "An aquatic rush."
+	next "1/5 flinch rate.@"
 
 ClampDescription:
-	db   "Traps the foe for"
-	next "2-5 turns.@"
+	db   "Has a 1/5 chance"
+	next "to drop DEFENSE.@"
 
 SwiftDescription:
 	db   "An attack that"
@@ -889,12 +889,12 @@ RestDescription:
 	next "to fully recover.@"
 
 RockSlideDescription:
-	db   "An attack that may"
-	next "cause flinching.@"
+	db   "A solid attack"
+	next "that deals recoil.@"
 
 HyperFangDescription:
-	db   "An attack that may"
-	next "cause flinching.@"
+	db   "Bites foe with"
+	next "2/5 flinch rate.@"
 
 SharpenDescription:
 	db   "A move that raises"
@@ -905,8 +905,8 @@ ConversionDescription:
 	next "to a move's type.@"
 
 TriAttackDescription:
-	db   "Fires three kinds"
-	next "of beams at once.@"
+	db   "4/9 chance to"
+	next "BRN, FRZ, PRZ.@"
 
 SuperFangDescription:
 	db   "Cuts the foe's HP"
@@ -1205,8 +1205,8 @@ SynthesisDescription:
 	next "(varies by time).@"
 
 MoonlightDescription:
-	db   "Restores HP"
-	next "(varies by time).@"
+	db   "Attack with 1/3"
+	next "SPATK drop rate.@"
 
 HiddenPowerDescription:
 	db   "The power varies"

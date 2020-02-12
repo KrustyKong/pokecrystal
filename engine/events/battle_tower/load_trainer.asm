@@ -131,21 +131,21 @@ Function_LoadRandomBattleTowerMon:
 	ld a, [wBT_OTMon1]
 	cp b
 	jr z, .FindARandomBattleTowerMon
-	ld a, [wBT_OTMon1Item]
-	cp c
-	jr z, .FindARandomBattleTowerMon
+;	ld a, [wBT_OTMon1Item]
+;	cp c
+;	jr z, .FindARandomBattleTowerMon
 	ld a, [wBT_OTMon2]
 	cp b
 	jr z, .FindARandomBattleTowerMon
-	ld a, [wBT_OTMon2Item]
-	cp c
-	jr z, .FindARandomBattleTowerMon
+;	ld a, [wBT_OTMon2Item]
+;	cp c
+;	jr z, .FindARandomBattleTowerMon
 	ld a, [wBT_OTMon3]
 	cp b
 	jr z, .FindARandomBattleTowerMon
-	ld a, [wBT_OTMon3Item]
-	cp c
-	jr z, .FindARandomBattleTowerMon
+;	ld a, [wBT_OTMon3Item]
+;	cp c
+;	jr z, .FindARandomBattleTowerMon
 	ld a, [sBTMonPrevTrainer1]
 	cp b
 	jr z, .FindARandomBattleTowerMon
