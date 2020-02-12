@@ -1,9 +1,10 @@
 	db NIDORINA ; 030
 
-	db  70,  62,  67,  56,  55,  55
+	db  90,  82,  87,  76,  85,  85
+;	db  70,  62,  67,  56,  55,  55
 	;   hp  atk  def  spd  sat  sdf
 
-	db POISON, POISON ; type
+	db POISON, GROUND ; type
 	db 120 ; catch rate
 	db 117 ; base exp
 	db NO_ITEM, NO_ITEM ; items

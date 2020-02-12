@@ -1,9 +1,10 @@
 	db SNUBBULL ; 209
 
-	db  60,  80,  50,  30,  40,  40
+	db  90, 120,  75,  45,  60,  60
+;	db  60,  80,  50,  30,  40,  40
 	;   hp  atk  def  spd  sat  sdf
 
-	db NORMAL, NORMAL ; type
+	db FAIRY, FAIRY ; type
 	db 190 ; catch rate
 	db 63 ; base exp
 	db NO_ITEM, NO_ITEM ; items

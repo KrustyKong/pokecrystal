@@ -569,8 +569,8 @@ SolarbeamDescription:
 	next "2nd turn: Attack@"
 
 PoisonpowderDescription:
-	db   "A move that may"
-	next "poison the foe.@"
+	db   "Has a high crit-"
+	next "ical hit ratio.@"
 
 StunSporeDescription:
 	db   "A move that may"
@@ -585,7 +585,7 @@ PetalDanceDescription:
 	next "and confuses user.@"
 
 StringShotDescription:
-	db   "A move that lowers"
+	db   "Sharply lowers"
 	next "the foe's SPEED.@"
 
 DragonRageDescription:
@@ -597,16 +597,16 @@ FireSpinDescription:
 	next "for 2-5 turns.@"
 
 ThundershockDescription:
-	db   "An attack that may"
-	next "cause paralysis.@"
+	db   "Has a 1/3"
+	next "paralysis rate.@"
 
 ThunderboltDescription:
 	db   "Raises DEF"
 	next "1/3 of the time.@"
 
 ThunderWaveDescription:
-	db   "Causes paralysis"
-	next "if it hits.@"
+	db   "Causes paralysis."
+	next "ACC/75@"
 
 ThunderDescription:
 	db   "Use in rain."
@@ -621,8 +621,8 @@ EarthquakeDescription:
 	next "vs. flying foes.@"
 
 FissureDescription:
-	db   "A ground-type,"
-	next "one-hit KO attack.@"
+	db   "Has a 1/5 chance"
+	next "to lower SPDEF.@"
 
 DigDescription:
 	db   "1st turn: Burrow"
@@ -949,7 +949,7 @@ NightmareDescription:
 	next "1/4 HP every turn.@"
 
 FlameWheelDescription:
-	db   "Hi crit chance."
+	db   "High crit ratio."
 	next "30% burn. Thaws.@"
 
 SnoreDescription:

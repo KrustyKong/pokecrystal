@@ -8,4 +8,5 @@ CriticalHitMoves:
 	db CROSS_CHOP
 	db ICE_BEAM
 	db FLAME_WHEEL
+	db POISONPOWDER
 	db -1

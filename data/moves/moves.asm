@@ -16,11 +16,11 @@ Moves: ; 41afb
 	move KARATE_CHOP,  EFFECT_NORMAL_HIT,         50, FIGHTING,  100, 25,   0
 	move DOUBLESLAP,   EFFECT_MULTI_HIT,          15, NORMAL,     85, 10,   0
 	move COMET_PUNCH,  EFFECT_MULTI_HIT,          18, NORMAL,     85, 15,   0
-	move MEGA_PUNCH,   EFFECT_NORMAL_HIT,         80, NORMAL,     85, 20,   0
+	move MEGA_PUNCH,   EFFECT_ATTACK_UP_HIT,      80, FIGHTING,  100, 20,  30		;raise attack
 	move PAY_DAY,      EFFECT_PAY_DAY,            40, NORMAL,    100, 20,   0
-	move FIRE_PUNCH,   EFFECT_SP_ATK_DOWN_HIT,           85, FIRE,      100, 15,  35
-	move ICE_PUNCH,    EFFECT_FREEZE_HIT,         85, ICE,       100, 15,  10
-	move THUNDERPUNCH, EFFECT_PARALYZE_HIT,       85, ELECTRIC,  100, 15,  10
+	move FIRE_PUNCH,   EFFECT_SPEED_DOWN_HIT,     80, FIRE,      100, 15,  35		;drops speed
+	move ICE_PUNCH,    EFFECT_FLINCH_HIT,         80, ICE,       100, 15,  35		;flinch
+	move THUNDERPUNCH, EFFECT_SP_ATK_DOWN_HIT,    80, ELECTRIC,  100, 15,  35		;drops spatk
 	move SCRATCH,      EFFECT_NORMAL_HIT,         40, NORMAL,    100, 35,   0
 	move VICEGRIP,     EFFECT_NORMAL_HIT,         55, NORMAL,    100, 30,   0
 	move GUILLOTINE,   EFFECT_OHKO,                0, NORMAL,     30,  5,   0
@@ -97,11 +97,11 @@ Moves: ; 41afb
 	move FIRE_SPIN,  EFFECT_RECOIL_HIT,        	 120, FIRE,    100, 15,   0			;Flare Blitz
 	move THUNDERSHOCK, EFFECT_PARALYZE_HIT,       40, ELECTRIC,   100, 30,  10
 	move THUNDERBOLT,  EFFECT_DEFENSE_UP_HIT,       90, ELECTRIC,   100, 15,  30
-	move THUNDER_WAVE, EFFECT_PARALYZE,            0, ELECTRIC,    90, 20,   0
-	move THUNDER,      EFFECT_THUNDER,           110, ELECTRIC,    70, 10,  30
+	move THUNDER_WAVE, EFFECT_PARALYZE,            0, ELECTRIC,    75, 20,   0		;old Glare accuracy
+	move THUNDER,      EFFECT_THUNDER,           110, ELECTRIC,    70, 10,  30		;nerf
 	move ROCK_THROW,   EFFECT_NORMAL_HIT,         50, ROCK,       90, 15,   0
 	move EARTHQUAKE,   EFFECT_EARTHQUAKE,        100, GROUND,    100, 10,   0
-	move FISSURE,      EFFECT_SP_DEF_DOWN_HIT,    80, GROUND,    100,  10,   20
+	move FISSURE,      EFFECT_SP_DEF_DOWN_HIT,    80, GROUND,    100,  10,   20		;Earth Power
 	move DIG,          EFFECT_FLY,                60, GROUND,    100, 10,   0
 	move TOXIC,        EFFECT_TOXIC,               0, POISON,       85, 10,   0
 	move CONFUSION,    EFFECT_CONFUSE_HIT,        50, PSYCHIC,    100, 25,  50
@@ -247,7 +247,7 @@ Moves: ; 41afb
 	move VITAL_THROW,  EFFECT_ALWAYS_HIT,         80, FIGHTING,  100, 10,   0
 	move MORNING_SUN,  EFFECT_MORNING_SUN,         0, NORMAL,      100,  5,   0
 	move SYNTHESIS,    EFFECT_SYNTHESIS,           0, GRASS,       100,  5,   0
-	move MOONLIGHT,    EFFECT_MOONLIGHT,           0, NORMAL,      100,  5,   0
+	move MOONLIGHT,    EFFECT_SP_ATK_DOWN_HIT,    95, FAIRY,      100, 15,  30		;MOONBLAST
 	move HIDDEN_POWER, EFFECT_HIDDEN_POWER,        1, NORMAL,     100, 15,   0
 	move CROSS_CHOP,   EFFECT_NORMAL_HIT,        100, FIGHTING,   80,  5,   0
 	move TWISTER,      EFFECT_TWISTER,            40, DRAGON,     100, 20,  20

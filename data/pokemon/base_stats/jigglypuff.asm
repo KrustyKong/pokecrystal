@@ -1,9 +1,10 @@
 	db JIGGLYPUFF ; 039
 
-	db 115,  45,  20,  20,  45,  25
+	db 140,  70,  45,  45,  75,  50
+;	db 115,  45,  20,  20,  45,  25
 	;   hp  atk  def  spd  sat  sdf
 
-	db NORMAL, NORMAL ; type
+	db NORMAL, FAIRY ; type
 	db 170 ; catch rate
 	db 76 ; base exp
 	db NO_ITEM, NO_ITEM ; items
