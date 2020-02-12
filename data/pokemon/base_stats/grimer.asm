@@ -1,9 +1,10 @@
 	db GRIMER ; 088
 
-	db  80,  80,  50,  25,  40,  50
+	db 105, 105,  75,  50,  65, 100
+;	db  80,  80,  50,  25,  40,  50
 	;   hp  atk  def  spd  sat  sdf
 
-	db POISON, POISON ; type
+	db POISON, DARK ; type
 	db 190 ; catch rate
 	db 90 ; base exp
 	db NO_ITEM, NUGGET ; items

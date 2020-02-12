@@ -3,7 +3,7 @@ MoveNames::
 	db "KARATE CHOP@"
 	db "DOUBLESLAP@"
 	db "COMET PUNCH@"
-	db "MEGA PUNCH@"
+	db "MEGA PUNCH@"	;MEGA PUNCH
 	db "PAY DAY@"
 	db "FIRE PUNCH@"
 	db "ICE PUNCH@"
@@ -15,7 +15,7 @@ MoveNames::
 	db "SWORDS DANCE@"
 	db "CUT@"
 	db "GUST@"
-	db "WING ATTACK@"
+	db "AERIAL ACE@"	;WING ATTACK
 	db "WHIRLWIND@"
 	db "FLY@"
 	db "BIND@"
@@ -23,7 +23,7 @@ MoveNames::
 	db "VINE WHIP@"
 	db "STOMP@"
 	db "DOUBLE KICK@"
-	db "MEGA KICK@"
+	db "MEGATON KICK@"
 	db "JUMP KICK@"
 	db "ROLLING KICK@"
 	db "SAND-ATTACK@"
@@ -38,7 +38,7 @@ MoveNames::
 	db "THRASH@"
 	db "DOUBLE-EDGE@"
 	db "TAIL WHIP@"
-	db "POISON STING@"
+	db "POISON JAB@"	;POISON STING
 	db "TWINEEDLE@"
 	db "PIN MISSILE@"
 	db "LEER@"
@@ -75,12 +75,12 @@ MoveNames::
 	db "GROWTH@"
 	db "RAZOR LEAF@"
 	db "SOLARBEAM@"
-	db "POISONPOWDER@"
+	db "LEAF BLADE@"	;POISONPOWDER
 	db "STUN SPORE@"
 	db "SLEEP POWDER@"
 	db "PETAL DANCE@"
 	db "STRING SHOT@"
-	db "DRAGON RAGE@"
+	db "DRAGON CLAW@"	;DRAGON RAGE
 	db "FIRE SPIN@"
 	db "THUNDERSHOCK@"
 	db "THUNDERBOLT@"
@@ -88,10 +88,10 @@ MoveNames::
 	db "THUNDER@"
 	db "ROCK THROW@"
 	db "EARTHQUAKE@"
-	db "FISSURE@"
+	db "EARTH POWER@"	; FISSURE
 	db "DIG@"
 	db "TOXIC@"
-	db "CONFUSION@"
+	db "MIND POWER@" ;CONFUSION
 	db "PSYCHIC@"
 	db "HYPNOSIS@"
 	db "MEDITATE@"
@@ -141,9 +141,9 @@ MoveNames::
 	db "BARRAGE@"
 	db "LEECH LIFE@"
 	db "LOVELY KISS@"
-	db "SKY ATTACK@"
+	db "BRAVE BIRD@" ;SKY ATTACK
 	db "TRANSFORM@"
-	db "BUBBLE@"
+	db "SCALD@"	;BUBBLE
 	db "DIZZY PUNCH@"
 	db "SPORE@"
 	db "FLASH@"
@@ -166,7 +166,7 @@ MoveNames::
 	db "STRUGGLE@"
 	db "SKETCH@"
 	db "TRIPLE KICK@"
-	db "THIEF@"
+	db "THIEF@"			;THIEF
 	db "SPIDER WEB@"
 	db "MIND READER@"
 	db "NIGHTMARE@"
@@ -176,27 +176,27 @@ MoveNames::
 	db "FLAIL@"
 	db "CONVERSION2@"
 	db "AEROBLAST@"
-	db "COTTON SPORE@"
+	db "COTTON GUARD@"	;COTTON SPORE
 	db "REVERSAL@"
 	db "SPITE@"
-	db "POWDER SNOW@"
+	db "DISCHARGE@"		;POWDER SNOW
 	db "PROTECT@"
 	db "MACH PUNCH@"
 	db "SCARY FACE@"
-	db "FAINT ATTACK@"
-	db "SWEET KISS@"
+	db "FEINT ATTACK@"	;FAINT ATTACK
+	db "SWEET KISS@"	;SWEET KISS
 	db "BELLY DRUM@"
 	db "SLUDGE BOMB@"
 	db "MUD-SLAP@"
 	db "OCTAZOOKA@"
 	db "SPIKES@"
-	db "ZAP CANNON@"
+	db "WILD CHARGE@"		;ZAP CANNON
 	db "FORESIGHT@"
 	db "DESTINY BOND@"
 	db "PERISH SONG@"
 	db "ICY WIND@"
 	db "DETECT@"
-	db "BONE RUSH@"
+	db "BONE RUSH@"		;BONE RUSH
 	db "LOCK-ON@"
 	db "OUTRAGE@"
 	db "SANDSTORM@"
@@ -207,7 +207,7 @@ MoveNames::
 	db "FALSE SWIPE@"
 	db "SWAGGER@"
 	db "MILK DRINK@"
-	db "SPARK@"
+	db "SPARK@"			;SPARK
 	db "FURY CUTTER@"
 	db "STEEL WING@"
 	db "MEAN LOOK@"
@@ -216,14 +216,14 @@ MoveNames::
 	db "HEAL BELL@"
 	db "RETURN@"
 	db "PRESENT@"
-	db "FRUSTRATION@"
+	db "FRUSTRATION@"	;FRUSTRATION
 	db "SAFEGUARD@"
 	db "PAIN SPLIT@"
 	db "SACRED FIRE@"
-	db "MAGNITUDE@"
-	db "DYNAMICPUNCH@"
+	db "BULLDOZE@"		;MAGNITUDE
+	db "DYNAMICPUNCH@"	;DYNAMICPUNCH
 	db "MEGAHORN@"
-	db "DRAGONBREATH@"
+	db "DRAGONBREATH@"	;DRAGONBREATH
 	db "BATON PASS@"
 	db "ENCORE@"
 	db "PURSUIT@"
@@ -235,9 +235,9 @@ MoveNames::
 	db "MORNING SUN@"
 	db "SYNTHESIS@"
 	db "MOONLIGHT@"
-	db "HIDDEN POWER@"
-	db "CROSS CHOP@"
-	db "TWISTER@"
+	db "HIDDEN POWER@"	;HIDDEN POWER
+	db "CROSS CHOP@"	;CROSS CHOP
+	db "TWISTER@"		;TWISTER
 	db "RAIN DANCE@"
 	db "SUNNY DAY@"
 	db "CRUNCH@"
@@ -247,6 +247,6 @@ MoveNames::
 	db "ANCIENTPOWER@"
 	db "SHADOW BALL@"
 	db "FUTURE SIGHT@"
-	db "ROCK SMASH@"
+	db "ROCK SMASH@"	;ROCK SMASH
 	db "WHIRLPOOL@"
-	db "BEAT UP@"
+	db "DARK PULSE@"	;BEAT UP

@@ -1,6 +1,8 @@
 	db SLUGMA ; 218
 
-	db  40,  40,  40,  20,  70,  40
+	db  80,  80,  80,  80,  80,  80
+;	db  50,  50, 120,  30,  80,  80	Magcargo
+;	db  40,  40,  40,  20,  70,  40
 	;   hp  atk  def  spd  sat  sdf
 
 	db FIRE, FIRE ; type

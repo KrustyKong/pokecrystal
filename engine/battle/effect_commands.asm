@@ -202,6 +202,9 @@ CheckPlayerTurn:
 	jr z, .not_frozen
 	cp SACRED_FIRE
 	jr z, .not_frozen
+	; add in scald too.
+	cp BUBBLE
+	jr z, .not_frozen
 
 	ld hl, FrozenSolidText
 	call StdBattleTextbox
