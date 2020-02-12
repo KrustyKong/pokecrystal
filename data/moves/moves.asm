@@ -234,7 +234,7 @@ Moves: ; 41afb
 	move PAIN_SPLIT,   EFFECT_PAIN_SPLIT,          0, NORMAL,      100, 20,   0
 	move SACRED_FIRE,  EFFECT_SACRED_FIRE,       100, FIRE,       95,  5,  50
 	move MAGNITUDE,    EFFECT_SPEED_DOWN_HIT,     60, GROUND,    100, 20,   0
-	move DYNAMICPUNCH, EFFECT_CONFUSE_HIT,       100, FIGHTING,   50,  5, 100
+	move DYNAMICPUNCH, EFFECT_LEECH_HIT,          75, FIGHTING,  100, 16,   0		;Drain Punch
 	move MEGAHORN,     EFFECT_NORMAL_HIT,        120, BUG,        85, 10,   0
 	move DRAGONBREATH, EFFECT_PARALYZE_HIT,       80, DRAGON,     100, 20,  30
 	move BATON_PASS,   EFFECT_BATON_PASS,          0, NORMAL,      100, 40,   0

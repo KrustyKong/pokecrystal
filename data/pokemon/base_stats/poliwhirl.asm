@@ -1,9 +1,9 @@
 	db POLIWHIRL ; 061
-
-	db  65,  65,  65,  90,  50,  50
+	db  90,  95,  95,  90,  70,  90
+;	db  65,  65,  65,  90,  50,  50
 	;   hp  atk  def  spd  sat  sdf
 
-	db WATER, WATER ; type
+	db WATER, FIGHTING ; type
 	db 120 ; catch rate
 	db 131 ; base exp
 	db NO_ITEM, KINGS_ROCK ; items

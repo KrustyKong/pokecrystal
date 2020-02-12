@@ -26,7 +26,7 @@ CheckForMobileBattleRules:
 
 _CheckForBattleTowerRules:
 	ld hl, wStringBuffer2
-	ld [hl], "3"
+	ld [hl], "6"			;
 	inc hl
 	ld [hl], "@"
 	ld de, .PointerTables
@@ -42,9 +42,9 @@ _CheckForBattleTowerRules:
 	dw .TextPointers
 
 .Functions:
-	dw Function_PartyCountEq3
+	dw Function_PartyCountEq3			;
 	dw Function_PartySpeciesAreUnique
-	dw Function_PartyItemsAreUnique
+	dw Function_PartyItemsAreUnique		;
 	dw Function_HasPartyAnEgg
 
 .TextPointers:
@@ -178,8 +178,10 @@ BattleTower_ExecuteJumptable:
 	ret
 
 BattleTower_CheckPartyLengthIs3:
-	ld a, [wPartyCount]
-	cp BATTLETOWER_PARTY_LENGTH
+	;ld a, [wPartyCount]
+	;cp BATTLETOWER_PARTY_LENGTH
+	ret
+	ret
 	ret
 
 BattleTower_CheckPartyHasThreeMonsThatAreNotEggs:
@@ -204,10 +206,14 @@ BattleTower_CheckPartyHasThreeMonsThatAreNotEggs:
 	ret
 
 Function_PartyCountEq3:
-	ld a, [wPartyCount]
-	cp BATTLETOWER_PARTY_LENGTH
-	ret z
-	scf
+;	ld a, [wPartyCount]
+;	cp BATTLETOWER_PARTY_LENGTH
+;	ret z
+;	scf
+	ret		;
+	ret		;
+	ret		;
+	ret		;
 	ret
 
 Function_PartySpeciesAreUnique:
@@ -277,8 +283,10 @@ VerifyUniqueness:
 	ret
 
 Function_PartyItemsAreUnique:
-	ld hl, wPartyMon1Item
-	call VerifyUniqueness
+;	ld hl, wPartyMon1Item
+;	call VerifyUniqueness
+	ret		;
+	ret		;
 	ret
 
 Function_HasPartyAnEgg:
