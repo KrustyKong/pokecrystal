@@ -3,7 +3,7 @@ MoveNames::
 	db "KARATE CHOP@"
 	db "DOUBLESLAP@"
 	db "COMET PUNCH@"
-	db "MEGATON PUNCH@"	;MEGA PUNCH
+	db "MEGATONPUNCH@"	;MEGA PUNCH
 	db "PAY DAY@"
 	db "FIRE PUNCH@"
 	db "ICE PUNCH@"

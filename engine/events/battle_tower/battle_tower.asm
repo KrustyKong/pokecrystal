@@ -1168,7 +1168,7 @@ SaveBattleTowerLevelGroup:
 
 LoadBattleTowerLevelGroup: ; Load level group choice
 	ld a, BANK(sBTChoiceOfLevelGroup)
-	call GetSRAMBank
+	call GetSRAMBank		;your team? no, prob jus the selection you chose.
 	ldh a, [rSVBK]
 	push af
 	ld a, BANK(wBTChoiceOfLvlGroup)
@@ -1517,7 +1517,7 @@ Function170ad7:
 	call CloseSRAM
 	ret
 
-BattleTowerAction_LevelCheck:
+BattleTowerAction_LevelCheck:		;doesnt remove level check at reception
 	ld a, BANK(s5_b2fb)
 	call GetSRAMBank
 	ld a, [s5_b2fb]

@@ -1,9 +1,9 @@
 	db SPEAROW ; 021
-
-	db  40,  60,  30,  70,  31,  31
+	db  65,  90,  65, 100,  90,  61
+;	db  40,  60,  30,  70,  31,  31
 	;   hp  atk  def  spd  sat  sdf
 
-	db NORMAL, FLYING ; type
+	db ELECTRIC, FLYING ; type
 	db 255 ; catch rate
 	db 58 ; base exp
 	db NO_ITEM, NO_ITEM ; items

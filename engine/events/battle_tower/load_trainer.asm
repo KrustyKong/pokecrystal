@@ -101,7 +101,7 @@ Function_LoadRandomBattleTowerMon:
 .FindARandomBattleTowerMon:
 	; From Which LevelGroup are the mon loaded
 	; a = 1..10
-	ld a, [wBTChoiceOfLvlGroup]
+	ld a, [wBTChoiceOfLvlGroup]		;take out to load random mons?
 	dec a
 	ld hl, BattleTowerMons
 	ld bc, BATTLETOWER_NUM_UNIQUE_MON * NICKNAMED_MON_STRUCT_LENGTH

@@ -1544,8 +1544,8 @@ BattleTowerMons3:
 	db "DOKUKURAGE@"
 
 	db GENGAR
-	db GOLD_BERRY
-	db THIEF, LICK, NIGHT_SHADE, GIGA_DRAIN
+	db SPELL_TAG
+	db SHADOW_BALL, THUNDERBOLT, NIGHT_SHADE, GIGA_DRAIN
 	dw 0 ; OT ID
 	dt 27000 ; Exp
 	; Stat exp
@@ -1597,7 +1597,7 @@ BattleTowerMons3:
 
 	db FEAROW
 	db LEFTOVERS
-	db MIRROR_MOVE, PURSUIT, PECK, SWIFT
+	db ZAP_CANNON, HORN_DRILL, SKY_ATTACK, SHARPEN
 	dw 0 ; OT ID
 	dt 27000 ; Exp
 	; Stat exp
@@ -1610,7 +1610,7 @@ BattleTowerMons3:
 	db 20, 20, 35, 20 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 30 ; Level
+	db 100 ; Level
 	db 0, 0 ; Status
 	bigdw 333 ; HP
 	bigdw 333 ; Max HP
@@ -1622,8 +1622,8 @@ BattleTowerMons3:
 	db "ONIDORIRU@@"
 
 	db PRIMEAPE
-	db MIRACLEBERRY
-	db LOW_KICK, KARATE_CHOP, REVERSAL, FOCUS_ENERGY
+	db SCOPE_LENS
+	db FURY_SWIPES, KARATE_CHOP, REVERSAL, FOCUS_ENERGY
 	dw 0 ; OT ID
 	dt 27000 ; Exp
 	; Stat exp
@@ -4393,7 +4393,7 @@ BattleTowerMons8:
 	db "GURANBURU@@"
 
 
-BattleTowerMons9:
+BattleTowerMons10:
 
 	db UMBREON
 	db KINGS_ROCK
@@ -4891,7 +4891,7 @@ BattleTowerMons9:
 
 	db TAUROS
 	db PINK_BOW
-	db THUNDERBOLT, HYPER_BEAM, ATTRACT, EARTHQUAKE
+	db SUBMISSION, BODY_SLAM, CHARM, EARTHQUAKE
 	dw 0 ; OT ID
 	dt 729000 ; Exp
 	; Stat exp
@@ -5205,8 +5205,8 @@ BattleTowerMons9:
 	db "HAGANE-RU@@"
 
 	db FEAROW
-	db KINGS_ROCK
-	db DRILL_PECK, STEEL_WING, SOFTBOILED, HORN_DRILL
+	db FOCUS_BAND
+	db DRILL_PECK, STEEL_WING, SOFTBOILED, AGILITY
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp

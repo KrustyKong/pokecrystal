@@ -46,7 +46,7 @@ Moves: ; 41afb
 	move HORN_DRILL,   EFFECT_DEFENSE_DOWN_HIT,   80, GROUND,    100,  15,   50
 	move TACKLE,       EFFECT_NORMAL_HIT,         35, NORMAL,     95, 35,   0
 	move BODY_SLAM,    EFFECT_PARALYZE_HIT,       85, NORMAL,    100, 15,  30
-	move WRAP,         EFFECT_TRAP_TARGET,        15, NORMAL,     85, 20,   0
+	move WRAP,         EFFECT_TRAP_TARGET,        55, NORMAL,     85, 20,   0
 	move TAKE_DOWN,    EFFECT_RECOIL_HIT,         90, NORMAL,     85, 20,   0
 	move THRASH,       EFFECT_RAMPAGE,           120, NORMAL,    100, 20,   0
 	move DOUBLE_EDGE,  EFFECT_RECOIL_HIT,        120, NORMAL,    100, 15,   0
@@ -64,17 +64,17 @@ Moves: ; 41afb
 	move DISABLE,      EFFECT_DISABLE,             0, NORMAL,      100, 20,   0
 	move ACID,         EFFECT_DEFENSE_DOWN_HIT,   40, POISON,     100, 30, 100
 	move EMBER,        EFFECT_BURN_HIT,           10, FIRE,       85, 25,  100
-	move FLAMETHROWER, EFFECT_SPEED_DOWN_HIT,     90, FIRE,       100, 15,  30
+	move FLAMETHROWER, EFFECT_SPEED_DOWN_HIT,     95, FIRE,       100, 15,  30
 	move MIST,         EFFECT_MIST,                0, ICE,         100, 30,   0
 	move WATER_GUN,    EFFECT_NORMAL_HIT,         40, WATER,      100, 25,   0
 	move HYDRO_PUMP,   EFFECT_RECOIL_HIT,        120, WATER,      100,  8,   0
 	move SURF,         EFFECT_NORMAL_HIT,         95, WATER,      100, 15,   0
 	move ICE_BEAM,     EFFECT_FLINCH_HIT,         90, ICE,        100, 10,  10
-	move BLIZZARD,     EFFECT_FREEZE_HIT,        110, ICE,         70,  5,  10
+	move BLIZZARD,     EFFECT_FREEZE_HIT,        110, ICE,         90,  5,  10		;[I] Accuracy
 	move PSYBEAM,      EFFECT_CONFUSE_HIT,        65, PSYCHIC,    100, 20,  10
 	move BUBBLEBEAM,   EFFECT_SPEED_DOWN_HIT,     65, WATER,      100, 20,  66
 	move AURORA_BEAM,  EFFECT_ATTACK_DOWN_HIT,    65, ICE,        100, 20,  66
-	move HYPER_BEAM,   EFFECT_HYPER_BEAM,        150, NORMAL,      90,  3,   0
+	move HYPER_BEAM,   EFFECT_RECOIL_HIT,        140, NORMAL,      90,  3,   0		;recoil based, nerf
 	move PECK,         EFFECT_NORMAL_HIT,         35, FLYING,    100, 35,   0
 	move DRILL_PECK,   EFFECT_NORMAL_HIT,         80, FLYING,    100, 20,   0
 	move SUBMISSION,   EFFECT_RECOIL_HIT,         80, FIGHTING,   80, 25,   0
@@ -96,7 +96,7 @@ Moves: ; 41afb
 	move DRAGON_RAGE,  EFFECT_NORMAL_HIT,      80, DRAGON,     100, 20,   0			;Dragon Claw
 	move FIRE_SPIN,  EFFECT_RECOIL_HIT,        	 120, FIRE,    100, 15,   0			;Flare Blitz
 	move THUNDERSHOCK, EFFECT_PARALYZE_HIT,       40, ELECTRIC,   100, 30,  10
-	move THUNDERBOLT,  EFFECT_DEFENSE_UP_HIT,       90, ELECTRIC,   100, 15,  30
+	move THUNDERBOLT,  EFFECT_DEFENSE_UP_HIT,       95, ELECTRIC,   100, 15,  30
 	move THUNDER_WAVE, EFFECT_PARALYZE,            0, ELECTRIC,    75, 20,   0		;old Glare accuracy
 	move THUNDER,      EFFECT_THUNDER,           110, ELECTRIC,    70, 10,  30		;nerf
 	move ROCK_THROW,   EFFECT_NORMAL_HIT,         50, ROCK,       90, 15,   0

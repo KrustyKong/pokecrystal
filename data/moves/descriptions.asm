@@ -413,7 +413,7 @@ ThrashDescription:
 	next "and confuses user.@"
 
 DoubleEdgeDescription:
-	db   "User takes 1/3"
+	db   "User takes 1/4"
 	next "recoil.@"
 
 TailWhipDescription:
@@ -486,19 +486,19 @@ WaterGunDescription:
 
 HydroPumpDescription:
 	db   "User takes"
-	next "1/3 Recoil.@"
+	next "1/4 Recoil.@"
 
 SurfDescription:
 	db   "A strong water-"
 	next "type attack.@"
 
 IceBeamDescription:
-	db   "An attack with a"
+	db   "Hi-crit ratio and"
 	next "1/10 flinch rate.@"
 
 BlizzardDescription:
-	db   "An attack that may"
-	next "freeze the foe.@"
+	db   "1/10 freeze rate."
+	next "ACC/90@"
 
 PsybeamDescription:
 	db   "An attack that may"
@@ -513,8 +513,8 @@ AuroraBeamDescription:
 	next "2/3 of the time.@"
 
 HyperBeamDescription:
-	db   "1st turn: Attack"
-	next "2nd turn: Rest@"
+	db   "Strong, but low PP"
+	next "1/4 Recoil.@"
 
 PeckDescription:
 	db   "Jabs the foe with"
