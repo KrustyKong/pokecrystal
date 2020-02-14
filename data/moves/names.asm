@@ -64,7 +64,7 @@ MoveNames::
 	db "HYPER BEAM@"
 	db "PECK@"
 	db "DRILL PECK@"
-	db "SUBMISSION@"
+	db "PLAY ROUGH@"		;SUBMISSION
 	db "LOW KICK@"
 	db "COUNTER@"
 	db "SEISMIC TOSS@"
@@ -108,7 +108,7 @@ MoveNames::
 	db "MINIMIZE@"
 	db "SMOKESCREEN@"
 	db "CONFUSE RAY@"
-	db "WITHDRAW@"
+	db "WITHDRAW@"			;WITHDRAW
 	db "DEFENSE CURL@"
 	db "BARRIER@"
 	db "LIGHT SCREEN@"
@@ -123,7 +123,7 @@ MoveNames::
 	db "LICK@"
 	db "SMOG@"
 	db "SLUDGE@"
-	db "BONE CLUB@"
+	db "POWER GEM@"				;BONE CLUB
 	db "FIRE BLAST@"
 	db "WATERFALL@"
 	db "LIQUIDATION@"			;CLAMP

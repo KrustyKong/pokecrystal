@@ -3869,7 +3869,7 @@ Strings_L10ToL100:
 	db " L:70 @@"
 	db " L:80 @@"
 	db " L:90 @@"
-	db " L:100@@"
+	db " UBERS@@"
 	db "CANCEL@@"
 
 Strings_Ll0ToL40:
@@ -3907,7 +3907,7 @@ BattleTower_LevelCheck:
 	pop hl
 	cp [hl]
 	jr z, .equal
-	jr nc, .exceeds
+;	jr nc, .exceeds
 .equal
 	pop af
 	dec a
@@ -3917,14 +3917,14 @@ BattleTower_LevelCheck:
 	and a
 	ret
 
-.exceeds
-	pop af
-	ld a, $4
-	ld [wBattleTowerRoomMenuJumptableIndex], a
-	pop af
-	ldh [rSVBK], a
-	scf
-	ret
+;.exceeds
+;	pop af
+;	ld a, $4
+;	ld [wBattleTowerRoomMenuJumptableIndex], a
+;	pop af
+;	ldh [rSVBK], a
+;	scf
+;	ret
 
 BattleTower_UbersCheck:
 	ldh a, [rSVBK]

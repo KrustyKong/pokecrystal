@@ -1209,7 +1209,7 @@ BattleAnim_RazorLeaf:
 	anim_ret
 
 BattleAnim_Solarbeam:
-	anim_if_param_equal $0, .FireSolarBeam
+	anim_if_param_equal $1, .FireSolarBeam
 	; charge turn
 	anim_1gfx ANIM_GFX_CHARGE
 	anim_sound 0, 0, SFX_CHARGE
@@ -2598,7 +2598,7 @@ BattleAnim_Minimize:
 	anim_ret
 
 BattleAnim_SkyAttack:
-	anim_if_param_equal $1, BattleAnim_FocusEnergy
+	anim_if_param_equal $0, BattleAnim_FocusEnergy
 	anim_1gfx ANIM_GFX_SKY_ATTACK
 	anim_bgeffect ANIM_BG_27, $0, $1, $0
 	anim_wait 32

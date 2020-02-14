@@ -14,5 +14,6 @@ BattleCommand_ThunderAccuracy:
 
 .rain
 	; Redundant with CheckHit guranteeing hit
-	ld [hl], 100 percent
+;	ld [hl], 100 percent
+	call DoubleDamage		;want to only have para chance while rain up too but later
 	ret

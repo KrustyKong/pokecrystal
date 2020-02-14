@@ -410,9 +410,10 @@ endr
 	ld [wCurSpecies], a
 	call GetBaseData
 	ld a, BANK(s5_b2fb)
-	call GetSRAMBank
-	ld a, [s5_b2fb] ; s5_b2fb ; max level?
-	call CloseSRAM
+;	call GetSRAMBank
+;	ld a, [s5_b2fb] ; s5_b2fb ; max level?
+	ld a, 100
+;	call CloseSRAM
 	ld e, a
 	ld hl, MON_LEVEL
 	add hl, bc

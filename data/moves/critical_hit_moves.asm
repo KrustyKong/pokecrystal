@@ -9,4 +9,6 @@ CriticalHitMoves:
 	db ICE_BEAM
 	db FLAME_WHEEL
 	db POISONPOWDER
+	db HORN_DRILL
+	db FURY_SWIPES
 	db -1

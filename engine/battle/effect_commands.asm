@@ -1088,7 +1088,7 @@ BattleCommand_DoTurn:
 	db EFFECT_RAZOR_WIND
 	db EFFECT_SKY_ATTACK
 	db EFFECT_SKULL_BASH
-	db EFFECT_SOLARBEAM
+;	db EFFECT_SOLARBEAM
 	db EFFECT_FLY
 	db EFFECT_ROLLOUT
 	db EFFECT_BIDE
@@ -1745,6 +1745,8 @@ BattleCommand_CheckHit:
 	ret z
 	cp TWISTER
 	ret
+;	cp VINE_WHIP	;Smash bros
+;	ret
 
 .DigMoves:
 	ld a, BATTLE_VARS_MOVE_ANIM
@@ -1917,8 +1919,8 @@ BattleCommand_LowerSub:
 	jr z, .charge_turn
 	cp EFFECT_SKULL_BASH
 	jr z, .charge_turn
-	cp EFFECT_SOLARBEAM
-	jr z, .charge_turn
+;	cp EFFECT_SOLARBEAM
+;	jr z, .charge_turn
 	cp EFFECT_FLY
 	jr z, .charge_turn
 
@@ -6664,7 +6666,7 @@ BattleCommand_SkipSunCharge:
 	ld a, [wBattleWeather]
 	cp WEATHER_SUN
 	ret nz
-	ld b, charge_command
+	call DoubleDamage		;solarbeam deal double in sun
 	jp SkipToBattleCommand
 
 INCLUDE "engine/battle/move_effects/future_sight.asm"
