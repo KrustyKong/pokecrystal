@@ -1480,7 +1480,9 @@ FlameWheel:
 	defrost
 	checkfaint
 	buildopponentrage
-	burntarget
+	speedup
+	statupmessage
+;	burntarget
 	endmove
 
 Curse:
@@ -1985,17 +1987,17 @@ Stomp:
 	endmove
 
 Solarbeam:
-	checkcharge
+;	checkcharge
 	checkobedience
 	doturn
-	skipsuncharge
-	charge
+;	charge
 	usedmovetext
 	critical
 	damagestats
 	damagecalc
 	stab
 	damagevariation
+	skipsuncharge	;now sun deals double damage instead
 	checkhit
 	moveanim
 	failuretext

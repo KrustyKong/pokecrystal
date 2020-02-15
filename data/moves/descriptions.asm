@@ -889,7 +889,7 @@ RestDescription:
 	next "to fully recover.@"
 
 RockSlideDescription:
-	db   "Deals 1/4 recoil."
+	db   "1/4 flinch rate."
 	next "ACC/100@"
 
 HyperFangDescription:
@@ -1021,8 +1021,8 @@ MudSlapDescription:
 	next "accuracy.@"
 
 OctazookaDescription:
-	db   "An attack that may"
-	next "reduce accuracy.@"
+	db   "-Acid Burst-"
+	next "1/2 Poison.@"
 
 SpikesDescription:
 	db   "Hurts foes when"

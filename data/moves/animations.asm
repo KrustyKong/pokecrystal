@@ -1209,7 +1209,14 @@ BattleAnim_RazorLeaf:
 	anim_ret
 
 BattleAnim_Solarbeam:
-	anim_if_param_equal $1, .FireSolarBeam
+;	.FireSolarBeam
+	anim_1gfx ANIM_GFX_BEAM
+	anim_bgeffect ANIM_BG_06, $0, $2, $0
+	anim_call BattleAnimSub_Beam
+	anim_wait 48
+	anim_ret
+	
+;	anim_if_param_equal $0, .FireSolarBeam
 	; charge turn
 	anim_1gfx ANIM_GFX_CHARGE
 	anim_sound 0, 0, SFX_CHARGE
@@ -1225,13 +1232,6 @@ BattleAnim_Solarbeam:
 	anim_wait 104
 	anim_bgeffect ANIM_BG_FLASH_WHITE, $0, $4, $2
 	anim_wait 64
-	anim_ret
-
-.FireSolarBeam
-	anim_1gfx ANIM_GFX_BEAM
-	anim_bgeffect ANIM_BG_06, $0, $2, $0
-	anim_call BattleAnimSub_Beam
-	anim_wait 48
 	anim_ret
 
 BattleAnim_Thunderpunch:

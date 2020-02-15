@@ -6667,7 +6667,8 @@ BattleCommand_SkipSunCharge:
 	cp WEATHER_SUN
 	ret nz
 	call DoubleDamage		;solarbeam deal double in sun
-	jp SkipToBattleCommand
+	;jp SkipToBattleCommand
+	ret
 
 INCLUDE "engine/battle/move_effects/future_sight.asm"
 
