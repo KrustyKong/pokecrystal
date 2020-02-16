@@ -192,6 +192,7 @@ AI_Types:
 	push de
 	push bc
 	ld a, [wEnemyMoveStruct + MOVE_TYPE]
+	and TYPE_MASK	;PSS		
 	ld d, a
 	ld hl, wEnemyMonMoves
 	ld b, wEnemyMonMovesEnd - wEnemyMonMoves + 1
@@ -206,6 +207,7 @@ AI_Types:
 
 	call AIGetEnemyMove
 	ld a, [wEnemyMoveStruct + MOVE_TYPE]
+	and TYPE_MASK	;PSS		
 	cp d
 	jr z, .checkmove2
 	ld a, [wEnemyMoveStruct + MOVE_POWER]
@@ -1113,14 +1115,37 @@ AI_Smart_SpDefenseUp2:
 
 ; 80% chance to greatly encourage this move if
 ; enemy's Special Defense level is lower than +2, and the player is of a special type.
-	cp $9
-	ret nc
 
-	ld a, [wBattleMonType1]
-	cp SPECIAL
-	jr nc, .asm_38b09
-	ld a, [wBattleMonType2]
-	cp SPECIAL
+; enemy's Special Defense level is lower than +2,
+; and the player's Pokémon is Special-oriented.	cp $9
+	ret nc
+;PSS
+;	ld a, [wBattleMonType1]
+;	cp SPECIAL
+;	jr nc, .asm_38b09
+;	ld a, [wBattleMonType2]
+;	cp SPECIAL
+;	ret c
+	push hl
+; Get the pointer for the player's Pokémon's base Attack
+	ld a, [wBattleMonSpecies]
+	ld hl, BaseData + BASE_ATK
+	ld bc, BASE_DATA_SIZE
+	call AddNTimes
+; Get the Pokémon's base Attack
+	ld a, BANK(BaseData)
+	call GetFarByte
+	ld d, a
+; Get the pointer for the player's Pokémon's base Special Attack
+	ld bc, BASE_SAT - BASE_ATK
+	add hl, bc
+; Get the Pokémon's base Special Attack
+	ld a, BANK(BaseData)
+	call GetFarByte
+	pop hl
+; If its base Attack is greater than its base Special Attack,
+; don't encourage this move.
+	cp d
 	ret c
 
 .asm_38b09
@@ -1404,6 +1429,7 @@ AI_Smart_Encore:
 
 	push hl
 	ld a, [wEnemyMoveStruct + MOVE_TYPE]
+	and TYPE_MASK	;PSS
 	ld hl, wEnemyMonType1
 	predef CheckTypeMatchup
 
@@ -1740,7 +1766,9 @@ AI_Smart_MeanLook:
 
 ; 80% chance to greatly encourage this move if the enemy is badly poisoned (buggy).
 ; Should check wPlayerSubStatus5 instead.
-	ld a, [wEnemySubStatus5]
+;	ld a, [wEnemySubStatus5]
+;now... 80% chance to greatly encourage this move if the player is badly poisoned
+	ld a, [wPlayerSubStatus5]
 	bit SUBSTATUS_TOXIC, a
 	jr nz, .asm_38e26
 
@@ -1836,11 +1864,12 @@ AI_Smart_Curse:
 	ld a, [wBattleMonType1]
 	cp GHOST
 	jr z, .asm_38e92
-	cp SPECIAL
-	ret nc
-	ld a, [wBattleMonType2]
-	cp SPECIAL
-	ret nc
+;PSS
+;	cp SPECIAL
+;	ret nc
+;	ld a, [wBattleMonType2]
+;	cp SPECIAL
+;	ret nc
 	call AI_80_20
 	ret c
 	dec [hl]
@@ -2366,13 +2395,14 @@ AI_Smart_WeatherMove:
 
 ; Greatly discourage this move if the enemy doesn't have
 ; one of the useful Rain Dance or Sunny Day moves.
-	call AIHasMoveInArray
-	pop hl
-	jr nc, AIBadWeatherType
+		;	removing these since we made these moves good
+;	call AIHasMoveInArray
+;	pop hl
+;	jr nc, AIBadWeatherType
 
 ; Greatly discourage this move if player's HP is below 50%.
-	call AICheckPlayerHalfHP
-	jr nc, AIBadWeatherType
+;	call AICheckPlayerHalfHP
+;	jr nc, AIBadWeatherType
 
 ; 50% chance to encourage this move otherwise.
 	call AI_50_50

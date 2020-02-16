@@ -8,8 +8,9 @@ UsefulMoves:
 	db SURF
 	db ICE_BEAM
 	db BLIZZARD
-	db HYPER_BEAM
+;	db HYPER_BEAM	;it aint 1996
 	db SLEEP_POWDER
+	db LEECH_SEED	;+
 	db THUNDERBOLT
 	db THUNDER
 	db EARTHQUAKE

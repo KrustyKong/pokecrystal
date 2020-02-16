@@ -9,7 +9,7 @@ EncoreMoves:
 	db MIST
 	db LEECH_SEED
 	db GROWTH
-	db POISONPOWDER
+;	db POISONPOWDER	;its leaf blade
 	db STRING_SHOT
 	db MEDITATE
 	db AGILITY
@@ -30,5 +30,6 @@ EncoreMoves:
 	db FLAME_WHEEL
 	db AEROBLAST
 	db COTTON_SPORE
-	db POWDER_SNOW
+;	db POWDER_SNOW	;its discharge
+	db CURSE	;+
 	db -1 ; end

@@ -509,7 +509,8 @@ CheckEnemyTurn:
 	call StdBattleTextbox
 
 	call HitSelfInConfusion
-	call BattleCommand_DamageCalc
+;	call BattleCommand_DamageCalc	
+	call ConfusionDamageCalc	;confusion damage fix
 	call BattleCommand_LowerSub
 
 	xor a
@@ -612,7 +613,8 @@ HitConfusion:
 	ld [wCriticalHit], a
 
 	call HitSelfInConfusion
-	call BattleCommand_DamageCalc
+;	call BattleCommand_DamageCalc
+	call ConfusionDamageCalc	;confusion damage fix
 	call BattleCommand_LowerSub
 
 	xor a
@@ -1254,6 +1256,7 @@ BattleCommand_Stab:
 .go
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVarAddr
+	and TYPE_MASK	;PSS	
 	ld [wCurType], a
 
 	push hl
@@ -1301,6 +1304,7 @@ BattleCommand_Stab:
 .SkipStab:
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar
+	and TYPE_MASK	;PSS	
 	ld b, a
 	ld hl, TypeMatchups
 
@@ -1419,11 +1423,14 @@ CheckTypeMatchup:
 ; this assumption is incorrect. A simple fix would be to load the move type for the
 ; current move into a in BattleCheckTypeMatchup, before falling through, which is
 ; consistent with how the rest of the code assumes this code works like.
+	ld a, BATTLE_VARS_MOVE_TYPE
+	call GetBattleVar ; preserves hl, de, and bc
+	and TYPE_MASK	;PSS		
 	push hl
 	push de
 	push bc
-	ld a, BATTLE_VARS_MOVE_TYPE
-	call GetBattleVar
+;	ld a, BATTLE_VARS_MOVE_TYPE
+;	call GetBattleVar
 	ld d, a
 	ld b, [hl]
 	inc hl
@@ -1743,8 +1750,8 @@ BattleCommand_CheckHit:
 	ret z
 	cp THUNDER
 	ret z
-	cp TWISTER
-	ret
+;	cp TWISTER		
+;	ret
 ;	cp VINE_WHIP	;Smash bros
 ;	ret
 
@@ -1887,7 +1894,12 @@ BattleCommand_EffectChance:
 
 	; BUG: 1/256 chance to fail even for a 100% effect chance,
 	; since carry is not set if BattleRandom == [hl] == 255
-	call BattleRandom
+;	call BattleRandom
+	ld a, [hl]
+	sub 100 percent
+	; If chance was 100%, RNG won't be called (carry not set)
+	; Thus chance will be subtracted from 0, guaranteeing a carry
+	call c, BattleRandom
 	cp [hl]
 	pop hl
 	ret c
@@ -2942,6 +2954,8 @@ HitSelfInConfusion:
 	ld d, 40
 	pop af
 	ld e, a
+	ld a, TRUE
+	ld [wIsConfusionDamage], a
 	ret
 
 BattleCommand_DamageCalc:
@@ -2977,6 +2991,11 @@ BattleCommand_DamageCalc:
 	ret z
 
 .skip_zero_damage_check
+	xor a ; Not confusion damage
+	ld [wIsConfusionDamage], a
+	; fallthrough
+
+ConfusionDamageCalc:
 ; Minimum defense value is 1.
 	ld a, c
 	and a
@@ -3031,6 +3050,12 @@ BattleCommand_DamageCalc:
 	call Divide
 
 ; Item boosts
+
+; Item boosts don't apply to confusion damage
+	ld a, [wIsConfusionDamage]
+	and a
+	jr nz, .DoneItem
+
 	call GetUserItem
 
 	ld a, b
@@ -3053,6 +3078,7 @@ BattleCommand_DamageCalc:
 	ld b, a
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar
+	and TYPE_MASK	;PSS	
 	cp b
 	jr nz, .DoneItem
 
@@ -3710,6 +3736,7 @@ BattleCommand_PoisonTarget:
 	ld a, [wTypeModifier]
 	and $7f
 	ret z
+	ld b, POISON
 	call CheckIfTargetIsPoisonType
 	ret z
 	call GetOpponentItem
@@ -3740,7 +3767,8 @@ BattleCommand_Poison:
 	ld a, [wTypeModifier]
 	and $7f
 	jp z, .failed
-
+	
+	ld b, POISON
 	call CheckIfTargetIsPoisonType
 	jp z, .failed
 
@@ -3840,7 +3868,7 @@ BattleCommand_Poison:
 	cp EFFECT_TOXIC
 	ret
 
-CheckIfTargetIsPoisonType:
+CheckIfTargetIsPoisonType:	;called that, but you can pass any type into B to check
 	ld de, wEnemyMonType1
 	ldh a, [hBattleTurn]
 	and a
@@ -3849,10 +3877,10 @@ CheckIfTargetIsPoisonType:
 .ok
 	ld a, [de]
 	inc de
-	cp POISON
+	cp b;POISON
 	ret z
 	ld a, [de]
-	cp POISON
+	cp b;POISON
 	ret
 
 PoisonOpponent:
@@ -3980,8 +4008,25 @@ BattleCommand_BurnTarget:
 	ld a, [wTypeModifier]
 	and $7f
 	ret z
-	call CheckMoveTypeMatchesTarget ; Don't burn a Fire-type
-	ret z
+;	call CheckMoveTypeMatchesTarget ; Don't burn a Fire-type
+;specifically check for fire type, cuz this'll make scald not burn waters instea
+; .typecheck
+	  ld b, FIRE
+	; ld de, wBattleMonType1
+	; ldh a, [hBattleTurn]
+	; and a
+	; jr z, .ok	;check if handling playermon
+	; ld de, wEnemyMonType1
+; .ok:	
+	; ld a, [de]
+	; cp FIRE;bc ;  (TYPE) ex WATER this jumps to .next if usermon is that type
+	; ret z
+	; inc hl
+	; ld a, [hl]
+	; cp b;FIRE; Using a 16 register (bc,hl) didnt work, but the 8bit ones do??
+	; ret z	
+	call CheckIfTargetIsPoisonType
+;	ret z
 	call GetOpponentItem
 	ld a, b
 	cp HELD_PREVENT_BURN
@@ -4099,6 +4144,9 @@ BattleCommand_ParalyzeTarget:
 	ld a, [wTypeModifier]
 	and $7f
 	ret z
+	ld b, ELECTRIC
+	call CheckIfTargetIsPoisonType
+	ret z
 	call GetOpponentItem
 	ld a, b
 	cp HELD_PREVENT_PARALYZE
@@ -4188,7 +4236,7 @@ BattleCommand_AccuracyUp2:
 
 BattleCommand_EvasionUp2:
 ; evasionup2
-	ld b, $10 | EVASION
+	ld b, $20 | DEFENSE		;cotton guard?
 	jr BattleCommand_StatUp
 
 BattleCommand_StatUp:
@@ -6012,6 +6060,9 @@ BattleCommand_Paralyze:
 	call AnimateFailedMove
 	jp PrintDoesntAffect
 
+;INCLUDE "engine/battle/status.asm"
+;to replace the below
+
 CheckMoveTypeMatchesTarget:
 ; Compare move type to opponent type.
 ; Return z if matching the opponent type,
@@ -6028,8 +6079,9 @@ CheckMoveTypeMatchesTarget:
 
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar
-	cp NORMAL
-	jr z, .normal
+	and TYPE_MASK	;PSS	
+;	cp NORMAL
+;	jr z, .normal
 
 	cp [hl]
 	jr z, .return
@@ -6676,9 +6728,10 @@ INCLUDE "engine/battle/move_effects/thunder.asm"
 
 CheckHiddenOpponent:
 ; BUG: This routine is completely redundant and introduces a bug, since BattleCommand_CheckHit does these checks properly.
-	ld a, BATTLE_VARS_SUBSTATUS3_OPP
-	call GetBattleVar
-	and 1 << SUBSTATUS_FLYING | 1 << SUBSTATUS_UNDERGROUND
+;	ld a, BATTLE_VARS_SUBSTATUS3_OPP
+;	call GetBattleVar
+;	and 1 << SUBSTATUS_FLYING | 1 << SUBSTATUS_UNDERGROUND
+	xor a
 	ret
 
 GetUserItem:

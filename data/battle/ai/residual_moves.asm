@@ -3,7 +3,7 @@
 ResidualMoves:
 	db MIST
 	db LEECH_SEED
-	db POISONPOWDER
+;	db POISONPOWDER		;leaf blade
 	db STUN_SPORE
 	db THUNDER_WAVE
 	db FOCUS_ENERGY

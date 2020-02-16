@@ -325,12 +325,12 @@ CutDescription:
 	next "scythes, etc.@"
 
 GustDescription:
-	db   "Whips up a strong"
-	next "gust of wind.@"
+	db   "1/4 chance to"
+	next "raise all stats.@"
 
 WingAttackDescription:
 	db   "1/4 chance to"
-	next "raise all stats.@"
+	next "raise ACCURACY.@"
 
 WhirlwindDescription:
 	db   "Blows away the foe"
@@ -545,8 +545,8 @@ StrengthDescription:
 	next "half the time.@"
 
 AbsorbDescription:
-	db   "Steals 1/2 of the"
-	next "damage inflicted.@"
+	db   "Raises SP.ATK,"
+	next "SP.DEF and SPEED.@"
 
 MegaDrainDescription:
 	db   "Steals 1/2 of the"
@@ -568,7 +568,7 @@ SolarbeamDescription:
 	db   "Sun: x2 Damage"
 	next "Rain: 1/2 Damage@"
 
-PoisonpowderDescription:
+PoisonpowderDescription:	;LEAF BLADE
 	db   "Has a high crit-"
 	next "ical hit ratio.@"
 
@@ -693,8 +693,8 @@ MinimizeDescription:
 	next "ness.@"
 
 SmokescreenDescription:
-	db   "Lowers the foe's"
-	next "accuracy.@"
+	db   "Lowers SPEED, ATK"
+	next "and SP.ATK. ACC/75@"
 
 ConfuseRayDescription:
 	db   "A move that causes"
@@ -1258,7 +1258,7 @@ FutureSightDescription:
 
 RockSmashDescription:
 	db   "An attack that"
-	next "lowers DEFENSE.@"
+	next "raises ATTACK.@"
 
 WhirlpoolDescription:
 	db   "Traps the foe for"

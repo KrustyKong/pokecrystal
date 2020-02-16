@@ -208,19 +208,22 @@ DefenseUp:
 	statupfailtext
 	endmove
 
-SpeedUp:
+SpeedUp:		;dragon dance time
 	checkobedience
 	usedmovetext
 	doturn
-	speedup
+	attackup	;
 	lowersub
 	statupanim
 	raisesub
 	statupmessage
 	statupfailtext
+	speedup
+	statupmessage
+	statupfailtext
 	endmove
 
-SpecialAttackUp:
+SpecialAttackUp:	;growth can be its own thing tbh
 	checkobedience
 	usedmovetext
 	doturn
@@ -230,9 +233,12 @@ SpecialAttackUp:
 	raisesub
 	statupmessage
 	statupfailtext
+	specialdefenseup	;calm mind
+	statupmessage
+	statupfailtext
 	endmove
 
-SpecialDefenseUp:
+SpecialDefenseUp:	;no move does this on its own, so its unused
 	checkobedience
 	usedmovetext
 	doturn
@@ -254,6 +260,9 @@ AccuracyUp:
 	raisesub
 	statupmessage
 	statupfailtext
+	attackup		;hone claws
+	statupmessage
+	statupfailtext
 	endmove
 
 EvasionUp:
@@ -261,7 +270,7 @@ EvasionUp:
 	usedmovetext
 	doturn
 	lowersub
-	evasionup
+;	evasionup
 	statupanim
 	lowersubnoanim
 	raisesub
@@ -269,7 +278,7 @@ EvasionUp:
 	statupfailtext
 	endmove
 
-AttackUp2:
+AttackUp2:		;SD
 	checkobedience
 	usedmovetext
 	doturn
@@ -281,7 +290,7 @@ AttackUp2:
 	statupfailtext
 	endmove
 
-DefenseUp2:
+DefenseUp2:		;acid armor
 	checkobedience
 	usedmovetext
 	doturn
@@ -293,7 +302,7 @@ DefenseUp2:
 	statupfailtext
 	endmove
 
-SpeedUp2:
+SpeedUp2:		;agility
 	checkobedience
 	usedmovetext
 	doturn
@@ -305,7 +314,7 @@ SpeedUp2:
 	statupfailtext
 	endmove
 
-SpecialAttackUp2:
+SpecialAttackUp2:	;unused, nasty plot
 	checkobedience
 	usedmovetext
 	doturn
@@ -317,7 +326,7 @@ SpecialAttackUp2:
 	statupfailtext
 	endmove
 
-SpecialDefenseUp2:
+SpecialDefenseUp2:	;amnesia
 	checkobedience
 	usedmovetext
 	doturn
@@ -329,11 +338,13 @@ SpecialDefenseUp2:
 	statupfailtext
 	endmove
 
-AccuracyUp2:
+AccuracyUp2:		;unused ofc. coil
 	checkobedience
 	usedmovetext
 	doturn
-	accuracyup2
+	attackup
+	defenseup		;
+	accuracyup		;
 	lowersub
 	statupanim
 	raisesub
@@ -341,11 +352,11 @@ AccuracyUp2:
 	statupfailtext
 	endmove
 
-EvasionUp2:
+EvasionUp2:			;hell no
 	checkobedience
 	usedmovetext
 	doturn
-	evasionup2
+	evasionup2		;made this cotton guard in battle/effect_commands
 	lowersub
 	statupanim
 	raisesub
@@ -418,17 +429,24 @@ SpecialDefenseDown:
 	statdownfailtext
 	endmove
 
-AccuracyDown:
+AccuracyDown:		;quiver dance instead
 	checkobedience
 	usedmovetext
 	doturn
-	checkhit
-	accuracydown
+;	checkhit
+;	accuracydown
+	speedup				;
 	lowersub
-	statdownanim
+	statupanim			;was down
 	raisesub
-	statdownmessage
-	statdownfailtext
+	statupmessage		;was down
+	statupfailtext
+	specialattackup		;quiver dance
+	statupmessage
+	statupfailtext
+	specialdefenseup	;
+	statupmessage
+	statupfailtext		;was down
 	endmove
 
 EvasionDown:
@@ -444,7 +462,7 @@ EvasionDown:
 	statdownfailtext
 	endmove
 
-AttackDown2:
+AttackDown2:		;CHARM
 	checkobedience
 	usedmovetext
 	doturn
@@ -457,7 +475,7 @@ AttackDown2:
 	statdownfailtext
 	endmove
 
-DefenseDown2:
+DefenseDown2:		;SCREECH
 	checkobedience
 	usedmovetext
 	doturn
@@ -470,7 +488,7 @@ DefenseDown2:
 	statdownfailtext
 	endmove
 
-SpeedDown2:
+SpeedDown2:		;SCARY FACE
 	checkobedience
 	usedmovetext
 	doturn
@@ -483,7 +501,7 @@ SpeedDown2:
 	statdownfailtext
 	endmove
 
-SpecialAttackDown2:
+SpecialAttackDown2:		;FREE
 	checkobedience
 	usedmovetext
 	doturn
@@ -509,20 +527,27 @@ SpecialDefenseDown2:
 	statdownfailtext
 	endmove
 
-AccuracyDown2:
+AccuracyDown2:		;gen5 smokescreen hack. FLASH, SMOKESCREEN
 	checkobedience
 	usedmovetext
 	doturn
 	checkhit
-	accuracydown2
+;	accuracydown2
+	speeddown
 	lowersub
 	statdownanim
 	raisesub
 	statdownmessage
 	statdownfailtext
+	attackdown
+	statdownmessage
+	statdownfailtext
+	specialattackdown
+	statdownmessage
+	statdownfailtext
 	endmove
 
-EvasionDown2:
+EvasionDown2:	;NEW KINESIS
 	checkobedience
 	usedmovetext
 	doturn
@@ -535,7 +560,7 @@ EvasionDown2:
 	statdownfailtext
 	endmove
 
-AttackDownHit:
+AttackDownHit:	;PLAY ROUGH
 	checkobedience
 	usedmovetext
 	doturn
@@ -557,7 +582,7 @@ AttackDownHit:
 	statdownmessage
 	endmove
 
-DefenseDownHit:
+DefenseDownHit:		;iron tail, liquidation
 	checkobedience
 	usedmovetext
 	doturn
@@ -575,12 +600,12 @@ DefenseDownHit:
 	supereffectivetext
 	checkfaint
 	buildopponentrage
-	effectchance ; bug: duplicate effectchance shouldn't be here
+;	effectchance ; bug: duplicate effectchance shouldn't be here
 	defensedown
 	statdownmessage
 	endmove
 
-SpeedDownHit:
+SpeedDownHit:	;icy wind, bulldoze
 	checkobedience
 	usedmovetext
 	doturn
@@ -602,7 +627,7 @@ SpeedDownHit:
 	statdownmessage
 	endmove
 
-SpecialAttackDownHit:
+SpecialAttackDownHit:	;moonblast
 	checkobedience
 	usedmovetext
 	doturn
@@ -624,7 +649,7 @@ SpecialAttackDownHit:
 	statdownmessage
 	endmove
 
-SpecialDefenseDownHit:
+SpecialDefenseDownHit:	;acid spray (x2)
 	checkobedience
 	usedmovetext
 	doturn
@@ -646,7 +671,7 @@ SpecialDefenseDownHit:
 	statdownmessage
 	endmove
 
-AccuracyDownHit:
+AccuracyDownHit:	;new: actually raises user acc. for swift, aerial ace, etc
 	checkobedience
 	usedmovetext
 	doturn
@@ -664,11 +689,11 @@ AccuracyDownHit:
 	supereffectivetext
 	checkfaint
 	buildopponentrage
-	accuracydown
-	statdownmessage
+	accuracyup
+	statupmessage
 	endmove
 
-EvasionDownHit:
+EvasionDownHit:		;new: psychic? since the spdef drop is kinda wack
 	checkobedience
 	usedmovetext
 	doturn
@@ -690,7 +715,7 @@ EvasionDownHit:
 	statdownmessage
 	endmove
 
-DefenseUpHit:
+DefenseUpHit:		;steel wing
 	checkobedience
 	usedmovetext
 	doturn
@@ -712,7 +737,7 @@ DefenseUpHit:
 	statupmessage
 	endmove
 
-AttackUpHit:
+AttackUpHit:		;metal claw
 	checkobedience
 	usedmovetext
 	doturn
@@ -731,6 +756,7 @@ AttackUpHit:
 	checkfaint
 	buildopponentrage
 	attackup
+	;accuracyup
 	statupmessage
 	endmove
 
@@ -1101,8 +1127,8 @@ HyperBeam:
 	applydamage
 	criticaltext
 	supereffectivetext
+	checkfaint		;switched this w the below to see if it works like gen 1?
 	rechargenextturn
-	checkfaint
 	buildopponentrage
 	endmove
 
@@ -1761,6 +1787,7 @@ RapidSpin:
 	applydamage
 	criticaltext
 	supereffectivetext
+	speedup			;gen 8
 	clearhazards
 	checkfaint
 	buildopponentrage

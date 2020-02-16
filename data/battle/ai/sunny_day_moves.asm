@@ -2,7 +2,7 @@
 
 SunnyDayMoves:
 	db FIRE_PUNCH
-	db EMBER
+;	db EMBER	;since its just will-o-wisp now
 	db FLAMETHROWER
 	db FIRE_SPIN
 	db FIRE_BLAST

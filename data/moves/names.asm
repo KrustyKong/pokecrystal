@@ -14,7 +14,7 @@ MoveNames::
 	db "RAZOR WIND@"
 	db "SWORDS DANCE@"
 	db "CUT@"
-	db "GUST@"
+	db "SILVER WIND@"			;GUST
 	db "AERIAL ACE@"	;WING ATTACK
 	db "WHIRLWIND@"
 	db "FLY@"
@@ -69,7 +69,7 @@ MoveNames::
 	db "COUNTER@"
 	db "SEISMIC TOSS@"
 	db "STRENGTH@"
-	db "ABSORB@"
+	db "QUIVER DANCE@"			;ABSORB
 	db "MEGA DRAIN@"
 	db "LEECH SEED@"
 	db "GROWTH@"
@@ -157,7 +157,7 @@ MoveNames::
 	db "REST@"
 	db "ROCK SLIDE@"
 	db "HYPER FANG@"
-	db "SHARPEN@"
+	db "HONE CLAWS@"			;SHARPEN
 	db "CONVERSION@"
 	db "TRI ATTACK@"
 	db "SUPER FANG@"
@@ -237,7 +237,7 @@ MoveNames::
 	db "MOONBLAST@"		;MOONLIGHT
 	db "HIDDEN POWER@"	;HIDDEN POWER
 	db "CROSS CHOP@"	;CROSS CHOP
-	db "TWISTER@"		;TWISTER
+	db "DRAGON DANCE@"		;TWISTER
 	db "RAIN DANCE@"
 	db "SUNNY DAY@"
 	db "CRUNCH@"
