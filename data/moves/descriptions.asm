@@ -337,8 +337,8 @@ WhirlwindDescription:
 	next "& ends battle.@"
 
 FlyDescription:
-	db   "1st turn: Fly"
-	next "2nd turn: Attack@"
+	db   "1st: Fly"
+	next "2nd: SPEED up.@"
 
 BindDescription:
 	db   "Binds the target"
@@ -633,7 +633,7 @@ ToxicDescription:
 	next "increasing damage.@"
 
 ConfusionDescription:
-	db   "An attack that may"
+	db   "1/2 chance to"
 	next "cause confusion.@"
 
 PsychicMDescription:
@@ -646,7 +646,7 @@ HypnosisDescription:
 
 MeditateDescription:
 	db   "Raises the user's"
-	next "ATTACK.@"
+	next "SPECIAL.@"
 
 AgilityDescription:
 	db   "Sharply increases"

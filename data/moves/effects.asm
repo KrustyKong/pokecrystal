@@ -1234,6 +1234,8 @@ Fly:
 	supereffectivetext
 	checkfaint
 	buildopponentrage
+	speedup		;works :)
+	statupmessage
 	kingsrock
 	endmove
 

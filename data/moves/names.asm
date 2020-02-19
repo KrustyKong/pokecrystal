@@ -94,7 +94,7 @@ MoveNames::
 	db "MIND POWER@" 		;CONFUSION
 	db "PSYCHIC@"
 	db "HYPNOSIS@"
-	db "MEDITATE@"			;MEDITATE
+	db "CALM MIND@"			;MEDITATE
 	db "AGILITY@"
 	db "QUICK ATTACK@"
 	db "RAGE@"

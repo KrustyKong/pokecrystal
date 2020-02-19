@@ -883,22 +883,38 @@ Battle_EnemyFirst:
 
 .switch_item
 	call SetEnemyTurn
-	call ResidualDamage
-	jp z, HandleEnemyMonFaint
-	call RefreshBattleHuds
+;	call ResidualDamage		;this is what damages them right after using their move
+;	jp z, HandleEnemyMonFaint
+;	call RefreshBattleHuds
 	call PlayerTurn_EndOpponentProtectEndureDestinyBond
 	call CheckMobileBattleError
 	ret c
 	ld a, [wForcedSwitch]
 	and a
 	ret nz
+
+	call HasEnemyFainted		;for their recoil i suppose
+	jp z, HandleEnemyMonFaint
+;	call HasPlayerFainted
+;	jp z, HandlePlayerMonFaint
+;	push bc
+;	call SetEnemyTurn			;
+;	call ResidualDamage			;
+;	jp z, HandleEnemyMonFaint	;
+	call SetPlayerTurn
+;	pop bc
 	call HasEnemyFainted
 	jp z, HandleEnemyMonFaint
-	call HasPlayerFainted
-	jp z, HandlePlayerMonFaint
 	call SetPlayerTurn
 	call ResidualDamage
+;
 	jp z, HandlePlayerMonFaint
+;	push bc
+	call RefreshBattleHuds
+	;pop af	;?
+	call SetEnemyTurn			;
+	call ResidualDamage			;
+	jp z, HandleEnemyMonFaint	;
 	call RefreshBattleHuds
 	xor a ; BATTLEPLAYERACTION_USEMOVE
 	ld [wBattlePlayerAction], a
@@ -917,13 +933,14 @@ Battle_PlayerFirst:
 	ret nz
 	call CheckMobileBattleError
 	ret c
+;	call SetPlayerTurn		;here?	
 	call HasEnemyFainted
 	jp z, HandleEnemyMonFaint
 	call HasPlayerFainted
 	jp z, HandlePlayerMonFaint
-	push bc
-	call SetPlayerTurn
-	call ResidualDamage
+	push bc		;was push
+	call SetPlayerTurn	;move this above?
+	call ResidualDamage	;move this, cuz it has some checks for dying inside it too. this why after you move, you take resid damage.
 	pop bc
 	jp z, HandlePlayerMonFaint
 	push bc
@@ -939,8 +956,12 @@ Battle_PlayerFirst:
 	ld a, [wForcedSwitch]
 	and a
 	ret nz
+;	call SetPlayerTurn		;+
+;	call ResidualDamage		;+
 	call HasPlayerFainted
 	jp z, HandlePlayerMonFaint
+;	call SetEnemyTurn		;
+;	call ResidualDamage		;
 	call HasEnemyFainted
 	jp z, HandleEnemyMonFaint
 
@@ -951,6 +972,8 @@ Battle_PlayerFirst:
 	call RefreshBattleHuds
 	xor a ; BATTLEPLAYERACTION_USEMOVE
 	ld [wBattlePlayerAction], a
+;	call ResidualDamage		;
+;	jp z, HandlePlayerMonFaint	;
 	ret
 
 PlayerTurn_EndOpponentProtectEndureDestinyBond:
@@ -1001,7 +1024,8 @@ ResidualDamage:
 ; Return z if the user fainted before
 ; or as a result of residual damage.
 ; For Sandstorm damage, see HandleWeather.
-
+;
+;gonna try to edit it by removing all enemy parts, so we can run it twice manually at the end of a turn
 	call HasUserFainted
 	ret z
 
@@ -1027,10 +1051,10 @@ ResidualDamage:
 	call Call_PlayBattleAnim_OnlyIfVisible
 	call GetEighthMaxHP
 	ld de, wPlayerToxicCount
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .check_toxic
-	ld de, wEnemyToxicCount
+;	ldh a, [hBattleTurn]
+;	and a
+;	jr z, .check_toxic
+;	ld de, wEnemyToxicCount
 .check_toxic
 
 	ld a, BATTLE_VARS_SUBSTATUS5
@@ -1117,9 +1141,9 @@ ResidualDamage:
 .not_cursed
 	ld hl, wBattleMonHP
 	ldh a, [hBattleTurn]
-	and a
-	jr z, .check_fainted
-	ld hl, wEnemyMonHP
+;	and a
+;	jr z, .check_fainted
+;	ld hl, wEnemyMonHP
 
 .check_fainted
 	ld a, [hli]

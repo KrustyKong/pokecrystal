@@ -432,6 +432,8 @@ CheckEnemyTurn:
 	jr z, .not_frozen
 	cp SACRED_FIRE
 	jr z, .not_frozen
+	cp BUBBLE		;scald
+	jr z, .not_frozen
 
 	ld hl, FrozenSolidText
 	call StdBattleTextbox
@@ -4008,7 +4010,9 @@ BattleCommand_BurnTarget:
 	ld a, [wTypeModifier]
 	and $7f
 	ret z
-;	call CheckMoveTypeMatchesTarget ; Don't burn a Fire-type
+;	call CheckMoveTypeMatchesTarget ; Don't burn a Fire-type. 
+;this turned out to essentially be checkpoisontarget, which they could use,
+;but theyd have to carry the type in an 8 bit reg
 ;specifically check for fire type, cuz this'll make scald not burn waters instea
 ; .typecheck
 	  ld b, FIRE
@@ -4026,7 +4030,7 @@ BattleCommand_BurnTarget:
 	; cp b;FIRE; Using a 16 register (bc,hl) didnt work, but the 8bit ones do??
 	; ret z	
 	call CheckIfTargetIsPoisonType
-;	ret z
+	ret z
 	call GetOpponentItem
 	ld a, b
 	cp HELD_PREVENT_BURN
@@ -5987,9 +5991,12 @@ BattleCommand_Paralyze:
 	call GetBattleVar
 	bit PAR, a
 	jr nz, .paralyzed
-	ld a, [wTypeModifier]
-	and $7f
-	jr z, .didnt_affect
+;	ld a, [wTypeModifier]
+;	and $7f
+;	jr z, .didnt_affect
+	ld b, ELECTRIC
+	call CheckIfTargetIsPoisonType
+	jr z, .didnt_affect	
 	call GetOpponentItem
 	ld a, b
 	cp HELD_PREVENT_PARALYZE

@@ -121,7 +121,7 @@ AI_Setup:
 .statdown
 	ld a, [wPlayerTurnsTaken]
 	and a
-	jr nz, .discourage
+	jr nz, .discourage	
 
 .encourage
 	call AI_50_50
@@ -133,7 +133,7 @@ AI_Setup:
 
 .discourage
 	call Random
-	cp 12 percent
+	cp 36 percent - 1
 	jr c, .checkmove
 	inc [hl]
 	inc [hl]
