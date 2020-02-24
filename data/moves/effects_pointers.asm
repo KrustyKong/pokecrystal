@@ -16,7 +16,7 @@ MoveEffectsPointers:
 	dw SpecialAttackUp
 	dw SpecialDefenseUp
 	dw AccuracyUp
-	dw EvasionUp
+	dw SpecialAttackUpHit	;EvasionUp
 	dw NormalHit
 	dw AttackDown
 	dw DefenseDown

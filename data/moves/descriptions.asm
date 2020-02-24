@@ -557,8 +557,8 @@ LeechSeedDescription:
 	next "foe on every turn.@"
 
 GrowthDescription:
-	db   "Raises the SPCL."
-	next "ATK rating.@"
+	db   "Rouses user. Ups"
+	next "ATK and SP.ATK.@"
 
 RazorLeafDescription:
 	db   "Has a high criti-"
@@ -646,7 +646,7 @@ HypnosisDescription:
 
 MeditateDescription:
 	db   "Raises the user's"
-	next "SPECIAL.@"
+	next "SP.ATK and SP.DEF.@"
 
 AgilityDescription:
 	db   "Sharply increases"
@@ -705,8 +705,8 @@ WithdrawDescription:
 	next "user's DEFENSE.@"
 
 DefenseCurlDescription:
-	db   "Heightens the"
-	next "user's DEFENSE.@"
+	db   "Heightens both"
+	next "DEFENSEs.@"
 
 BarrierDescription:
 	db   "Sharply increases"
@@ -777,12 +777,12 @@ ClampDescription:
 	next "to drop DEFENSE.@"
 
 SwiftDescription:
-	db   "An attack that"
-	next "never misses.@"
+	db   "Raises ACCURACY"
+	next "1/2 of the time.@"
 
 SkullBashDescription:
-	db   "Ups DEFENSE, then"
-	next "attacks.@"
+	db   "1st: Bulk Up"
+	next "2nd: Attacks@"
 
 SpikeCannonDescription:
 	db   "Fires spikes to"
@@ -949,8 +949,8 @@ NightmareDescription:
 	next "1/4 HP every turn.@"
 
 FlameWheelDescription:
-	db   "High crit ratio."
-	next "1/3 burn rate.@"
+	db   "Hi-crit. 1/3 burn"
+	next "and SPEED-up rate.@"
 
 SnoreDescription:
 	db   "An attack useable"
@@ -958,7 +958,7 @@ SnoreDescription:
 
 CurseDescription:
 	db   "1/4 HP each turn./"
-	next "Atk/Def+1, Spe-1.@"
+	next "ATK/DEF-up, SPE-1.@"
 
 FlailDescription:
 	db   "Stronger if the"
@@ -974,7 +974,7 @@ AeroblastDescription:
 
 CottonSporeDescription:
 	db   "Drastically ups"
-	next "user's DEF.@"
+	next "user's DEFENSE.@"
 
 ReversalDescription:
 	db   "Stronger if the"
@@ -1029,8 +1029,8 @@ SpikesDescription:
 	next "they switch out.@"
 
 ZapCannonDescription:
-	db   "An attack that"
-	next "always paralyzes.@"
+	db   "Raises SP.ATK 2/3"
+	next "of the time.@"
 
 ForesightDescription:
 	db   "Negates accuracy"
@@ -1097,8 +1097,8 @@ MilkDrinkDescription:
 	next "the max HP.@"
 
 SparkDescription:
-	db   "May paralyze 1/3"
-	next "of the time.@"
+	db   "An attack that"
+	next "raises SPEED.@"
 
 FuryCutterDescription:
 	db   "Successive hits"
@@ -1253,8 +1253,8 @@ ShadowBallDescription:
 	next "lower SPCL.DEF.@"
 
 FutureSightDescription:
-	db   "An attack that"
-	next "hits on 3rd turn.@"
+	db   "An attack with a"
+	next "1/5 flinch rate.@"
 
 RockSmashDescription:
 	db   "An attack that"

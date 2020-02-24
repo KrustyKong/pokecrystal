@@ -89,9 +89,9 @@ AI_Setup:
 
 	ld a, [wEnemyMoveStruct + MOVE_EFFECT]
 
-	cp EFFECT_ATTACK_UP
+	cp EFFECT_SPEED_UP;EFFECT_ATTACK_UP	;since speed is dd and atkup is bulk up
 	jr c, .checkmove
-	cp EFFECT_EVASION_UP + 1
+;	cp EFFECT_EVASION_UP + 1	;is now spatk hit chance.
 	jr c, .statup
 
 ;	cp EFFECT_ATTACK_DOWN - 1
@@ -133,7 +133,7 @@ AI_Setup:
 
 .discourage
 	call Random
-	cp 36 percent - 1
+	cp 12 percent
 	jr c, .checkmove
 	inc [hl]
 	inc [hl]
@@ -597,7 +597,8 @@ AI_Smart_DreamEater:
 
 AI_Smart_EvasionUp:
 ; Dismiss this move if enemy's evasion can't raise anymore.
-	ld a, [wEnemyEvaLevel]
+	ret		;took it out the game
+	;ld a, [wEnemyEvaLevel]
 	cp $d
 	jp nc, AIDiscourageMove
 

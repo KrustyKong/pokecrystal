@@ -196,16 +196,19 @@ AttackUp:
 	statupfailtext
 	endmove
 
-DefenseUp:
+DefenseUp:		;new: bulk up
 	checkobedience
 	usedmovetext
 	doturn
-	defenseup
+	attackup		;was def
 	lowersub
 	statupanim
 	raisesub
 	statupmessage
 	statupfailtext
+	defenseup		;
+	statupmessage	;
+	statupfailtext	;
 	endmove
 
 SpeedUp:		;dragon dance time
@@ -223,7 +226,7 @@ SpeedUp:		;dragon dance time
 	statupfailtext
 	endmove
 
-SpecialAttackUp:	;growth can be its own thing tbh
+SpecialAttackUp:	;work up | growth can be its own thing tbh
 	checkobedience
 	usedmovetext
 	doturn
@@ -242,10 +245,13 @@ SpecialDefenseUp:	;no move does this on its own, so its unused
 	checkobedience
 	usedmovetext
 	doturn
-	specialdefenseup
+	specialattackup
 	lowersub
 	statupanim
 	raisesub
+	statupmessage
+	statupfailtext
+	specialdefenseup	;calm mind
 	statupmessage
 	statupfailtext
 	endmove
@@ -265,17 +271,26 @@ AccuracyUp:
 	statupfailtext
 	endmove
 
-EvasionUp:
+SpecialAttackUpHit:	;EvasionUp:	;CHARGE beam, fiery dance
 	checkobedience
 	usedmovetext
 	doturn
-	lowersub
-;	evasionup
-	statupanim
-	lowersubnoanim
-	raisesub
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	effectchance
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	specialattackup
 	statupmessage
-	statupfailtext
 	endmove
 
 AttackUp2:		;SD
@@ -352,7 +367,7 @@ AccuracyUp2:		;unused ofc. coil
 	statupfailtext
 	endmove
 
-EvasionUp2:			;hell no
+EvasionUp2:			;hell no. could do the mini mario thing instead (+1spe,-defenses)
 	checkobedience
 	usedmovetext
 	doturn
@@ -532,6 +547,7 @@ AccuracyDown2:		;gen5 smokescreen hack. FLASH, SMOKESCREEN
 	usedmovetext
 	doturn
 	checkhit
+	failuretext
 ;	accuracydown2
 	speeddown
 	lowersub
@@ -1508,9 +1524,9 @@ FlameWheel:
 	defrost
 	checkfaint
 	buildopponentrage
-	speedup
+	speedup			;Putting this in and removing burn chance makes this use the effect chance instead
 	statupmessage
-;	burntarget
+	burntarget
 	endmove
 
 Curse:
@@ -1911,6 +1927,8 @@ SkullBash:
 	endturn
 	defenseup
 	statupmessage
+	attackup		;added in attack up buff
+	statupmessage	;
 	endmove
 
 Twister:
@@ -2103,6 +2121,9 @@ DefenseCurl:
 	lowersub
 	statupanim
 	raisesub
+	statupmessage
+	statupfailtext
+	specialdefenseup
 	statupmessage
 	statupfailtext
 	endmove

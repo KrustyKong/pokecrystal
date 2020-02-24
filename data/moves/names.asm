@@ -38,7 +38,7 @@ MoveNames::
 	db "THRASH@"
 	db "DOUBLE-EDGE@"
 	db "TAIL WHIP@"
-	db "POISON JAB@"	;POISON STING
+	db "SLUDGE WAVE@"	;POISON STING
 	db "TWINEEDLE@"
 	db "PIN MISSILE@"
 	db "LEER@"
@@ -62,7 +62,7 @@ MoveNames::
 	db "BUBBLEBEAM@"
 	db "AURORA BEAM@"
 	db "HYPER BEAM@"
-	db "PECK@"
+	db "AIR SLASH@"			;PECK
 	db "DRILL PECK@"
 	db "PLAY ROUGH@"		;SUBMISSION
 	db "LOW KICK@"
@@ -72,7 +72,7 @@ MoveNames::
 	db "QUIVER DANCE@"			;ABSORB
 	db "MEGA DRAIN@"
 	db "LEECH SEED@"
-	db "GROWTH@"
+	db "WORK UP@"			;GROWTH
 	db "RAZOR LEAF@"
 	db "SOLARBEAM@"
 	db "LEAF BLADE@"		;POISONPOWDER
@@ -86,7 +86,7 @@ MoveNames::
 	db "THUNDERBOLT@"
 	db "THUNDER WAVE@"
 	db "THUNDER@"
-	db "ROCK THROW@"
+	db "ROCK TOMB@"
 	db "EARTHQUAKE@"
 	db "EARTH POWER@"		; FISSURE
 	db "DIG@"
@@ -132,7 +132,7 @@ MoveNames::
 	db "SPIKE CANNON@"
 	db "CONSTRICT@"
 	db "AMNESIA@"
-	db "KINESIS@"
+	db "TELEKINESIS@"		;KINESIS
 	db "SOFTBOILED@"
 	db "HI JUMP KICK@"
 	db "GLARE@"
@@ -147,7 +147,7 @@ MoveNames::
 	db "DIZZY PUNCH@"
 	db "SPORE@"
 	db "FLASH@"
-	db "PSYWAVE@"
+	db "BEDAZZLE@"			;PSYWAVE
 	db "SPLASH@"
 	db "ACID ARMOR@"
 	db "CRABHAMMER@"
@@ -190,8 +190,8 @@ MoveNames::
 	db "MUD-SLAP@"
 	db "OCTAZOOKA@"
 	db "SPIKES@"
-	db "WILD CHARGE@"		;ZAP CANNON
-	db "FORESIGHT@"
+	db "CHARGE BEAM@"		;ZAP CANNON
+	db "FORESIGHT@"			;FORESIGHT
 	db "DESTINY BOND@"
 	db "PERISH SONG@"
 	db "ICY WIND@"
@@ -234,9 +234,9 @@ MoveNames::
 	db "VITAL THROW@"
 	db "MORNING SUN@"
 	db "SYNTHESIS@"
-	db "MOONBLAST@"		;MOONLIGHT
-	db "HIDDEN POWER@"	;HIDDEN POWER
-	db "CROSS CHOP@"	;CROSS CHOP
+	db "MOONBLAST@"			;MOONLIGHT
+	db "HIDDEN POWER@"		;HIDDEN POWER
+	db "CROSS CHOP@"		;CROSS CHOP
 	db "DRAGON DANCE@"		;TWISTER
 	db "RAIN DANCE@"
 	db "SUNNY DAY@"
@@ -246,7 +246,7 @@ MoveNames::
 	db "EXTREMESPEED@"
 	db "ANCIENTPOWER@"
 	db "SHADOW BALL@"
-	db "FUTURE SIGHT@"
-	db "ROCK SMASH@"	;ROCK SMASH
+	db "ZEN HEADBUTT@"		;FUTURE SIGHT
+	db "GROW PUNCH@"	;ROCK SMASH
 	db "WHIRLPOOL@"
 	db "DARK PULSE@"	;BEAT UP

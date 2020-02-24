@@ -1051,10 +1051,11 @@ ResidualDamage:
 	call Call_PlayBattleAnim_OnlyIfVisible
 	call GetEighthMaxHP
 	ld de, wPlayerToxicCount
-;	ldh a, [hBattleTurn]
-;	and a
-;	jr z, .check_toxic
-;	ld de, wEnemyToxicCount
+;toxic seemed to carry over damage amount even to next mon w these four disabled
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .check_toxic		
+	ld de, wEnemyToxicCount
 .check_toxic
 
 	ld a, BATTLE_VARS_SUBSTATUS5
