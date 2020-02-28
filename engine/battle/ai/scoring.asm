@@ -91,7 +91,7 @@ AI_Setup:
 
 	cp EFFECT_SPEED_UP;EFFECT_ATTACK_UP	;since speed is dd and atkup is bulk up
 	jr c, .checkmove
-;	cp EFFECT_EVASION_UP + 1	;is now spatk hit chance.
+;	cp EFFECT_EVASION_UP + 1	;is now spatk hit up (charge beam) chance.
 	jr c, .statup
 
 ;	cp EFFECT_ATTACK_DOWN - 1
@@ -965,7 +965,8 @@ AI_Smart_Toxic:
 AI_Smart_LeechSeed:
 ; Discourage this move if player's HP is below 50%.
 
-	call AICheckPlayerHalfHP
+	;call AICheckPlayerHalfHP
+	call AICheckPlayerQuarterHP
 	ret c
 	inc [hl]
 	ret

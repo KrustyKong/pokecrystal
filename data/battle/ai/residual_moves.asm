@@ -2,7 +2,7 @@
 
 ResidualMoves:
 	db MIST
-	db LEECH_SEED
+;	db LEECH_SEED
 ;	db POISONPOWDER		;leaf blade
 	db STUN_SPORE
 	db THUNDER_WAVE
@@ -11,6 +11,6 @@ ResidualMoves:
 	db POISON_GAS
 	db TRANSFORM
 	db CONVERSION
-	db SUBSTITUTE
+;	db SUBSTITUTE
 	db SPIKES
 	db -1 ; end

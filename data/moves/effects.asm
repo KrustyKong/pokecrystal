@@ -230,13 +230,13 @@ SpecialAttackUp:	;work up | growth can be its own thing tbh
 	checkobedience
 	usedmovetext
 	doturn
-	specialattackup
+	attackup
 	lowersub
 	statupanim
 	raisesub
 	statupmessage
 	statupfailtext
-	specialdefenseup	;calm mind
+	specialattackup	;workup
 	statupmessage
 	statupfailtext
 	endmove
@@ -1526,7 +1526,7 @@ FlameWheel:
 	buildopponentrage
 	speedup			;Putting this in and removing burn chance makes this use the effect chance instead
 	statupmessage
-	burntarget
+	;burntarget		;sacred fire is in here too anyway
 	endmove
 
 Curse:
@@ -2075,7 +2075,9 @@ Thunder:
 	supereffectivetext
 	checkfaint
 	buildopponentrage
-	paralyzetarget
+	;paralyzetarget
+	defenseup		;thunder armor bitches (also hurricane now like uses featherdance :D)
+	statupmessage
 	endmove
 
 Teleport:
@@ -2123,7 +2125,7 @@ DefenseCurl:
 	raisesub
 	statupmessage
 	statupfailtext
-	specialdefenseup
+	specialdefenseup	;now better cosmic power
 	statupmessage
 	statupfailtext
 	endmove

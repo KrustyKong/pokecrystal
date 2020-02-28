@@ -43,7 +43,7 @@ TMHMMoves:
 	db DEFENSE_CURL
 	db THUNDERPUNCH
 	db MEDITATE		;wasDREAM_EATER | calm mind
-	db DETECT
+	db DETECT		;					bulk up
 	db REST
 	db TWISTER		;dragon dance	|	ATTRACT
 	db THIEF

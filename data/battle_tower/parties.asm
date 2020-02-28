@@ -1,9 +1,9 @@
 BattleTowerMons:
 ; 10 groups of 21 mons.
 
-BattleTowerMons1:
+BattleTowerMons1:							;NU
 
-	db JOLTEON	;1-1
+	db RAICHU	;1-1
 	db MIRACLEBERRY
 	db THUNDERBOLT, REFLECT, LEECH_SEED, GROWTH
 	dw 0 ; OT ID
@@ -20,16 +20,16 @@ BattleTowerMons1:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 101 ; Level
 	db 0, 0 ; Status
-	bigdw 333 ; HP
-	bigdw 333 ; Max HP
-	bigdw 228 ; Atk
-	bigdw 318 ; Def
-	bigdw 358 ; Spd
-	bigdw 318 ; SAtk
-	bigdw 288 ; SDef
-	db "SANDA-SU@@@"
+	bigdw 323 ; HP
+	bigdw 323 ; Max HP
+	bigdw 268 ; Atk
+	bigdw 198 ; Def
+	bigdw 318 ; Spd
+	bigdw 288 ; SAtk
+	bigdw 268 ; SDef
+	db "SANDA-SU@@@";jolteon
 
-	db ESPEON	;1-2
+	db PERSIAN	;1-2
 	db LEFTOVERS
 	db BONE_CLUB, PSYCHIC_M, PSYWAVE, MEDITATE
 	dw 0 ; OT ID
@@ -41,21 +41,21 @@ BattleTowerMons1:
 	bigdw 40000
 	bigdw 40000
 	dn 14, 13, 15, 11 ; DVs
-	db 10, 10, 10, 10 ; PP
+	db 16, 16, 16, 32 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 100 ; Level
+	db 101 ; Level
 	db 0, 0 ; Status
 	bigdw 333 ; HP
 	bigdw 333 ; Max HP
-	bigdw 228 ; Atk
+	bigdw 238 ; Atk
 	bigdw 218 ; Def
-	bigdw 318 ; Spd
-	bigdw 358 ; SAtk
-	bigdw 288 ; SDef
-	db "E-HUi@@@@@@"
+	bigdw 328 ; Spd
+	bigdw 228 ; SAtk
+	bigdw 228 ; SDef
+	db "E-HUi@@@@@@";espeon
 
-	db UMBREON	;1-3
+	db ARBOK	;1-3
 	db LEFTOVERS
 	db CRUNCH, IRON_TAIL, CURSE, TOXIC
 	dw 0 ; OT ID
@@ -67,19 +67,19 @@ BattleTowerMons1:
 	bigdw 50000
 	bigdw 40000
 	dn 13, 11, 14, 15 ; DVs
-	db 15, 15, 10, 10 ; PP
+	db 24, 24, 16, 16 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 100 ; Level
+	db 101 ; Level
 	db 0, 0 ; Status
-	bigdw 393 ; HP
-	bigdw 393 ; Max HP
-	bigdw 228 ; Atk
-	bigdw 318 ; Def
-	bigdw 228 ; Spd
-	bigdw 218 ; SAtk
-	bigdw 358 ; SDef
-	db "BURAtuKI-@@"
+	bigdw 323 ; HP
+	bigdw 323 ; Max HP
+	bigdw 288 ; Atk
+	bigdw 236 ; Def
+	bigdw 258 ; Spd
+	bigdw 228 ; SAtk
+	bigdw 256 ; SDef
+	db "BURAtuKI-@@";umbreon
 
 	db WOBBUFFET	;1-4
 	db MIRACLEBERRY
@@ -107,35 +107,35 @@ BattleTowerMons1:
 	bigdw 214 ; SDef
 	db "SO-NANSU@@@"
 
-	db KANGASKHAN		;1-5
-	db MIRACLEBERRY
-	db MEGA_PUNCH, DOUBLE_EDGE, EARTHQUAKE, SWORDS_DANCE
+	db PRIMEAPE	;was 7-14			;1-5
+	db SCOPE_LENS
+	db CROSS_CHOP, ICE_PUNCH, EARTHQUAKE, FOCUS_ENERGY
 	dw 0 ; OT ID
-	dt 1000 ; Exp
+	dt 343000 ; Exp
 	; Stat exp
+	bigdw 50000
 	bigdw 40000
-	bigdw 30000
-	bigdw 40000
-	bigdw 30000
-	bigdw 30000
-	dn 14, 15, 12, 15 ; DVs
-	db 15, 5, 10, 15 ; PP
+	bigdw 50000
+	bigdw 50000
+	bigdw 50000
+	dn 11, 13, 14, 15 ; DVs
+	db 5, 15, 15, 10 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 100 ; Level
+	db 101 ; Level
 	db 0, 0 ; Status
-	bigdw 413 ; HP
-	bigdw 413 ; Max HP
-	bigdw 288 ; Atk
-	bigdw 258 ; Def
-	bigdw 278 ; Spd
-	bigdw 178 ; SAtk
-	bigdw 258 ; SDef
-	db "GARU-RA@@@@"
+	bigdw 333 ; HP
+	bigdw 333 ; Max HP
+	bigdw 308 ; Atk
+	bigdw 218 ; Def
+	bigdw 288 ; Spd
+	bigdw 218 ; SAtk
+	bigdw 238 ; SDef
+	db "GARU-RA@@@@";kangaskhan
 
 	db CORSOLA	;1-6
 	db SCOPE_LENS
-	db SURF, PSYCHIC_M, RECOVER, ANCIENTPOWER
+	db BUBBLE, PSYCHIC_M, RECOVER, ANCIENTPOWER
 	dw 0 ; OT ID
 	dt 1000 ; Exp
 	; Stat exp
@@ -148,15 +148,15 @@ BattleTowerMons1:
 	db 15, 10, 20, 5 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 100 ; Level
+	db 101 ; Level
 	db 0, 0 ; Status
-	bigdw 313 ; HP
-	bigdw 313 ; Max HP
+	bigdw 323 ; HP
+	bigdw 323 ; Max HP
 	bigdw 208 ; Atk
-	bigdw 268 ; Def
-	bigdw 168 ; Spd
+	bigdw 358 ; Def
+	bigdw 158 ; Spd
 	bigdw 228 ; SAtk
-	bigdw 268 ; SDef
+	bigdw 358 ; SDef
 	db "SANI-GO@@@@"
 
 	db MILTANK	;1-7
@@ -291,7 +291,7 @@ BattleTowerMons1:
 
 	db MISDREAVUS	;1-12
 	db SPELL_TAG
-	db EMBER, BONE_CLUB, PSYCHIC, SHADOW_BALL
+	db EMBER, BONE_CLUB, PSYWAVE, SHADOW_BALL
 	dw 0 ; OT ID
 	dt 1000 ; Exp
 	; Stat exp
@@ -327,7 +327,7 @@ BattleTowerMons1:
 	bigdw 33000
 	bigdw 30000
 	dn 15, 13, 15, 14 ; DVs
-	db 16, 16, 24, 8 ; PP
+	db 16, 16, 24, 16 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
@@ -356,7 +356,7 @@ BattleTowerMons1:
 	db 20, 10, 15, 30 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 100 ; Level
+	db 101 ; Level
 	db 0, 0 ; Status
 	bigdw 344 ; HP
 	bigdw 344 ; Max HP
@@ -379,10 +379,10 @@ BattleTowerMons1:
 	bigdw 30000
 	bigdw 30000
 	dn 13, 15, 12, 14 ; DVs
-	db 15, 10, 20, 15 ; PP
+	db 32, 16, 32, 8 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 100 ; Level
+	db 101 ; Level
 	db 0, 0 ; Status
 	bigdw 713 ; HP
 	bigdw 713 ; Max HP
@@ -408,7 +408,7 @@ BattleTowerMons1:
 	db 15, 10, 15, 15 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 100 ; Level
+	db 101 ; Level
 	db 0, 0 ; Status
 	bigdw 523 ; HP
 	bigdw 523 ; Max HP
@@ -446,7 +446,7 @@ BattleTowerMons1:
 	db "NAtuSI-@@@@"
 
 	db PINSIR		;1-18
-	db QUICK_CLAW
+	db SHARP_BEAK
 	db HORN_ATTACK, ROCK_THROW, WING_ATTACK, ROCK_SMASH
 	dw 0 ; OT ID
 	dt 1000 ; Exp
@@ -460,7 +460,7 @@ BattleTowerMons1:
 	db 15, 10, 20, 15 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 100 ; Level
+	db 101 ; Level
 	db 0, 0 ; Status
 	bigdw 333 ; HP
 	bigdw 333 ; Max HP
@@ -474,6 +474,7 @@ BattleTowerMons1:
 	db STANTLER		;1-19
 	db LEFTOVERS
 	db SLEEP_POWDER, LEECH_SEED, AGILITY, BATON_PASS
+	;need to fix ai so it actually uses seeds + powder
 	dw 0 ; OT ID
 	dt 1000 ; Exp
 	; Stat exp
@@ -486,7 +487,7 @@ BattleTowerMons1:
 	db 15, 0, 0, 0 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 100 ; Level
+	db 101 ; Level
 	db 0, 0 ; Status
 	bigdw 349 ; HP
 	bigdw 349 ; Max HP
@@ -512,7 +513,7 @@ BattleTowerMons1:
 	db 15, 15, 30, 15 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 100 ; Level
+	db 101 ; Level
 	db 0, 0 ; Status
 	bigdw 353 ; HP
 	bigdw 353 ; Max HP
@@ -538,7 +539,7 @@ BattleTowerMons1:
 	db 10, 10, 15, 15 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 100 ; Level
+	db 101 ; Level
 	db 0, 0 ; Status
 	bigdw 283 ; HP
 	bigdw 283 ; Max HP
@@ -550,11 +551,11 @@ BattleTowerMons1:
 	db "BARIYA-DO@@"
 
 
-BattleTowerMons2:
+BattleTowerMons2:						;NU2
 
-	db UMBREON
+	db MURKROW	;2-1	
 	db LEFTOVERS
-	db PROTECT, TOXIC, MUD_SLAP, ATTRACT
+	db PROTECT, EMBER, SOFTBOILED, FLY
 	dw 0 ; OT ID
 	dt 8000 ; Exp
 	; Stat exp
@@ -564,49 +565,49 @@ BattleTowerMons2:
 	bigdw 50000
 	bigdw 50000
 	dn 12, 15, 11, 12 ; DVs
-	db 10, 10, 10, 15 ; PP
+	db 16, 16, 16, 24 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 100 ; Level
+	db 102 ; Level
 	db 0, 0 ; Status
-	bigdw 393 ; HP
-	bigdw 393 ; Max HP
-	bigdw 228 ; Atk
-	bigdw 318 ; Def
-	bigdw 228 ; Spd
-	bigdw 218 ; SAtk
-	bigdw 358 ; SDef
-	db "BURAtuKI-@@"
+	bigdw 323 ; HP
+	bigdw 323 ; Max HP
+	bigdw 268 ; Atk
+	bigdw 242 ; Def	;bst42=182
+	bigdw 280 ; Spd
+	bigdw 268 ; SAtk
+	bigdw 242 ; SDef
+	db "BURAtuKI-@@";umbreon
 
-	db STARMIE
-	db GOLD_BERRY
-	db RECOVER, PSYCHIC_M, SURF, PSYCH_UP
+	db GOLDUCK	;was10-18 wasStarmie	;2-2
+	db LEFTOVERS
+	db HYDRO_PUMP, BLIZZARD, MEGA_KICK, SHARPEN
 	dw 0 ; OT ID
-	dt 8000 ; Exp
+	dt 1000000 ; Exp
 	; Stat exp
 	bigdw 50000
 	bigdw 50000
 	bigdw 50000
 	bigdw 50000
 	bigdw 50000
-	dn 13, 11, 13, 11 ; DVs
-	db 20, 10, 15, 10 ; PP
+	dn 15, 11, 14, 7 ; DVs
+	db 24, 10, 8, 16 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 102 ; Level
 	db 0, 0 ; Status
-	bigdw 71 ; HP
-	bigdw 71 ; Max HP
-	bigdw 51 ; Atk
-	bigdw 54 ; Def
-	bigdw 67 ; Spd
-	bigdw 60 ; SAtk
-	bigdw 54 ; SDef
-	db "SUTA-MI-@@@"
+	bigdw 363 ; HP
+	bigdw 363 ; Max HP
+	bigdw 262 ; Atk
+	bigdw 254 ; Def
+	bigdw 268 ; Spd
+	bigdw 288 ; SAtk
+	bigdw 258 ; SDef
+	db "OMUSUTA-@@@"
 
-	db GYARADOS
+	db SEAKING;			;2-3
 	db MIRACLEBERRY
-	db HYPER_BEAM, DRAGON_RAGE, THUNDERBOLT, FIRE_BLAST
+	db HYPER_BEAM, WATERFALL, MIRROR_MOVE, HORN_DRILL
 	dw 0 ; OT ID
 	dt 8000 ; Exp
 	; Stat exp
@@ -616,23 +617,23 @@ BattleTowerMons2:
 	bigdw 50000
 	bigdw 50000
 	dn 15, 10, 15, 13 ; DVs
-	db 5, 10, 15, 5 ; PP
+	db 8, 24, 32, 16 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 102 ; Level
 	db 0, 0 ; Status
-	bigdw 83 ; HP
-	bigdw 83 ; Max HP
-	bigdw 72 ; Atk
-	bigdw 51 ; Def
-	bigdw 54 ; Spd
-	bigdw 45 ; SAtk
-	bigdw 61 ; SDef
+	bigdw 363 ; HP
+	bigdw 363 ; Max HP
+	bigdw 282 ; Atk
+	bigdw 228 ; Def
+	bigdw 235 ; Spd
+	bigdw 228 ; SAtk
+	bigdw 258 ; SDef
 	db "GIyaRADOSU@"
 
-	db STEELIX
-	db GOLD_BERRY
-	db ROAR, IRON_TAIL, SWAGGER, EARTHQUAKE
+	db SUDOWOODO			;2-4
+	db LEFTOVERS
+	db SPIKES, ROCK_SMASH, AGILITY, EARTHQUAKE
 	dw 0 ; OT ID
 	dt 8000 ; Exp
 	; Stat exp
@@ -642,23 +643,23 @@ BattleTowerMons2:
 	bigdw 30000
 	bigdw 50000
 	dn 15, 15, 15, 15 ; DVs
-	db 20, 15, 15, 10 ; PP
+	db 32, 32, 32, 16 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 102 ; Level
 	db 0, 0 ; Status
-	bigdw 77 ; HP
-	bigdw 77 ; Max HP
-	bigdw 55 ; Atk
-	bigdw 102 ; Def
-	bigdw 31 ; Spd
-	bigdw 44 ; SAtk
-	bigdw 48 ; SDef
-	db "HAGANE-RU@@"
+	bigdw 343 ; HP
+	bigdw 343 ; Max HP
+	bigdw 298 ; Atk
+	bigdw 328 ; Def
+	bigdw 158 ; Spd
+	bigdw 158 ; SAtk
+	bigdw 228 ; SDef
+	db "HAGANE-RU@@";steelix
 
-	db ALAKAZAM
+	db KADABRA			;2-5
 	db BERRY_JUICE
-	db PSYCHIC_M, PSYCH_UP, TOXIC, THUNDERPUNCH
+	db PSYCHIC_M, MEDITATE, SHADOW_BALL, ZAP_CANNON
 	dw 0 ; OT ID
 	dt 8000 ; Exp
 	; Stat exp
@@ -668,23 +669,23 @@ BattleTowerMons2:
 	bigdw 50000
 	bigdw 40000
 	dn 15, 13, 14, 15 ; DVs
-	db 10, 10, 10, 15 ; PP
+	db 16, 32, 24, 16 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 20 ; Level
+	db 102 ; Level
 	db 0, 0 ; Status
-	bigdw 68 ; HP
-	bigdw 68 ; Max HP
-	bigdw 42 ; Atk
-	bigdw 36 ; Def
-	bigdw 69 ; Spd
-	bigdw 75 ; SAtk
-	bigdw 55 ; SDef
-	db "HU-DEiN@@@@"
+	bigdw 284 ; HP
+	bigdw 284 ; Max HP
+	bigdw 75 ; Atk
+	bigdw 158 ; Def
+	bigdw 339 ; Spd
+	bigdw 338 ; SAtk
+	bigdw 238 ; SDef
+	db "HU-DEiN@@@@";alakazam
 
-	db ARCANINE	;#2-6
-	db BRIGHTPOWDER
-	db FLAMETHROWER, ROAR, HYPER_BEAM, IRON_TAIL
+	db MAGMAR				;#2-6
+	db SCOPE_LENS
+	db FLAMETHROWER, THUNDERBOLT, HYPER_BEAM, IRON_TAIL
 	dw 0 ; OT ID
 	dt 8000 ; Exp
 	; Stat exp
@@ -694,25 +695,50 @@ BattleTowerMons2:
 	bigdw 55000
 	bigdw 50000
 	dn 13, 11, 15, 11 ; DVs
-	db 15, 20, 5, 15 ; PP
+	db 24, 24, 8, 24 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 102 ; Level
 	db 0, 0 ; Status
-	bigdw 81 ; HP
-	bigdw 81 ; Max HP
-	bigdw 64 ; Atk
-	bigdw 52 ; Def
-	bigdw 60 ; Spd
-	bigdw 60 ; SAtk
-	bigdw 52 ; SDef
-	db "UINDEi@@@@@"
-;2-7
+	bigdw 333 ; HP
+	bigdw 333 ; Max HP
+	bigdw 288 ; Atk
+	bigdw 212 ; Def
+	bigdw 284 ; Spd
+	bigdw 298 ; SAtk
+	bigdw 268 ; SDef
+	db "UINDEi@@@@@";Arcanine
 
-;
+;2-7
+	db LANTURN			;was10-21
+	db QUICK_CLAW
+	db SURF, RAIN_DANCE, THUNDER, ICE_BEAM
+	dw 0 ; OT ID
+	dt 1000000 ; Exp
+	; Stat exp
+	bigdw 30000
+	bigdw 30000
+	bigdw 30000
+	bigdw 30000
+	bigdw 30000
+	dn 7, 6, 5, 7 ; DVs
+	db 24, 8, 24, 16 ; PP
+	db 0 ; Happiness
+	db 0, 0, 0 ; Pokerus, Caught data
+	db 102 ; Level
+	db 0, 0 ; Status
+	bigdw 454 ; HP
+	bigdw 454 ; Max HP
+	bigdw 214 ; Atk
+	bigdw 214 ; Def
+	bigdw 232 ; Spd
+	bigdw 250 ; SAtk
+	bigdw 250 ; SDef
+	db "RANTA-N@@@@"
+
 	db EXEGGUTOR	;2-8
 	db LEFTOVERS
-	db LEECH_SEED, DRAGONBREATH, SLEEP_POWDER, DREAM_EATER
+	db LEECH_SEED, DRAGONBREATH, FLAMETHROWER, PSYCHIC_M
 	dw 0 ; OT ID
 	dt 8000 ; Exp
 	; Stat exp
@@ -722,7 +748,7 @@ BattleTowerMons2:
 	bigdw 45000
 	bigdw 45000
 	dn 15, 13, 14, 11 ; DVs
-	db 5, 10, 10, 15 ; PP
+	db 16, 32, 24, 16 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 102 ; Level
@@ -736,9 +762,9 @@ BattleTowerMons2:
 	bigdw 248 ; SDef
 	db "NAtuSI-@@@@"
 
-	db AERODACTYL
+	db BEEDRILL		;2-9
 	db GOLD_BERRY
-	db REST, HYPER_BEAM, EARTHQUAKE, DRAGON_RAGE
+	db THIEF, HYPER_BEAM, HORN_DRILL, SWORDS_DANCE
 	dw 0 ; OT ID
 	dt 8000 ; Exp
 	; Stat exp
@@ -748,23 +774,23 @@ BattleTowerMons2:
 	bigdw 50000
 	bigdw 45000
 	dn 15, 11, 11, 11 ; DVs
-	db 10, 5, 10, 10 ; PP
+	db 32, 8, 16, 48 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 20 ; Level
+	db 102 ; Level
 	db 0, 0 ; Status
-	bigdw 78 ; HP
-	bigdw 78 ; Max HP
-	bigdw 64 ; Atk
-	bigdw 45 ; Def
-	bigdw 72 ; Spd
-	bigdw 44 ; SAtk
-	bigdw 50 ; SDef
+	bigdw 333 ; HP
+	bigdw 333 ; Max HP
+	bigdw 336 ; Atk
+	bigdw 116 ; Def
+	bigdw 326 ; Spd
+	bigdw 66 ; SAtk
+	bigdw 196 ; SDef
 	db "PUTERA@@@@@"
 
-	db BLISSEY
-	db BRIGHTPOWDER
-	db PSYCHIC_M, SUBMISSION, SOFTBOILED, COUNTER
+	db DELIBIRD		;2-10
+	db LEFTOVERS
+	db SPIKES, SEISMIC_TOSS, SUBSTITUTE, FLY
 	dw 0 ; OT ID
 	dt 8000 ; Exp
 	; Stat exp
@@ -774,23 +800,23 @@ BattleTowerMons2:
 	bigdw 30000
 	bigdw 50000
 	dn 11, 13, 15, 14 ; DVs
-	db 10, 25, 10, 20 ; PP
+	db 32, 8, 16, 24 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 20 ; Level
+	db 102 ; Level
 	db 0, 0 ; Status
-	bigdw 148 ; HP
-	bigdw 148 ; Max HP
-	bigdw 24 ; Atk
-	bigdw 22 ; Def
-	bigdw 41 ; Spd
-	bigdw 51 ; SAtk
-	bigdw 75 ; SDef
-	db "HAPINASU@@@"
+	bigdw 603 ; HP
+	bigdw 603 ; Max HP
+	bigdw 208 ; Atk
+	bigdw 188 ; Def
+	bigdw 248 ; Spd
+	bigdw 228 ; SAtk
+	bigdw 188 ; SDef
+	db "HAPINASU@@@";Blissey
 
-	db LAPRAS
-	db GOLD_BERRY
-	db PSYCHIC_M, THUNDERBOLT, BLIZZARD, CONFUSE_RAY
+	db DEWGONG			;2-11
+	db LEFTOVERS
+	db CLAMP, HORN_DRILL, ICE_BEAM, LEECH_SEED
 	dw 0 ; OT ID
 	dt 8000 ; Exp
 	; Stat exp
@@ -800,22 +826,22 @@ BattleTowerMons2:
 	bigdw 55000
 	bigdw 30000
 	dn 15, 14, 13, 7 ; DVs
-	db 10, 15, 5, 10 ; PP
+	db 16, 16, 16, 16 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 20 ; Level
+	db 102 ; Level
 	db 0, 0 ; Status
-	bigdw 98 ; HP
-	bigdw 98 ; Max HP
-	bigdw 53 ; Atk
-	bigdw 52 ; Def
-	bigdw 45 ; Spd
-	bigdw 50 ; SAtk
-	bigdw 54 ; SDef
-	db "RAPURASU@@@"
+	bigdw 383 ; HP
+	bigdw 383 ; Max HP
+	bigdw 238 ; Atk
+	bigdw 258 ; Def
+	bigdw 238 ; Spd
+	bigdw 238 ; SAtk
+	bigdw 288 ; SDef
+	db "RAPURASU@@@";Lapras
 
-	db PIKACHU
-	db LIGHT_BALL
+	db PICHU			;2-12
+	db LEFTOVERS
 	db THUNDERBOLT, THUNDER_WAVE, STRENGTH, TOXIC
 	dw 0 ; OT ID
 	dt 8000 ; Exp
@@ -826,23 +852,23 @@ BattleTowerMons2:
 	bigdw 50000
 	bigdw 50000
 	dn 15, 12, 15, 14 ; DVs
-	db 15, 20, 15, 10 ; PP
+	db 24, 32, 24, 16 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 20 ; Level
+	db 102 ; Level
 	db 0, 0 ; Status
-	bigdw 58 ; HP
-	bigdw 58 ; Max HP
-	bigdw 44 ; Atk
-	bigdw 32 ; Def
-	bigdw 58 ; Spd
-	bigdw 41 ; SAtk
-	bigdw 37 ; SDef
-	db "PIKATIyuU@@"
+	bigdw 323 ; HP
+	bigdw 323 ; Max HP
+	bigdw 278 ; Atk
+	bigdw 208 ; Def
+	bigdw 298 ; Spd
+	bigdw 278 ; SAtk
+	bigdw 258 ; SDef
+	db "PIKATIyuU@@";pikachu
 
-	db SCIZOR
-	db FOCUS_BAND
-	db STEEL_WING, SLASH, TOXIC, SANDSTORM
+	db FORRETRESS		;6-13
+	db LEFTOVERS
+	db SPIKES, LEECH_SEED, TOXIC, SANDSTORM
 	dw 0 ; OT ID
 	dt 8000 ; Exp
 	; Stat exp
@@ -852,22 +878,22 @@ BattleTowerMons2:
 	bigdw 45000
 	bigdw 50000
 	dn 15, 13, 15, 14 ; DVs
-	db 25, 20, 10, 10 ; PP
+	db 32, 16, 16, 16 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 20 ; Level
+	db 102 ; Level
 	db 0, 0 ; Status
-	bigdw 73 ; HP
-	bigdw 73 ; Max HP
-	bigdw 73 ; Atk
-	bigdw 60 ; Def
-	bigdw 47 ; Spd
-	bigdw 43 ; SAtk
-	bigdw 53 ; SDef
-	db "HAtuSAMU@@@"
+	bigdw 353 ; HP
+	bigdw 353 ; Max HP
+	bigdw 278 ; Atk
+	bigdw 378 ; Def
+	bigdw 178 ; Spd
+	bigdw 218 ; SAtk
+	bigdw 218 ; SDef
+	db "HAtuSAMU@@@";Scizor
 
-	db HITMONCHAN
-	db GOLD_BERRY
+	db HITMONCHAN		;6-14
+	db SCOPE_LENS
 	db THUNDERPUNCH, ICE_PUNCH, FIRE_PUNCH, MEGA_PUNCH
 	dw 0 ; OT ID
 	dt 8000 ; Exp
@@ -878,22 +904,22 @@ BattleTowerMons2:
 	bigdw 50000
 	bigdw 30000
 	dn 15, 11, 15, 13 ; DVs
-	db 15, 15, 15, 20 ; PP
+	db 24, 24, 24, 32 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 20 ; Level
 	db 0, 0 ; Status
-	bigdw 67 ; HP
-	bigdw 67 ; Max HP
-	bigdw 63 ; Atk
-	bigdw 50 ; Def
-	bigdw 52 ; Spd
-	bigdw 32 ; SAtk
-	bigdw 62 ; SDef
+	bigdw 303 ; HP
+	bigdw 303 ; Max HP
+	bigdw 308 ; Atk
+	bigdw 256 ; Def
+	bigdw 250 ; Spd
+	bigdw 168 ; SAtk
+	bigdw 318 ; SDef
 	db "EBIWARA-@@@"
 
-	db TAUROS
-	db BRIGHTPOWDER
+	db DUNSPARCE		;6-15
+	db LEFTOVERS
 	db THUNDERBOLT, EARTHQUAKE, HYPER_BEAM, BLIZZARD
 	dw 0 ; OT ID
 	dt 8000 ; Exp
@@ -904,23 +930,23 @@ BattleTowerMons2:
 	bigdw 30000
 	bigdw 30000
 	dn 15, 11, 14, 15 ; DVs
-	db 15, 10, 5, 5 ; PP
+	db 24, 16, 8, 8 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 20 ; Level
 	db 0, 0 ; Status
-	bigdw 76 ; HP
-	bigdw 76 ; Max HP
-	bigdw 61 ; Atk
-	bigdw 58 ; Def
-	bigdw 63 ; Spd
-	bigdw 35 ; SAtk
-	bigdw 47 ; SDef
-	db "KENTAROSU@@"
+	bigdw 403 ; HP
+	bigdw 403 ; Max HP
+	bigdw 238 ; Atk
+	bigdw 238 ; Def
+	bigdw 188 ; Spd
+	bigdw 228 ; SAtk
+	bigdw 228 ; SDef
+	db "KENTAROSU@@";tauros
 
-	db AZUMARILL
+	db MANTINE			;6-16
 	db MYSTIC_WATER
-	db SURF, BLIZZARD, ATTRACT, RAIN_DANCE
+	db BUBBLE, ICE_BEAM, PECK, RAIN_DANCE
 	dw 0 ; OT ID
 	dt 8000 ; Exp
 	; Stat exp
@@ -930,23 +956,23 @@ BattleTowerMons2:
 	bigdw 40000
 	bigdw 40000
 	dn 14, 13, 15, 7 ; DVs
-	db 15, 5, 15, 5 ; PP
+	db 24, 16, 32, 8 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 20 ; Level
+	db 102 ; Level
 	db 0, 0 ; Status
-	bigdw 82 ; HP
-	bigdw 82 ; Max HP
-	bigdw 40 ; Atk
-	bigdw 52 ; Def
-	bigdw 41 ; Spd
-	bigdw 37 ; SAtk
-	bigdw 49 ; SDef
-	db "MARIRURI@@@"
+	bigdw 333 ; HP
+	bigdw 333 ; Max HP
+	bigdw 178 ; Atk
+	bigdw 238 ; Def
+	bigdw 238 ; Spd
+	bigdw 258 ; SAtk
+	bigdw 378 ; SDef
+	db "MARIRURI@@@";azumarill
 
-	db MILTANK
-	db KINGS_ROCK
-	db EARTHQUAKE, THUNDER, ATTRACT, SURF
+	db LICKITUNG		;6-17
+	db LEFTOVERS
+	db EARTHQUAKE, VINE_WHIP, GROWTH, SURF
 	dw 0 ; OT ID
 	dt 8000 ; Exp
 	; Stat exp
@@ -956,23 +982,23 @@ BattleTowerMons2:
 	bigdw 40000
 	bigdw 40000
 	dn 13, 15, 15, 14 ; DVs
-	db 10, 10, 15, 15 ; PP
+	db 16, 16, 48, 24 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 20 ; Level
+	db 102 ; Level
 	db 0, 0 ; Status
-	bigdw 83 ; HP
-	bigdw 83 ; Max HP
-	bigdw 52 ; Atk
-	bigdw 63 ; Def
-	bigdw 61 ; Spd
-	bigdw 36 ; SAtk
-	bigdw 48 ; SDef
-	db "MIRUTANKU@@"
+	bigdw 383 ; HP
+	bigdw 383 ; Max HP
+	bigdw 208 ; Atk
+	bigdw 248 ; Def
+	bigdw 158 ; Spd
+	bigdw 218 ; SAtk
+	bigdw 248 ; SDef
+	db "MIRUTANKU@@";miltank
 
-	db WIGGLYTUFF
+	db WIGGLYTUFF		;6-18
 	db GOLD_BERRY
-	db HYPER_BEAM, BLIZZARD, FIRE_BLAST, ATTRACT
+	db HYPER_BEAM, BLIZZARD, FIRE_BLAST, LEECH_SEED
 	dw 0 ; OT ID
 	dt 8000 ; Exp
 	; Stat exp
@@ -982,23 +1008,23 @@ BattleTowerMons2:
 	bigdw 40000
 	bigdw 40000
 	dn 12, 7, 15, 14 ; DVs
-	db 5, 5, 5, 15 ; PP
+	db 8, 8, 8, 16 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 20 ; Level
+	db 102 ; Level
 	db 0, 0 ; Status
-	bigdw 98 ; HP
-	bigdw 98 ; Max HP
-	bigdw 47 ; Atk
-	bigdw 35 ; Def
-	bigdw 39 ; Spd
-	bigdw 50 ; SAtk
-	bigdw 40 ; SDef
+	bigdw 483 ; HP
+	bigdw 483 ; Max HP
+	bigdw 238 ; Atk
+	bigdw 188 ; Def
+	bigdw 188 ; Spd
+	bigdw 268 ; SAtk
+	bigdw 198 ; SDef
 	db "PUKURIN@@@@"
 
-	db WIGGLYTUFF
+	db AIPOM		;6-19
 	db PINK_BOW
-	db PSYCHIC_M, SWAGGER, PSYCH_UP, HEADBUTT
+	db MEGA_KICK, SHARPEN, IRON_TAIL, FIRE_PUNCH
 	dw 0 ; OT ID
 	dt 8000 ; Exp
 	; Stat exp
@@ -1008,23 +1034,23 @@ BattleTowerMons2:
 	bigdw 30000
 	bigdw 30000
 	dn 12, 7, 7, 7 ; DVs
-	db 10, 15, 10, 15 ; PP
+	db 8, 24, 24, 24 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 20 ; Level
+	db 102 ; Level
 	db 0, 0 ; Status
-	bigdw 97 ; HP
-	bigdw 97 ; Max HP
-	bigdw 46 ; Atk
-	bigdw 34 ; Def
-	bigdw 34 ; Spd
-	bigdw 46 ; SAtk
-	bigdw 36 ; SDef
-	db "PUKURIN@@@@"
+	bigdw 313 ; HP
+	bigdw 313 ; Max HP
+	bigdw 238 ; Atk
+	bigdw 208 ; Def
+	bigdw 268 ; Spd
+	bigdw 178 ; SAtk
+	bigdw 208 ; SDef
+	db "PUKURIN@@@@";wigglytuff
 
-	db NIDOKING
-	db BERRY
-	db BLIZZARD, EARTHQUAKE, SURF, THUNDERPUNCH
+	db FURRET		;6-20
+	db GOLD_BERRY
+	db QUICK_ATTACK, BODY_SLAM, BELLY_DRUM, THUNDERPUNCH
 	dw 0 ; OT ID
 	dt 8000 ; Exp
 	; Stat exp
@@ -1034,23 +1060,23 @@ BattleTowerMons2:
 	bigdw 30000
 	bigdw 30000
 	dn 5, 6, 4, 6 ; DVs
-	db 5, 10, 15, 15 ; PP
+	db 48, 24, 16, 24 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 20 ; Level
 	db 0, 0 ; Status
-	bigdw 74 ; HP
-	bigdw 74 ; Max HP
-	bigdw 52 ; Atk
-	bigdw 46 ; Def
-	bigdw 49 ; Spd
-	bigdw 50 ; SAtk
-	bigdw 46 ; SDef
-	db "NIDOKINGU@@"
+	bigdw 373 ; HP
+	bigdw 373 ; Max HP
+	bigdw 250 ; Atk
+	bigdw 226 ; Def
+	bigdw 278 ; Spd
+	bigdw 188 ; SAtk
+	bigdw 208 ; SDef
+	db "NIDOKINGU@@";nidoking
 
-	db QUAGSIRE
+	db LEDIAN			;6-21
 	db QUICK_CLAW
-	db AMNESIA, EARTHQUAKE, SURF, RAIN_DANCE
+	db DYNAMICPUNCH, SWORDS_DANCE, ABSORB, BATON_PASS
 	dw 0 ; OT ID
 	dt 8000 ; Exp
 	; Stat exp
@@ -1060,26 +1086,26 @@ BattleTowerMons2:
 	bigdw 30000
 	bigdw 30000
 	dn 5, 5, 4, 7 ; DVs
-	db 20, 10, 15, 5 ; PP
+	db 20, 10, 32, 5 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 20 ; Level
 	db 0, 0 ; Status
-	bigdw 81 ; HP
-	bigdw 81 ; Max HP
-	bigdw 49 ; Atk
-	bigdw 49 ; Def
-	bigdw 29 ; Spd
-	bigdw 42 ; SAtk
-	bigdw 42 ; SDef
-	db "NUO-@@@@@@@"
+	bigdw 313 ; HP
+	bigdw 313 ; Max HP
+	bigdw 168 ; Atk
+	bigdw 198 ; Def
+	bigdw 268 ; Spd
+	bigdw 208 ; SAtk
+	bigdw 318 ; SDef
+	db "NUO-@@@@@@@";quagsire
 
 
-BattleTowerMons3:
+BattleTowerMons3:				;NUBL
 
-	db JOLTEON
-	db MIRACLEBERRY
-	db THUNDERBOLT, THUNDER_WAVE, ROAR, MUD_SLAP
+	db MAGNETON		;3-1
+	db LEFTOVERS
+	db THUNDERBOLT, TRI_ATTACK, SUBSTITUTE, FLASH
 	dw 0 ; OT ID
 	dt 27000 ; Exp
 	; Stat exp
@@ -1089,23 +1115,23 @@ BattleTowerMons3:
 	bigdw 50000
 	bigdw 55000
 	dn 13, 11, 14, 13 ; DVs
-	db 15, 20, 20, 10 ; PP
+	db 24, 16, 16, 32 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 30 ; Level
+	db 103 ; Level
 	db 0, 0 ; Status
-	bigdw 103 ; HP
-	bigdw 103 ; Max HP
-	bigdw 68 ; Atk
-	bigdw 64 ; Def
-	bigdw 107 ; Spd
-	bigdw 96 ; SAtk
-	bigdw 87 ; SDef
-	db "SANDA-SU@@@"
+	bigdw 303 ; HP
+	bigdw 303 ; Max HP
+	bigdw 218 ; Atk
+	bigdw 288 ; Def
+	bigdw 358 ; Spd
+	bigdw 338 ; SAtk
+	bigdw 238 ; SDef
+	db "SANDA-SU@@@";wasJolteon
 
-	db POLIWRATH
-	db BRIGHTPOWDER
-	db DOUBLE_TEAM, WATERFALL, FISSURE, MEGA_PUNCH
+	db POLIWRATH			;3-2
+	db BLACK_BELT
+	db RAIN_DANCE, WATERFALL, EARTHQUAKE, MEGA_PUNCH
 	dw 0 ; OT ID
 	dt 27000 ; Exp
 	; Stat exp
@@ -1115,23 +1141,23 @@ BattleTowerMons3:
 	bigdw 55000
 	bigdw 50000
 	dn 13, 13, 15, 11 ; DVs
-	db 15, 15, 5, 25 ; PP
+	db 15, 24, 16, 25 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 100 ; Level
+	db 103 ; Level
 	db 0, 0 ; Status
-	bigdw 119 ; HP
-	bigdw 119 ; Max HP
-	bigdw 81 ; Atk
-	bigdw 87 ; Def
-	bigdw 73 ; Spd
-	bigdw 70 ; SAtk
-	bigdw 82 ; SDef
+	bigdw 383 ; HP
+	bigdw 383 ; Max HP
+	bigdw 288 ; Atk
+	bigdw 288 ; Def
+	bigdw 238 ; Spd
+	bigdw 238 ; SAtk
+	bigdw 278 ; SDef
 	db "NIyoROBON@@"
 
-	db STARMIE
-	db LEFTOVERS
-	db THUNDER_WAVE, PSYCHIC_M, RECOVER, SURF
+	db FERALIGATR			;3-3
+	db MYSTICWATER
+	db MIRROR_MOVE, EARTHQUAKE, ICE_PUNCH, WATERFALL
 	dw 0 ; OT ID
 	dt 27000 ; Exp
 	; Stat exp
@@ -1144,20 +1170,22 @@ BattleTowerMons3:
 	db 20, 10, 20, 15 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 30 ; Level
+	db 103 ; Level
 	db 0, 0 ; Status
-	bigdw 101 ; HP
-	bigdw 101 ; Max HP
-	bigdw 75 ; Atk
-	bigdw 81 ; Def
-	bigdw 99 ; Spd
-	bigdw 90 ; SAtk
-	bigdw 81 ; SDef
-	db "SUTA-MI-@@@"
+	bigdw 373 ; HP
+	bigdw 373 ; Max HP
+	bigdw 308 ; Atk
+	bigdw 298 ; Def
+	bigdw 254 ; Spd
+	bigdw 256 ; SAtk
+	bigdw 264 ; SDef
+	db "SUTA-MI-@@@"	;wasStarmie
 
-	db JYNX
-	db GOLD_BERRY
-	db BLIZZARD, LOVELY_KISS, DREAM_EATER, ATTRACT
+	db JYNX				;3-4
+	db LEFTOVERS
+	db MEAN_LOOK, PERISH_SONG, PROTECT, ICE_BEAM
+	;jynx is ou, but we put misdreavus in the tier so this can be the perish--
+	;trapper instead.
 	dw 0 ; OT ID
 	dt 27000 ; Exp
 	; Stat exp
@@ -1167,23 +1195,23 @@ BattleTowerMons3:
 	bigdw 30000
 	bigdw 50000
 	dn 15, 11, 14, 14 ; DVs
-	db 5, 10, 15, 15 ; PP
+	db 8, 8, 16, 16 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 30 ; Level
+	db 103 ; Level
 	db 0, 0 ; Status
-	bigdw 102 ; HP
-	bigdw 102 ; Max HP
-	bigdw 60 ; Atk
-	bigdw 49 ; Def
-	bigdw 83 ; Spd
-	bigdw 98 ; SAtk
-	bigdw 86 ; SDef
+	bigdw 333 ; HP
+	bigdw 333 ; Max HP
+	bigdw 198 ; Atk
+	bigdw 168 ; Def
+	bigdw 288 ; Spd
+	bigdw 328 ; SAtk
+	bigdw 288 ; SDef
 	db "RU-ZIyuRA@@"
 
-	db DUGTRIO
-	db KINGS_ROCK
-	db EARTHQUAKE, SLUDGE_BOMB, SLASH, MUD_SLAP
+	db DUGTRIO					;3-5
+	db SCOPE_LENS
+	db EARTHQUAKE, SLUDGE_BOMB, SLASH, FOCUS_ENERGY
 	dw 0 ; OT ID
 	dt 27000 ; Exp
 	; Stat exp
@@ -1193,10 +1221,10 @@ BattleTowerMons3:
 	bigdw 50000
 	bigdw 50000
 	dn 14, 15, 15, 15 ; DVs
-	db 10, 10, 20, 10 ; PP
+	db 16, 16, 20, 10 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 100 ; Level
+	db 103 ; Level
 	db 0, 0 ; Status
 	bigdw 81 ; HP
 	bigdw 81 ; Max HP
@@ -1207,9 +1235,9 @@ BattleTowerMons3:
 	bigdw 72 ; SDef
 	db "DAGUTORIO@@"
 
-	db BELLOSSOM
-	db MIRACLE_SEED
-	db GIGA_DRAIN, SUNNY_DAY, SOLARBEAM, AGILITY
+	db BELLOSSOM					;3-6
+	db LEFTOVERS
+	db GIGA_DRAIN, SUNNY_DAY, FLAMETHROWER, ABSORB
 	dw 0 ; OT ID
 	dt 27000 ; Exp
 	; Stat exp
@@ -1219,23 +1247,23 @@ BattleTowerMons3:
 	bigdw 55000
 	bigdw 50000
 	dn 13, 15, 13, 11 ; DVs
-	db 5, 5, 10, 15 ; PP
+	db 16, 16, 15, 32 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 100 ; Level
+	db 103 ; Level
 	db 0, 0 ; Status
-	bigdw 109 ; HP
-	bigdw 109 ; Max HP
-	bigdw 76 ; Atk
-	bigdw 81 ; Def
-	bigdw 60 ; Spd
-	bigdw 82 ; SAtk
-	bigdw 88 ; SDef
+	bigdw 353 ; HP
+	bigdw 353 ; Max HP
+	bigdw 258 ; Atk
+	bigdw 268 ; Def
+	bigdw 198 ; Spd
+	bigdw 278 ; SAtk
+	bigdw 298 ; SDef
 	db "KIREIHANA@@"
 
-	db BLISSEY
+	db VILEPLUME				;3-7
 	db LEFTOVERS
-	db TOXIC, REFLECT, SOFTBOILED, PROTECT
+	db TOXIC, REFLECT, SYNTHESIS, PROTECT
 	dw 0 ; OT ID
 	dt 27000 ; Exp
 	; Stat exp
@@ -1248,18 +1276,18 @@ BattleTowerMons3:
 	db 10, 20, 10, 10 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 30 ; Level
+	db 103 ; Level
 	db 0, 0 ; Status
-	bigdw 217 ; HP
-	bigdw 217 ; Max HP
-	bigdw 32 ; Atk
-	bigdw 33 ; Def
-	bigdw 59 ; Spd
-	bigdw 73 ; SAtk
-	bigdw 109 ; SDef
-	db "HAPINASU@@@"
+	bigdw 353 ; HP
+	bigdw 353 ; Max HP
+	bigdw 268 ; Atk
+	bigdw 268 ; Def
+	bigdw 198 ; Spd
+	bigdw 298 ; SAtk
+	bigdw 278 ; SDef
+	db "HAPINASU@@@";wasBlissey
 
-	db HOUNDOOM
+	db HOUNDOOM					;3-8
 	db CHARCOAL
 	db FLAMETHROWER, CRUNCH, SHADOW_BALL, DREAM_EATER
 	dw 0 ; OT ID
@@ -1285,7 +1313,7 @@ BattleTowerMons3:
 	bigdw 76 ; SDef
 	db "HERUGA-@@@@"
 
-	db MACHAMP
+	db MACHAMP				;3-9
 	db MIRACLEBERRY
 	db CROSS_CHOP, ICE_PUNCH, EARTHQUAKE, FIRE_BLAST
 	dw 0 ; OT ID
@@ -1311,7 +1339,7 @@ BattleTowerMons3:
 	bigdw 80 ; SDef
 	db "KAIRIKI-@@@"
 
-	db CROBAT
+	db CROBAT				;3-10
 	db GOLD_BERRY
 	db ATTRACT, CONFUSE_RAY, TOXIC, WING_ATTACK
 	dw 0 ; OT ID
@@ -1337,7 +1365,7 @@ BattleTowerMons3:
 	bigdw 76 ; SDef
 	db "KUROBAtuTO@"
 
-	db PORYGON2
+	db PORYGON2			;3-11
 	db BRIGHTPOWDER
 	db PSYCHIC_M, RECOVER, HYPER_BEAM, TRI_ATTACK
 	dw 0 ; OT ID
@@ -1363,7 +1391,7 @@ BattleTowerMons3:
 	bigdw 81 ; SDef
 	db "PORIGON2@@@"
 
-	db MAROWAK
+	db MAROWAK				;3-12
 	db THICK_CLUB
 	db EARTHQUAKE, RETURN, HYPER_BEAM, BONEMERANG
 	dw 0 ; OT ID
@@ -1389,7 +1417,7 @@ BattleTowerMons3:
 	bigdw 72 ; SDef
 	db "GARAGARA@@@"
 
-	db ELECTRODE
+	db ELECTRODE							;3-13
 	db BRIGHTPOWDER
 	db LIGHT_SCREEN, THUNDERBOLT, PROTECT, THUNDER
 	dw 0 ; OT ID
@@ -1415,9 +1443,9 @@ BattleTowerMons3:
 	bigdw 258 ; SDef
 	db "MARUMAIN@@@"
 
-	db LAPRAS
-	db LEFTOVERS
-	db RAIN_DANCE, WATER_GUN, ICY_WIND, STRENGTH
+	db QWILFISH								;3-14
+	db QUICK_CLAW
+	db OCTAZOOKA, FLY, SWORDS_DANCE, STRENGTH
 	dw 0 ; OT ID
 	dt 27000 ; Exp
 	; Stat exp
@@ -1427,7 +1455,7 @@ BattleTowerMons3:
 	bigdw 50000
 	bigdw 30000
 	dn 15, 13, 14, 11 ; DVs
-	db 5, 25, 15, 15 ; PP
+	db 8, 25, 15, 15 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 30 ; Level
@@ -1441,9 +1469,9 @@ BattleTowerMons3:
 	bigdw 81 ; SDef
 	db "RAPURASU@@@"
 
-	db LANTURN
-	db GOLD_BERRY
-	db RAIN_DANCE, THUNDER, SURF, FLAIL
+	db LANTURN								;3-15
+	db LEFTOVERS
+	db SURF, THUNDERBOLT, THUNDER_WAVE, SUBSTITUTE
 	dw 0 ; OT ID
 	dt 27000 ; Exp
 	; Stat exp
@@ -1456,20 +1484,20 @@ BattleTowerMons3:
 	db 5, 10, 15, 15 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 30 ; Level
+	db 103 ; Level
 	db 0, 0 ; Status
-	bigdw 139 ; HP
-	bigdw 139 ; Max HP
-	bigdw 62 ; Atk
-	bigdw 64 ; Def
-	bigdw 66 ; Spd
-	bigdw 70 ; SAtk
-	bigdw 70 ; SDef
+	bigdw 454 ; HP
+	bigdw 454 ; Max HP
+	bigdw 214 ; Atk
+	bigdw 214 ; Def
+	bigdw 232 ; Spd
+	bigdw 250 ; SAtk
+	bigdw 250 ; SDef
 	db "RANTA-N@@@@"
 
-	db ESPEON
+	db ESPEON								;3-16
 	db MIRACLEBERRY
-	db CONFUSION, SWIFT, TOXIC, PSYCH_UP
+	db PSYCHIC_M, SHADOW_BALL, PSYWAVE, ZAP_CANNON
 	dw 0 ; OT ID
 	dt 27000 ; Exp
 	; Stat exp
@@ -1484,18 +1512,18 @@ BattleTowerMons3:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 30 ; Level
 	db 0, 0 ; Status
-	bigdw 99 ; HP
-	bigdw 99 ; Max HP
-	bigdw 68 ; Atk
-	bigdw 66 ; Def
-	bigdw 96 ; Spd
-	bigdw 103 ; SAtk
-	bigdw 82 ; SDef
-	db "E-HUi@@@@@@"
+	bigdw 333 ; HP
+	bigdw 333 ; Max HP
+	bigdw 228 ; Atk
+	bigdw 218 ; Def
+	bigdw 318 ; Spd
+	bigdw 358 ; SAtk
+	bigdw 288 ; SDef
+	db "E-HUi@@@@@@";espeon
 
-	db TENTACRUEL
-	db KINGS_ROCK
-	db WRAP, TOXIC, SLUDGE_BOMB, BUBBLEBEAM
+	db TENTACRUEL								;3-17
+	db LEFTOVERS
+	db WRAP, TOXIC, LEECH_SEED, HAZE
 	dw 0 ; OT ID
 	dt 27000 ; Exp
 	; Stat exp
@@ -1510,18 +1538,18 @@ BattleTowerMons3:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 30 ; Level
 	db 0, 0 ; Status
-	bigdw 110 ; HP
-	bigdw 110 ; Max HP
-	bigdw 71 ; Atk
-	bigdw 68 ; Def
-	bigdw 90 ; Spd
-	bigdw 77 ; SAtk
-	bigdw 101 ; SDef
+	bigdw 363 ; HP
+	bigdw 363 ; Max HP
+	bigdw 238 ; Atk
+	bigdw 228 ; Def
+	bigdw 298 ; Spd
+	bigdw 258 ; SAtk
+	bigdw 338 ; SDef
 	db "DOKUKURAGE@"
 
-	db MISDREAVUS;wasGENGAR
+	db MISDREAVUS								;3-18
 	db FOCUS_BAND
-	db PERISH_SONG, MEAN_LOOK, PAIN_SPLIT, SHADOW_BALL
+	db SHADOW_BALL, POWER_GEM, THUNDERBOLT, MEDITATE
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
@@ -1531,21 +1559,21 @@ BattleTowerMons3:
 	bigdw 50000
 	bigdw 55000
 	dn 11, 13, 14, 15 ; DVs
-	db 5, 5, 20, 15 ; PP
+	db 24, 16, 24, 32 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 100 ; Level
+	db 103 ; Level
 	db 0, 0 ; Status
-	bigdw 309 ; HP
-	bigdw 309 ; Max HP
-	bigdw 202 ; Atk
-	bigdw 209 ; Def
-	bigdw 258 ; Spd
-	bigdw 263 ; SAtk
-	bigdw 263 ; SDef
+	bigdw 323 ; HP
+	bigdw 323 ; Max HP
+	bigdw 308 ; Atk
+	bigdw 218 ; Def
+	bigdw 308 ; Spd		;Mismagius stats
+	bigdw 308 ; SAtk
+	bigdw 308 ; SDef
 	db "MUUMA@@@@@@"
 
-	db KINGLER;wasURSARING
+	db KINGLER								;3-19
 	db GOLD_BERRY
 	db ROCK_SLIDE, RAIN_DANCE, WHIRLPOOL, THIEF
 	dw 0 ; OT ID
@@ -1569,11 +1597,11 @@ BattleTowerMons3:
 	bigdw 248 ; Spd
 	bigdw 198 ; SAtk
 	bigdw 198 ; SDef
-	db "RINGUMA@@@@"
+	db "RINGUMA@@@@";ursaring
 
-	db FEAROW
+	db FEAROW								;3-20
 	db LEFTOVERS
-	db ZAP_CANNON, HORN_DRILL, SKY_ATTACK, SOFTBOILED
+	db POWDER_SNOW, HORN_DRILL, SKY_ATTACK, GROWTH
 	dw 0 ; OT ID
 	dt 27000 ; Exp
 	; Stat exp
@@ -1597,7 +1625,7 @@ BattleTowerMons3:
 	bigdw 220 ; SDef
 	db "ONIDORIRU@@"
 
-	db PRIMEAPE
+	db PRIMEAPE								;3-21
 	db SCOPE_LENS
 	db FURY_SWIPES, KARATE_CHOP, DYNAMICPUNCH, FOCUS_ENERGY
 	dw 0 ; OT ID
@@ -1624,9 +1652,9 @@ BattleTowerMons3:
 	db "OKORIZARU@@"
 
 
-BattleTowerMons4:
+BattleTowerMons4:	;UUBL
 
-	db TAUROS
+	db TAUROS		;4-1
 	db MIRACLEBERRY
 	db RETURN, HYPER_BEAM, EARTHQUAKE, IRON_TAIL
 	dw 0 ; OT ID
@@ -1652,7 +1680,7 @@ BattleTowerMons4:
 	bigdw 94 ; SDef
 	db "KENTAROSU@@"
 
-	db KINGDRA
+	db KINGDRA		;4-2
 	db LEFTOVERS
 	db SURF, DRAGONBREATH, HYPER_BEAM, BLIZZARD
 	dw 0 ; OT ID
@@ -1678,9 +1706,9 @@ BattleTowerMons4:
 	bigdw 115 ; SDef
 	db "KINGUDORA@@"
 
-	db SNORLAX
-	db QUICK_CLAW
-	db ATTRACT, BODY_SLAM, PSYCH_UP, EARTHQUAKE
+	db DONPHAN				;4-3
+	db LEFTOVERS
+	db ROCK_SLIDE, BODY_SLAM, FLY, EARTHQUAKE
 	dw 0 ; OT ID
 	dt 64000 ; Exp
 	; Stat exp
@@ -1702,9 +1730,9 @@ BattleTowerMons4:
 	bigdw 61 ; Spd
 	bigdw 89 ; SAtk
 	bigdw 125 ; SDef
-	db "KABIGON@@@@"
+	db "KABIGON@@@@";wasSnorlax
 
-	db LAPRAS
+	db LAPRAS			;4-4
 	db LEFTOVERS
 	db THUNDERBOLT, ICE_BEAM, CONFUSE_RAY, SURF
 	dw 0 ; OT ID
@@ -1728,9 +1756,9 @@ BattleTowerMons4:
 	bigdw 86 ; Spd
 	bigdw 103 ; SAtk
 	bigdw 111 ; SDef
-	db "RAPURASU@@@"
+	db "RAPURASU@@@";wasLapras. 7 in vanilla tower
 
-	db STEELIX
+	db STEELIX				;4-5
 	db GOLD_BERRY
 	db SANDSTORM, IRON_TAIL, EARTHQUAKE, TOXIC
 	dw 0 ; OT ID
@@ -1756,7 +1784,7 @@ BattleTowerMons4:
 	bigdw 87 ; SDef
 	db "HAGANE-RU@@"
 
-	db ALAKAZAM
+	db ALAKAZAM				;4-6
 	db KINGS_ROCK
 	db PSYCHIC_M, THUNDERPUNCH, RECOVER, FIRE_PUNCH
 	dw 0 ; OT ID
@@ -1782,7 +1810,7 @@ BattleTowerMons4:
 	bigdw 107 ; SDef
 	db "HU-DEiN@@@@"
 
-	db STARMIE
+	db STARMIE				;4-7
 	db LEFTOVERS
 	db BLIZZARD, THUNDERBOLT, SURF, PSYCHIC_M
 	dw 0 ; OT ID
@@ -1808,7 +1836,7 @@ BattleTowerMons4:
 	bigdw 105 ; SDef
 	db "SUTA-MI-@@@"
 
-	db WOBBUFFET
+	db WOBBUFFET				;4-8
 	db GOLD_BERRY
 	db COUNTER, MIRROR_COAT, SAFEGUARD, DESTINY_BOND
 	dw 0 ; OT ID
@@ -1834,7 +1862,7 @@ BattleTowerMons4:
 	bigdw 79 ; SDef
 	db "SO-NANSU@@@"
 
-	db GOLEM
+	db GOLEM				;4-9
 	db FOCUS_BAND
 	db EXPLOSION, EARTHQUAKE, MEGA_PUNCH, ROCK_SLIDE
 	dw 0 ; OT ID
@@ -1860,7 +1888,7 @@ BattleTowerMons4:
 	bigdw 88 ; SDef
 	db "GORO-NIya@@"
 
-	db SCIZOR
+	db SCIZOR					;4-10
 	db SCOPE_LENS
 	db SLASH, STEEL_WING, PURSUIT, HYPER_BEAM
 	dw 0 ; OT ID
@@ -1886,7 +1914,7 @@ BattleTowerMons4:
 	bigdw 102 ; SDef
 	db "HAtuSAMU@@@"
 
-	db DUGTRIO
+	db DUGTRIO					;4-11
 	db KINGS_ROCK
 	db EARTHQUAKE, HYPER_BEAM, SLUDGE_BOMB, MUD_SLAP
 	dw 0 ; OT ID
@@ -1912,7 +1940,7 @@ BattleTowerMons4:
 	bigdw 91 ; SDef
 	db "DAGUTORIO@@"
 
-	db SLOWBRO
+	db SLOWBRO					;4-12
 	db MIRACLEBERRY
 	db SURF, PSYCHIC_M, EARTHQUAKE, BLIZZARD
 	dw 0 ; OT ID
@@ -1938,7 +1966,7 @@ BattleTowerMons4:
 	bigdw 103 ; SDef
 	db "YADORAN@@@@"
 
-	db DROWZEE;PORYGON2
+	db DROWZEE;PORYGON2			;4-13
 	db NO_ITEM
 	db MEGA_KICK, KINESIS, PSYBEAM, THIEF
 	dw 0 ; OT ID
@@ -1964,7 +1992,7 @@ BattleTowerMons4:
 	bigdw 329 ; SDef
 	db "PORIGON2@@@"
 
-	db ARCANINE
+	db ARCANINE					;4-14
 	db CHARCOAL
 	db FLAME_WHEEL, LEER, BODY_SLAM, ROAR
 	dw 0 ; OT ID
@@ -1990,7 +2018,7 @@ BattleTowerMons4:
 	bigdw 99 ; SDef
 	db "UINDEi@@@@@"
 
-	db FORRETRESS
+	db FORRETRESS				;4-15
 	db LEFTOVERS
 	db RAPID_SPIN, PROTECT, TOXIC, SANDSTORM
 	dw 0 ; OT ID
@@ -2005,20 +2033,20 @@ BattleTowerMons4:
 	db 40, 10, 10, 10 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 40 ; Level
+	db 104 ; Level
 	db 0, 0 ; Status
-	bigdw 140 ; HP
-	bigdw 140 ; Max HP
-	bigdw 111 ; Atk
-	bigdw 147 ; Def
-	bigdw 64 ; Spd
-	bigdw 87 ; SAtk
-	bigdw 87 ; SDef
+	bigdw 353 ; HP
+	bigdw 353 ; Max HP
+	bigdw 278 ; Atk
+	bigdw 378 ; Def
+	bigdw 178 ; Spd
+	bigdw 218 ; SAtk
+	bigdw 218 ; SDef
 	db "HUoRETOSU@@"
 
-	db OMASTAR
-	db GOLD_BERRY
-	db CURSE, WATER_GUN, ANCIENTPOWER, ROCK_SMASH
+	db OMASTAR			;4-16
+	db LEFTOVERS
+	db SURF, ANCIENTPOWER, BLIZZARD, TOXIC
 	dw 0 ; OT ID
 	dt 64000 ; Exp
 	; Stat exp
@@ -2031,18 +2059,18 @@ BattleTowerMons4:
 	db 10, 25, 5, 15 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 40 ; Level
+	db 104 ; Level
 	db 0, 0 ; Status
-	bigdw 133 ; HP
-	bigdw 133 ; Max HP
-	bigdw 86 ; Atk
-	bigdw 139 ; Def
-	bigdw 83 ; Spd
-	bigdw 124 ; SAtk
-	bigdw 88 ; SDef
+	bigdw 343 ; HP
+	bigdw 343 ; Max HP
+	bigdw 218 ; Atk
+	bigdw 348 ; Def
+	bigdw 208 ; Spd
+	bigdw 328 ; SAtk
+	bigdw 238 ; SDef
 	db "OMUSUTA-@@@"
 
-	db CHARIZARD
+	db CHARIZARD								;4-17
 	db KINGS_ROCK
 	db FIRE_SPIN, DRAGON_RAGE, FLY, SLASH
 	dw 0 ; OT ID
@@ -2068,7 +2096,7 @@ BattleTowerMons4:
 	bigdw 106 ; SDef
 	db "RIZA-DON@@@"
 
-	db EXEGGUTOR
+	db EXEGGUTOR								;4-18
 	db BRIGHTPOWDER
 	db EGG_BOMB, STOMP, PSYCH_UP, CONFUSION
 	dw 0 ; OT ID
@@ -2094,7 +2122,7 @@ BattleTowerMons4:
 	bigdw 84 ; SDef
 	db "NAtuSI-@@@@"
 
-	db HYPNO
+	db HYPNO								;4-19
 	db BRIGHTPOWDER
 	db CONFUSION, THUNDERPUNCH, HEADBUTT, DISABLE
 	dw 0 ; OT ID
@@ -2120,7 +2148,7 @@ BattleTowerMons4:
 	bigdw 122 ; SDef
 	db "SURI-PA-@@@"
 
-	db MUK
+	db MUK								;4-20
 	db QUICK_CLAW
 	db SCREECH, TOXIC, SLUDGE, HARDEN
 	dw 0 ; OT ID
@@ -2146,7 +2174,7 @@ BattleTowerMons4:
 	bigdw 111 ; SDef
 	db "BETOBETON@@"
 
-	db ELECTABUZZ
+	db ELECTABUZZ								;4-21
 	db KINGS_ROCK
 	db LIGHT_SCREEN, THUNDERPUNCH, SWIFT, SNORE
 	dw 0 ; OT ID
@@ -2175,7 +2203,7 @@ BattleTowerMons4:
 
 BattleTowerMons5:
 
-	db KINGDRA
+	db KINGDRA				;5-1
 	db GOLD_BERRY
 	db SURF, HYPER_BEAM, BLIZZARD, DRAGONBREATH
 	dw 0 ; OT ID
@@ -2201,7 +2229,7 @@ BattleTowerMons5:
 	bigdw 144 ; SDef
 	db "KINGUDORA@@"
 
-	db HOUNDOOM
+	db HOUNDOOM				;5-2
 	db MIRACLEBERRY
 	db REST, CRUNCH, DREAM_EATER, FLAMETHROWER
 	dw 0 ; OT ID
@@ -2227,7 +2255,7 @@ BattleTowerMons5:
 	bigdw 127 ; SDef
 	db "HERUGA-@@@@"
 
-	db SHUCKLE
+	db SHUCKLE				;5-3
 	db LEFTOVERS
 	db SANDSTORM, REST, TOXIC, WRAP
 	dw 0 ; OT ID
@@ -2253,7 +2281,7 @@ BattleTowerMons5:
 	bigdw 279 ; SDef
 	db "TUBOTUBO@@@"
 
-	db SNORLAX
+	db SNORLAX				;5-4
 	db LEFTOVERS
 	db HYPER_BEAM, EARTHQUAKE, SURF, PSYCH_UP
 	dw 0 ; OT ID
@@ -2279,7 +2307,7 @@ BattleTowerMons5:
 	bigdw 159 ; SDef
 	db "KABIGON@@@@"
 
-	db LAPRAS
+	db LAPRAS				;5-5
 	db GOLD_BERRY
 	db THUNDERBOLT, SURF, CONFUSE_RAY, BLIZZARD
 	dw 0 ; OT ID
@@ -2305,7 +2333,7 @@ BattleTowerMons5:
 	bigdw 143 ; SDef
 	db "RAPURASU@@@"
 
-	db JOLTEON
+	db JOLTEON				;5-6
 	db KINGS_ROCK
 	db THUNDERBOLT, THUNDER_WAVE, SHADOW_BALL, HIDDEN_POWER
 	dw 0 ; OT ID
@@ -2322,16 +2350,16 @@ BattleTowerMons5:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 50 ; Level
 	db 0, 0 ; Status
-	bigdw 161 ; HP
-	bigdw 161 ; Max HP
-	bigdw 114 ; Atk
-	bigdw 107 ; Def
-	bigdw 179 ; Spd
-	bigdw 159 ; SAtk
-	bigdw 144 ; SDef
+	bigdw 333 ; HP
+	bigdw 333 ; Max HP
+	bigdw 228 ; Atk
+	bigdw 318 ; Def
+	bigdw 358 ; Spd
+	bigdw 318 ; SAtk
+	bigdw 288 ; SDef
 	db "SANDA-SU@@@"
 
-	db SCIZOR
+	db SCIZOR				;5-7
 	db LEFTOVERS
 	db HYPER_BEAM, SLASH, AGILITY, METAL_CLAW
 	dw 0 ; OT ID
@@ -2357,7 +2385,7 @@ BattleTowerMons5:
 	bigdw 124 ; SDef
 	db "HAtuSAMU@@@"
 
-	db SLOWKING
+	db SLOWKING				;5-8
 	db MINT_BERRY
 	db REST, SURF, PSYCHIC_M, AMNESIA
 	dw 0 ; OT ID
@@ -2374,13 +2402,13 @@ BattleTowerMons5:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 50 ; Level
 	db 0, 0 ; Status
-	bigdw 196 ; HP
-	bigdw 196 ; Max HP
-	bigdw 118 ; Atk
-	bigdw 126 ; Def
-	bigdw 75 ; Spd
-	bigdw 146 ; SAtk
-	bigdw 156 ; SDef
+	bigdw 393 ; HP
+	bigdw 393 ; Max HP
+	bigdw 248 ; Atk
+	bigdw 258 ; Def
+	bigdw 158 ; Spd
+	bigdw 298 ; SAtk
+	bigdw 318 ; SDef
 	db "YADOKINGU@@"
 
 	db MACHAMP
@@ -3037,7 +3065,7 @@ BattleTowerMons6:
 	bigdw 218 ; SDef
 	db "HAGANE-RU@@"
 
-	db BLISSEY
+	db BLISSEY		;6-13
 	db LEFTOVERS
 	db SOFTBOILED, TOXIC, PROTECT, PSYCHIC_M
 	dw 0 ; OT ID
@@ -3141,7 +3169,7 @@ BattleTowerMons6:
 	bigdw 165 ; SDef
 	db "RU-ZIyuRA@@"
 
-	db BLASTOISE	;6-17
+	db BLASTOISE					;6-17
 	db MIRACLEBERRY
 	db BUBBLE, EARTHQUAKE, MEGA_KICK, REST
 	dw 0 ; OT ID
@@ -3156,7 +3184,7 @@ BattleTowerMons6:
 	db 24, 16, 8, 8 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 17 ; Level
+	db 106 ; Level
 	db 0, 0 ; Status
 	bigdw 361 ; HP
 	bigdw 361 ; Max HP
@@ -3219,7 +3247,7 @@ BattleTowerMons6:
 	bigdw 208 ; SDef
 	db "SANDOPAN@@@"
 
-	db BUTTERFREE;PARASECT	;6-20
+	db BUTTERFREE;wasPARASECT	;6-20
 	db GOLD_BERRY
 	db SPORE, GUST, ABSORB, BATON_PASS
 	dw 0 ; OT ID
@@ -3243,7 +3271,7 @@ BattleTowerMons6:
 	bigdw 72 ; Spd
 	bigdw 120 ; SAtk
 	bigdw 144 ; SDef
-	db "PARASEKUTO@"
+	db "PARASEKUTO@"		;
 
 	db GOLEM
 	db BRIGHTPOWDER
@@ -3260,7 +3288,7 @@ BattleTowerMons6:
 	db 5, 10, 15, 20 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 21 ; Level
+	db 106 ; Level
 	db 0, 0 ; Status
 	bigdw 205 ; HP
 	bigdw 205 ; Max HP
@@ -3274,7 +3302,7 @@ BattleTowerMons6:
 
 BattleTowerMons7:
 
-	db JOLTEON
+	db JOLTEON		;7-1
 	db MIRACLEBERRY
 	db THUNDERBOLT, HYPER_BEAM, SHADOW_BALL, ROAR
 	dw 0 ; OT ID
@@ -3291,16 +3319,16 @@ BattleTowerMons7:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 70 ; Level
 	db 0, 0 ; Status
-	bigdw 231 ; HP
-	bigdw 231 ; Max HP
-	bigdw 158 ; Atk
-	bigdw 145 ; Def
-	bigdw 245 ; Spd
-	bigdw 222 ; SAtk
-	bigdw 201 ; SDef
+	bigdw 333 ; HP
+	bigdw 333 ; Max HP
+	bigdw 228 ; Atk
+	bigdw 318 ; Def
+	bigdw 358 ; Spd
+	bigdw 318 ; SAtk
+	bigdw 288 ; SDef
 	db "SANDA-SU@@@"
 
-	db VAPOREON
+	db VAPOREON				;7-2
 	db LEFTOVERS
 	db BLIZZARD, SHADOW_BALL, SURF, MUD_SLAP
 	dw 0 ; OT ID
@@ -3326,22 +3354,22 @@ BattleTowerMons7:
 	bigdw 197 ; SDef
 	db "SIyaWA-ZU@@"
 
-	db UMBREON
-	db GOLD_BERRY
-	db FAINT_ATTACK, MOONLIGHT, PSYCH_UP, TOXIC
+	db UMBREON				;7-3
+	db LEFTOVERS
+	db CRUNCH, IRON_TAIL, CURSE, TOXIC
 	dw 0 ; OT ID
-	dt 343000 ; Exp
+	dt 1000 ; Exp
 	; Stat exp
-	bigdw 54000
-	bigdw 60000
-	bigdw 55000
+	bigdw 40000
+	bigdw 40000
+	bigdw 45000
 	bigdw 50000
-	bigdw 58000
-	dn 13, 13, 13, 13 ; DVs
-	db 20, 5, 10, 10 ; PP
+	bigdw 40000
+	dn 13, 11, 14, 15 ; DVs
+	db 24, 24, 16, 16 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 70 ; Level
+	db 107 ; Level
 	db 0, 0 ; Status
 	bigdw 393 ; HP
 	bigdw 393 ; Max HP
@@ -3352,7 +3380,7 @@ BattleTowerMons7:
 	bigdw 358 ; SDef
 	db "BURAtuKI-@@"
 
-	db BLISSEY
+	db BLISSEY				;7-4
 	db GOLD_BERRY
 	db COUNTER, SOFTBOILED, SHADOW_BALL, THUNDERBOLT
 	dw 0 ; OT ID
@@ -3378,7 +3406,7 @@ BattleTowerMons7:
 	bigdw 250 ; SDef
 	db "HAPINASU@@@"
 
-	db SNORLAX
+	db SNORLAX				;7-5
 	db LEFTOVERS
 	db ROCK_SLIDE, EARTHQUAKE, BLIZZARD, SHADOW_BALL
 	dw 0 ; OT ID
@@ -3404,7 +3432,7 @@ BattleTowerMons7:
 	bigdw 215 ; SDef
 	db "KABIGON@@@@"
 
-	db HOUNDOOM
+	db HOUNDOOM				;7-5
 	db KINGS_ROCK
 	db CRUNCH, FLAMETHROWER, FAINT_ATTACK, ROAR
 	dw 0 ; OT ID
@@ -3430,7 +3458,7 @@ BattleTowerMons7:
 	bigdw 175 ; SDef
 	db "HERUGA-@@@@"
 
-	db TYRANITAR
+	db TYRANITAR				;7-5
 	db LEFTOVERS
 	db EARTHQUAKE, CRUNCH, ROCK_SLIDE, HYPER_BEAM
 	dw 0 ; OT ID
@@ -3456,7 +3484,7 @@ BattleTowerMons7:
 	bigdw 203 ; SDef
 	db "BANGIRASU@@"
 
-	db ZAPDOS
+	db ZAPDOS				;7-6
 	db GOLD_BERRY
 	db THUNDERBOLT, DRILL_PECK, THUNDER_WAVE, HYPER_BEAM
 	dw 0 ; OT ID
@@ -3482,7 +3510,7 @@ BattleTowerMons7:
 	bigdw 189 ; SDef
 	db "SANDA-@@@@@"
 ;
-	db EXEGGUTOR
+	db EXEGGUTOR				;7-7
 	db MIRACLEBERRY
 	db REST, EXPLOSION, PSYCHIC_M, GIGA_DRAIN
 	dw 0 ; OT ID
@@ -3508,7 +3536,7 @@ BattleTowerMons7:
 	bigdw 151 ; SDef
 	db "NAtuSI-@@@@"
 ;
-	db HERACROSS	;#2-7
+	db HERACROSS	;#2-7		;7-8
 	db FOCUS_BAND
 	db ENDURE, REVERSAL, MEGAHORN, EARTHQUAKE
 	dw 0 ; OT ID
@@ -3535,7 +3563,7 @@ BattleTowerMons7:
 	db "HERAKUROSU@"
 ;
 
-	db UMBREON
+	db UMBREON				;7-9
 	db LEFTOVERS
 	db MOONLIGHT, FAINT_ATTACK, PSYCHIC_M, SHADOW_BALL
 	dw 0 ; OT ID
@@ -3561,7 +3589,7 @@ BattleTowerMons7:
 	bigdw 358 ; SDef
 	db "BURAtuKI-@@"
 
-	db GYARADOS
+	db GYARADOS				;7-10
 	db BRIGHTPOWDER
 	db SURF, THUNDERBOLT, HYPER_BEAM, ROAR
 	dw 0 ; OT ID
@@ -3587,7 +3615,7 @@ BattleTowerMons7:
 	bigdw 204 ; SDef
 	db "GIyaRADOSU@"
 
-	db QUAGSIRE
+	db QUAGSIRE				;7-11
 	db MIRACLEBERRY
 	db EARTHQUAKE, SURF, SLUDGE_BOMB, IRON_TAIL
 	dw 0 ; OT ID
@@ -3613,7 +3641,7 @@ BattleTowerMons7:
 	bigdw 152 ; SDef
 	db "NUO-@@@@@@@"
 
-	db URSARING
+	db URSARING			;7-12
 	db SCOPE_LENS
 	db SLASH, EARTHQUAKE, HYPER_BEAM, THUNDERPUNCH
 	dw 0 ; OT ID
@@ -3630,18 +3658,18 @@ BattleTowerMons7:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 70 ; Level
 	db 0, 0 ; Status
-	bigdw 262 ; HP
-	bigdw 262 ; Max HP
-	bigdw 245 ; Atk
-	bigdw 166 ; Def
-	bigdw 138 ; Spd
-	bigdw 166 ; SAtk
-	bigdw 166 ; SDef
+	bigdw 383 ; HP
+	bigdw 383 ; Max HP
+	bigdw 358 ; Atk
+	bigdw 248 ; Def
+	bigdw 208 ; Spd
+	bigdw 248 ; SAtk
+	bigdw 248 ; SDef
 	db "RINGUMA@@@@"
 
-	db MR__MIME
-	db KINGS_ROCK
-	db REFLECT, FIRE_PUNCH, PSYCHIC_M, ENCORE
+	db SLOWKING				;7-13
+	db LEFTOVERS
+	db REFLECT, FIRE_BLAST, PSYCHIC_M, ENCORE
 	dw 0 ; OT ID
 	dt 343000 ; Exp
 	; Stat exp
@@ -3651,45 +3679,45 @@ BattleTowerMons7:
 	bigdw 50000
 	bigdw 50000
 	dn 11, 13, 15, 11 ; DVs
-	db 20, 15, 10, 5 ; PP
+	db 32, 8, 16, 8 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 70 ; Level
+	db 107 ; Level
 	db 0, 0 ; Status
-	bigdw 195 ; HP
-	bigdw 195 ; Max HP
-	bigdw 120 ; Atk
-	bigdw 151 ; Def
-	bigdw 190 ; Spd
-	bigdw 198 ; SAtk
-	bigdw 226 ; SDef
-	db "BARIYA-DO@@"
+	bigdw 393 ; HP
+	bigdw 393 ; Max HP
+	bigdw 248 ; Atk
+	bigdw 258 ; Def
+	bigdw 158 ; Spd
+	bigdw 298 ; SAtk
+	bigdw 318 ; SDef
+	db "BARIYA-DO@@";mr.mime
 
-	db PRIMEAPE
-	db QUICK_CLAW
-	db CROSS_CHOP, ICE_PUNCH, THUNDERPUNCH, ROCK_SLIDE
+	db KANGASKHAN		;was1-5		;7-14
+	db MIRACLEBERRY
+	db MEGA_PUNCH, DOUBLE_EDGE, EARTHQUAKE, SWORDS_DANCE
 	dw 0 ; OT ID
-	dt 343000 ; Exp
+	dt 1000 ; Exp
 	; Stat exp
-	bigdw 50000
 	bigdw 40000
-	bigdw 50000
-	bigdw 50000
-	bigdw 50000
-	dn 11, 13, 14, 15 ; DVs
-	db 5, 15, 15, 10 ; PP
+	bigdw 30000
+	bigdw 40000
+	bigdw 30000
+	bigdw 30000
+	dn 14, 15, 12, 15 ; DVs
+	db 15, 5, 10, 15 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 70 ; Level
+	db 107 ; Level
 	db 0, 0 ; Status
-	bigdw 227 ; HP
-	bigdw 227 ; Max HP
-	bigdw 202 ; Atk
-	bigdw 145 ; Def
-	bigdw 196 ; Spd
-	bigdw 148 ; SAtk
-	bigdw 162 ; SDef
-	db "OKORIZARU@@"
+	bigdw 413 ; HP
+	bigdw 413 ; Max HP
+	bigdw 288 ; Atk
+	bigdw 258 ; Def
+	bigdw 278 ; Spd
+	bigdw 178 ; SAtk
+	bigdw 258 ; SDef
+	db "OKORIZARU@@";primeape
 
 	db GIRAFARIG
 	db GOLD_BERRY
@@ -3821,9 +3849,9 @@ BattleTowerMons7:
 	bigdw 159 ; SDef
 	db "RIZA-DON@@@"
 
-	db BLASTOISE
+	db BLASTOISE								;7-21
 	db QUICK_CLAW
-	db HYDRO_PUMP, ICE_PUNCH, HYPER_BEAM, IRON_TAIL
+	db HYDRO_PUMP, ICE_PUNCH, HYPER_BEAM, MIRROR_MOVE
 	dw 0 ; OT ID
 	dt 343000 ; Exp
 	; Stat exp
@@ -3836,19 +3864,19 @@ BattleTowerMons7:
 	db 5, 15, 5, 15 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 70 ; Level
+	db 107 ; Level
 	db 0, 0 ; Status
-	bigdw 231 ; HP
-	bigdw 231 ; Max HP
-	bigdw 161 ; Atk
-	bigdw 183 ; Def
-	bigdw 152 ; Spd
-	bigdw 159 ; SAtk
-	bigdw 187 ; SDef
+	bigdw 361 ; HP
+	bigdw 361 ; Max HP
+	bigdw 264 ; Atk
+	bigdw 298 ; Def
+	bigdw 254 ; Spd
+	bigdw 268 ; SAtk
+	bigdw 308 ; SDef
 	db "KAMEtuKUSU@"
 
 
-BattleTowerMons8:
+BattleTowerMons8: 								;OU
 
 	db JOLTEON
 	db MIRACLEBERRY
@@ -3867,13 +3895,13 @@ BattleTowerMons8:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 80 ; Level
 	db 0, 0 ; Status
-	bigdw 263 ; HP
-	bigdw 263 ; Max HP
-	bigdw 179 ; Atk
-	bigdw 170 ; Def
-	bigdw 281 ; Spd
-	bigdw 245 ; SAtk
-	bigdw 221 ; SDef
+	bigdw 333 ; HP
+	bigdw 333 ; Max HP
+	bigdw 228 ; Atk
+	bigdw 318 ; Def
+	bigdw 358 ; Spd
+	bigdw 318 ; SAtk
+	bigdw 288 ; SDef
 	db "SANDA-SU@@@"
 
 	db SNORLAX
@@ -4137,7 +4165,7 @@ BattleTowerMons8:
 	db "PORIGON2@@@"
 
 	db JYNX
-	db QUICK_CLAW
+	db LEFTOVERS
 	db LOVELY_KISS, BLIZZARD, DREAM_EATER, PSYCHIC_M
 	dw 0 ; OT ID
 	dt 512000 ; Exp
@@ -4397,7 +4425,7 @@ BattleTowerMons8:
 	db "GURANBURU@@"
 
 
-BattleTowerMons9:
+BattleTowerMons9:	;OU + UBERS
 
 	db UMBREON
 	db KINGS_ROCK
@@ -4635,7 +4663,7 @@ BattleTowerMons9:
 
 	db ESPEON
 	db GOLD_BERRY
-	db PSYCHIC_M, SHADOW_BALL, SUNNY_DAY, MORNING_SUN
+	db PSYCHIC_M, SHADOW_BALL, MEDITATE, ZAP_CANNON
 	dw 0 ; OT ID
 	dt 729000 ; Exp
 	; Stat exp
@@ -4648,15 +4676,15 @@ BattleTowerMons9:
 	db 10, 15, 5, 5 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 90 ; Level
+	db 109 ; Level
 	db 0, 0 ; Status
-	bigdw 294 ; HP
-	bigdw 294 ; Max HP
-	bigdw 194 ; Atk
-	bigdw 185 ; Def
-	bigdw 282 ; Spd
-	bigdw 313 ; SAtk
-	bigdw 250 ; SDef
+	bigdw 333 ; HP
+	bigdw 333 ; Max HP
+	bigdw 228 ; Atk
+	bigdw 218 ; Def
+	bigdw 318 ; Spd
+	bigdw 358 ; SAtk
+	bigdw 288 ; SDef
 	db "E-HUi@@@@@@"
 
 	db MACHAMP
@@ -4946,7 +4974,7 @@ BattleTowerMons9:
 	db "BETOBETON@@"
 
 
-;BattleTowerMons10:
+BattleTowerMons10:			;UBERS
 
 	db HOUNDOOM		;10-1
 	db MINT_BERRY
@@ -5026,7 +5054,7 @@ BattleTowerMons9:
 	bigdw 288 ; SDef
 	db "KINGUDORA@@"
 
-	db RAIKOU;JOLTEON		;10-4
+	db RAIKOU;			;10-4
 	db LEFTOVERS
 	db THUNDERBOLT, MEDITATE, THUNDER_WAVE, SHADOW_BALL
 	dw 0 ; OT ID
@@ -5050,9 +5078,9 @@ BattleTowerMons9:
 	bigdw 328 ; Spd
 	bigdw 328 ; SAtk
 	bigdw 298 ; SDef
-	db "SANDA-SU@@@"
+	db "SANDA-SU@@@";jolteon
 
-	db TAUROS
+	db TAUROS	;10-5
 	db KINGS_ROCK
 	db HYPER_BEAM, EARTHQUAKE, IRON_TAIL, BATON_PASS
 	dw 0 ; OT ID
@@ -5078,7 +5106,7 @@ BattleTowerMons9:
 	bigdw 238 ; SDef
 	db "KENTAROSU@@"
 
-	db ARCANINE
+	db ARCANINE			;10-6
 	db MIRACLEBERRY
 	db SACRED_FIRE, EXTREMESPEED, IRON_TAIL, OUTRAGE
 	dw 0 ; OT ID
@@ -5104,7 +5132,7 @@ BattleTowerMons9:
 	bigdw 258 ; SDef
 	db "UINDEi@@@@@"
 
-	db CHARIZARD
+	db CHARIZARD			;10-7
 	db SCOPE_LENS
 	db FLAMETHROWER, EARTHQUAKE, SLASH, TWISTER
 	dw 0 ; OT ID
@@ -5128,9 +5156,9 @@ BattleTowerMons9:
 	bigdw 289 ; Spd
 	bigdw 311 ; SAtk
 	bigdw 263 ; SDef
-	db "RIZA-DON@@@"
+	db "RIZA-DON@@@";charizard - 3 in vanilla
 
-	db ELECTRODE
+	db ELECTRODE			;10-8
 	db MAGNET
 	db THUNDER_WAVE, THUNDERBOLT, EXPLOSION, MIRROR_COAT
 	dw 0 ; OT ID
@@ -5156,7 +5184,7 @@ BattleTowerMons9:
 	bigdw 258 ; SDef
 	db "MARUMAIN@@@"
 
-	db RHYDON
+	db RHYDON							;10-9
 	db MIRACLEBERRY
 	db WATERFALL, EARTHQUAKE, AGILITY, ROCK_SLIDE
 	dw 0 ; OT ID
@@ -5182,7 +5210,7 @@ BattleTowerMons9:
 	bigdw 178 ; SDef
 	db "SAIDON@@@@@"
 ;
-	db SKARMORY		;6-12 wasSteelix
+	db SKARMORY		;6-12 wasSteelix	;10-10
 	db LEFTOVERS
 	db STEEL_WING, FLY, TOXIC, PROTECT
 	dw 0 ; OT ID
@@ -5208,7 +5236,7 @@ BattleTowerMons9:
 	bigdw 135 ; SDef
 	db "EA-MUDO@@@@"
 
-	db FEAROW
+	db FEAROW						;10-11
 	db FOCUS_BAND
 	db DRILL_PECK, STEEL_WING, SOFTBOILED, AGILITY
 	dw 0 ; OT ID
@@ -5234,7 +5262,7 @@ BattleTowerMons9:
 	bigdw 220 ; SDef
 	db "ONIDORIRU@@"
 
-	db GENGAR;was110misdreavus
+	db GENGAR;was110misdreavus			;10-12
 	db SPELL_TAG
 	db SHADOW_BALL, THUNDERBOLT, FLASH, GIGA_DRAIN
 	dw 0 ; OT ID
@@ -5260,7 +5288,7 @@ BattleTowerMons9:
 	bigdw 248 ; SDef
 	db "GENGA-@@@@@"
 ;
-	db SNEASEL
+	db SNEASEL					;10-13
 	db SCOPE_LENS
 	db SLASH, ICE_PUNCH, SWORDS_DANCE, FURY_SWIPES
 	dw 0 ; OT ID
@@ -5286,7 +5314,7 @@ BattleTowerMons9:
 	bigdw 240 ; SDef
 	db "NIyu-RA@@@@"
 
-	db SCIZOR
+	db SCIZOR					;10-14
 	db POISON_BARB
 	db COMET_PUNCH, FURY_SWIPES, SLUDGE_BOMB, SWORDS_DANCE
 	dw 0 ; OT ID
@@ -5312,7 +5340,7 @@ BattleTowerMons9:
 	bigdw 246 ; SDef
 	db "HAtuSAMU@@@"
 
-	db BLISSEY
+	db BLISSEY					;10-15
 	db LEFTOVERS
 	db SEISMIC_TOSS, THUNDER_WAVE, HEAL_BELL, SOFTBOILED
 	dw 0 ; OT ID
@@ -5338,7 +5366,7 @@ BattleTowerMons9:
 	bigdw 346 ; SDef
 	db "HAPINASU@@@"
 
-	db LUGIA;wasPILOSWINE
+	db LUGIA;wasPILOSWINE				;10-16
 	db MINT_BERRY
 	db REST, ANCIENTPOWER, AEROBLAST, EARTHQUAKE
 	dw 0 ; OT ID
@@ -5364,7 +5392,7 @@ BattleTowerMons9:
 	bigdw 406 ; SDef
 	db "INOMU-@@@@@"
 ;
-	db CELEBI;wasExeggutor
+	db CELEBI;wasExeggutor			;10-17
 	db MIRACLEBERRY
 	db PSYCHIC_M, TOXIC, LEECH_SEED, ANCIENTPOWER
 	dw 0 ; OT ID
@@ -5389,34 +5417,34 @@ BattleTowerMons9:
 	bigdw 298 ; SAtk
 	bigdw 298 ; SDef
 	db "NAtuSI-@@@@"
-;
-	db OMASTAR
+
+	db STARMIE	;was2-2		;wasOmastar		;10-18
 	db LEFTOVERS
-	db SURF, ANCIENTPOWER, BLIZZARD, TOXIC
+	db RECOVER, PSYCHIC_M, SURF, PSYCH_UP
 	dw 0 ; OT ID
-	dt 1000000 ; Exp
+	dt 8000 ; Exp
 	; Stat exp
 	bigdw 50000
 	bigdw 50000
 	bigdw 50000
 	bigdw 50000
 	bigdw 50000
-	dn 15, 11, 14, 7 ; DVs
-	db 15, 5, 5, 10 ; PP
+	dn 13, 11, 13, 11 ; DVs
+	db 20, 10, 15, 10 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 100 ; Level
+	db 102 ; Level
 	db 0, 0 ; Status
-	bigdw 343 ; HP
-	bigdw 343 ; Max HP
-	bigdw 218 ; Atk
-	bigdw 348 ; Def
-	bigdw 208 ; Spd
-	bigdw 328 ; SAtk
-	bigdw 238 ; SDef
-	db "OMUSUTA-@@@"
-;
-	db GOLEM
+	bigdw 323 ; HP
+	bigdw 323 ; Max HP
+	bigdw 248 ; Atk
+	bigdw 268 ; Def
+	bigdw 328 ; Spd
+	bigdw 298 ; SAtk
+	bigdw 268 ; SDef
+	db "SUTA-MI-@@@"
+
+	db GOLEM			;10-19
 	db BRIGHTPOWDER
 	db EXPLOSION, EARTHQUAKE, ROCK_SLIDE, FIRE_BLAST
 	dw 0 ; OT ID
@@ -5442,7 +5470,7 @@ BattleTowerMons9:
 	bigdw 190 ; SDef
 	db "GORO-NIya@@"
 
-	db HITMONCHAN
+	db HITMONCHAN			;10-20
 	db FOCUS_BAND
 	db COUNTER, FIRE_PUNCH, THUNDERPUNCH, ICE_PUNCH
 	dw 0 ; OT ID
@@ -5468,9 +5496,9 @@ BattleTowerMons9:
 	bigdw 280 ; SDef
 	db "EBIWARA-@@@"
 
-	db LANTURN
+	db SUICUNE						;10-21
 	db LEFTOVERS
-	db SURF, RAIN_DANCE, POWDER_SNOW, ICE_BEAM
+	db SURF, RAIN_DANCE, MEDITATE, ICE_BEAM
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp

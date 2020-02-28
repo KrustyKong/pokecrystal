@@ -13,7 +13,7 @@ MoveNames::
 	db "GUILLOTINE@"
 	db "RAZOR WIND@"
 	db "SWORDS DANCE@"
-	db "CUT@"
+	db "X-CUTTER@"				;CUT
 	db "SILVER WIND@"			;GUST
 	db "AERIAL ACE@"	;WING ATTACK
 	db "WHIRLWIND@"

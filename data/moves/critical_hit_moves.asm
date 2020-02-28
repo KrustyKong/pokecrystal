@@ -11,4 +11,8 @@ CriticalHitMoves:
 	db POISONPOWDER
 	db HORN_DRILL
 	db FURY_SWIPES
+	db WITHDRAW
+	db CUT
+	db FIRE_PUNCH
+;	db THUNDERPUNCH
 	db -1

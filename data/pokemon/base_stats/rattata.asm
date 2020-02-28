@@ -1,9 +1,10 @@
 	db RATTATA ; 019
 
-	db  30,  56,  35,  72,  25,  35
+	db  75,  81,  70,  97,  50,  80	;best of both forms
+;	db  30,  56,  35,  72,  25,  35
 	;   hp  atk  def  spd  sat  sdf
 
-	db NORMAL, NORMAL ; type
+	db DARK, NORMAL ; type
 	db 255 ; catch rate
 	db 57 ; base exp
 	db NO_ITEM, NO_ITEM ; items

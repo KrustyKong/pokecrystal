@@ -289,16 +289,16 @@ PayDayDescription:
 	next "them back later.@"
 
 FirePunchDescription:
-	db   "A fiery punch. 1/3"
-	next "SPATK drop.@"
+	db   "Hi-crit chance."
+	next "1/3 SPATK drop.@"
 
 IcePunchDescription:
 	db   "An icy punch. 1/3"
 	next "flinch rate.@"
 
 ThunderpunchDescription:
-	db   "An electric punch."
-	next "1/3 SPEED drop.@"
+	db   "1/3 chance to"
+	next "raise SPEED.@"
 
 ScratchDescription:
 	db   "Scratches with"
@@ -442,7 +442,7 @@ BiteDescription:
 
 GrowlDescription:
 	db   "Reduces the foe's"
-	next "ATTACK.@"
+	next "SPEC.ATK.@"
 
 RoarDescription:
 	db   "Scares foe"
@@ -450,11 +450,11 @@ RoarDescription:
 
 SingDescription:
 	db   "Causes sleep."
-	next "ACC / 55@"
+	next "ACC/ 55@"
 
 SupersonicDescription:
-	db   "Sound waves that"
-	next "cause confusion.@"
+	db   "Causes confusion."
+	next "ACC/ 55@"
 
 SonicboomDescription:
 	db   "Always inflicts"
@@ -498,7 +498,7 @@ IceBeamDescription:
 
 BlizzardDescription:
 	db   "1/10 freeze rate."
-	next "ACC/ 90@"
+	next "ACC/ 70@"
 
 PsybeamDescription:
 	db   "Lowers SPDEF"
@@ -513,8 +513,8 @@ AuroraBeamDescription:
 	next "2/3 of the time.@"
 
 HyperBeamDescription:
-	db   "Strong, but low PP"
-	next "1/4 Recoil.@"
+	db   "Needs recharge if"
+	next "foe is not KO'd.@"
 
 PeckDescription:
 	db   "Jabs the foe with"
@@ -689,20 +689,20 @@ HardenDescription:
 	next "DEFENSE.@"
 
 MinimizeDescription:
-	db   "Heightens evasive-"
-	next "ness.@"
+	db   "Goes mini. drops"
+	next "DEFs.SPE/crit up.@"
 
 SmokescreenDescription:
 	db   "Lowers SPEED, ATK"
-	next "and SP.ATK. ACC/75@"
+	next "and SP.ATK.@"
 
 ConfuseRayDescription:
 	db   "A move that causes"
 	next "confusion.@"
 
 WithdrawDescription:
-	db   "Heightens the"
-	next "user's DEFENSE.@"
+	db   "Hi-crit. 1/2"
+	next "DEFENSE up rate.@"
 
 DefenseCurlDescription:
 	db   "Heightens both"
@@ -737,8 +737,8 @@ MetronomeDescription:
 	next "#MON move.@"
 
 MirrorMoveDescription:
-	db   "Counters with the"
-	next "same move.@"
+	db   "A dance to boost"
+	next "ATTACK and SPEED.@"
 
 SelfdestructDescription:
 	db   "Powerful but makes"
@@ -949,8 +949,8 @@ NightmareDescription:
 	next "1/4 HP every turn.@"
 
 FlameWheelDescription:
-	db   "Hi-crit. 1/3 burn"
-	next "and SPEED-up rate.@"
+	db   "Hi-crit ratio. "
+	next "1/2 SPEED-up rate.@"
 
 SnoreDescription:
 	db   "An attack useable"
@@ -1217,8 +1217,8 @@ CrossChopDescription:
 	next "cal hit ratio.@"
 
 TwisterDescription:
-	db   "Whips up a tornado"
-	next "to attack.@"
+	db   "Damage x2 in rain."
+	next "1/3 DEFENSE up.@"
 
 RainDanceDescription:
 	db   "Rains for 5 turns."

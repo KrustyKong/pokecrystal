@@ -32,6 +32,7 @@ StallMoves:
 	db ACID_ARMOR
 	db SHARPEN
 	db CONVERSION
-	db SUBSTITUTE
+;	db SUBSTITUTE	;could be good
+	db TWISTER
 ;	db FLAME_WHEEL	;???
 	db -1 ; end
