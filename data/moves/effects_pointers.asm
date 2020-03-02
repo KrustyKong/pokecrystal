@@ -1,19 +1,19 @@
 MoveEffectsPointers:
 ; entries correspond to EFFECT_* constants
-	dw NormalHit
+	dw NormalHit	;0
 	dw DoSleep
 	dw PoisonHit
 	dw LeechHit
-	dw BurnHit
+	dw BurnHit		;downside about referencing this list over the effect command is u gotta rewrite this to do burn. this list just goes to effects.asm anyway, so itll rexecute all those commands in battle too.
 	dw FreezeHit
 	dw ParalyzeHit
 	dw Selfdestruct
 	dw DreamEater
 	dw MirrorMove
-	dw AttackUp
-	dw DefenseUp
-	dw SpeedUp
-	dw SpecialAttackUp
+	dw AttackUp		;a
+	dw DefenseUp	;b
+	dw SpeedUp		;c
+	dw SpecialAttackUp	;d
 	dw SpecialDefenseUp
 	dw AccuracyUp
 	dw SpecialAttackUpHit	;EvasionUp
@@ -43,7 +43,7 @@ MoveEffectsPointers:
 	dw SuperFang
 	dw StaticDamage
 	dw TrapTarget
-	dw NormalHit
+	dw Extra;does effect command baed on id in effect_command_pointers
 	dw MultiHit
 	dw NormalHit
 	dw Mist
@@ -84,7 +84,7 @@ MoveEffectsPointers:
 	dw Rage
 	dw Mimic
 	dw Metronome
-	dw LeechSeed
+	dw LeechSeed		;
 	dw Splash
 	dw Disable
 	dw StaticDamage

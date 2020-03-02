@@ -51,14 +51,14 @@ DoMove:
 
 	ld de, wBattleScriptBuffer
 
-.GetMoveEffect:
-	ld a, BANK(MoveEffects)
+.GetMoveEffectEffCmd:	;changed the name to only ref this ver of it and make it callable (not .GetMove)
+	ld a, BANK(MoveEffects)	;probably need to make a copy of this, but go to the thing that points to the entries in this file instead
 	call GetFarByte
 	inc hl
 	ld [de], a
 	inc de
 	cp endmove_command
-	jr nz, .GetMoveEffect
+	jr nz, .GetMoveEffectEffCmd
 
 ; Start at the first command.
 	ld hl, wBattleScriptBuffer
@@ -88,6 +88,7 @@ DoMove:
 	ret nc
 
 ; The rest of the commands (01-af) are read from BattleCommandPointers.
+
 	push bc
 	dec a
 	ld c, a
@@ -96,7 +97,7 @@ DoMove:
 	add hl, bc
 	add hl, bc
 	pop bc
-
+;.GetBattleCommand:
 	ld a, BANK(BattleCommandPointers)
 	call GetFarHalfword
 
@@ -5753,8 +5754,37 @@ BattleCommand_Charge:
 	text_far _BattleDugText
 	text_end
 
-BattleCommand3c:
-; unused
+;BattleCommand3c:
+BattleCommand_Extra:
+	ld a, BATTLE_VARS_MOVE_EXTRA
+	and a
+	call GetBattleVar
+	;clear
+	push bc
+	dec a
+	ld c, a
+	ld b, 0
+;	call .GetBattleCommand
+	ld hl, BattleCommandPointers
+	;clear
+	add hl, bc
+	add hl, bc
+	pop bc
+	ld a, BANK(BattleCommandPointers)
+	;clear
+	call GetFarHalfword
+	;
+	jp hl
+;	sub a, 1
+	;need to make it load the extra bit, then use it to fetch the effect command
+	;need to make it use the ids in move effects pointers
+	;think we wanna use the get move effect in here instead of the on
+	;in core b/c the other one loads b into a, then inc's it.
+;	jp z, BattleCommand_PoisonTarget
+;	sub a, 2
+;	jp z, BattleCommand_BurnTarget
+;	sub a, 3
+;	jp z, BattleCommand_ParalyzeTarget
 	ret
 
 BattleCommand_TrapTarget:

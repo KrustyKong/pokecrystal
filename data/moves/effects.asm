@@ -20,6 +20,8 @@ NormalHit:
 	checkfaint
 	buildopponentrage
 	kingsrock
+;	effectchance		;extra bit added
+	extra				;
 	endmove
 
 DoSleep:
@@ -1013,7 +1015,7 @@ DoConfuse:
 	confuse
 	endmove
 
-ConfuseHit:
+ConfuseHit:			;confusion, dizzy punch
 	checkobedience
 	usedmovetext
 	doturn
@@ -1274,6 +1276,8 @@ TrapTarget:
 	checkfaint
 	buildopponentrage
 	traptarget
+	effectchance	;see if we can add burn chance to fire spin
+	extra			;
 	endmove
 
 SuperFang:
@@ -1515,6 +1519,7 @@ FlameWheel:
 	stab
 	damagevariation
 	checkhit
+	extra			;see if we can reenable the burn chance to always happen by puttin this here.
 	effectchance
 	moveanim
 	failuretext
@@ -1527,6 +1532,10 @@ FlameWheel:
 	speedup			;Putting this in and removing burn chance makes this use the effect chance instead
 	statupmessage
 	;burntarget		;sacred fire is in here too anyway
+	endmove
+	
+Extra:		;need this or it wont build in effects_pointers.asm
+	extra
 	endmove
 
 Curse:

@@ -182,6 +182,10 @@ battle_tower_struct: MACRO
 \1Mon3:: party_struct \1Mon3
 \1Mon3Name:: ds MON_NAME_LENGTH
 \1Mon3NameEnd::
+;tryna add for new ones
+;\1Mon4:: party_struct \1Mon3
+;\1Mon4Name:: ds MON_NAME_LENGTH
+;\1Mon4NameEnd::
 \1TrainerData:: ds BATTLETOWER_TRAINERDATALENGTH
 \1TrainerEnd::
 ENDM
@@ -260,6 +264,7 @@ move_struct: MACRO
 \1Accuracy::     db
 \1PP::           db
 \1EffectChance:: db
+\1Extra::     db	;extrabit added.
 ENDM
 
 slot_reel: MACRO

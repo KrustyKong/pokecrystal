@@ -49,6 +49,7 @@ NUM_LEVEL_STATS EQU const_value
 	const MOVE_ACC    ; 4
 	const MOVE_PP     ; 5
 	const MOVE_CHANCE ; 6
+	const MOVE_EXTRA  ; 7
 MOVE_LENGTH EQU const_value
 
 ; stat constants
@@ -120,6 +121,7 @@ SPDSPCDV_SHINY EQU $AA
 	const BATTLE_VARS_LAST_COUNTER_MOVE_OPP
 	const BATTLE_VARS_LAST_MOVE
 	const BATTLE_VARS_LAST_MOVE_OPP
+	const BATTLE_VARS_MOVE_EXTRA
 
 ; BattleVarLocations indexes (see home/battle.asm)
 	const_def
@@ -149,6 +151,8 @@ SPDSPCDV_SHINY EQU $AA
 	const ENEMY_COUNTER_MOVE
 	const PLAYER_LAST_MOVE
 	const ENEMY_LAST_MOVE
+	const PLAYER_MOVE_EXTRA
+	const ENEMY_MOVE_EXTRA
 
 ; status condition bit flags
 SLP EQU %111 ; 0-7 turns

@@ -250,6 +250,7 @@ HandleBetweenTurnEffects:
 	ldh a, [hSerialConnectionStatus]
 	cp USING_EXTERNAL_CLOCK
 	jr z, .CheckEnemyFirst
+;change above tocheck who used the last move, then checks their opponent first (so slower mon is always last)
 	call CheckFaint_PlayerThenEnemy
 	ret c
 	call HandleFutureSight
