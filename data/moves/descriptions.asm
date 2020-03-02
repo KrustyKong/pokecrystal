@@ -853,12 +853,12 @@ SporeDescription:
 	next "induces sleep.@"
 
 FlashDescription:
-	db   "Blinds the foe to"
-	next "reduce accuracy.@"
+	db   "Lowers EVASION,"
+	next "ATK and SP.ATK.@"
 
 PsywaveDescription:
-	db   "An attack with"
-	next "variable power.@"
+	db   "Attacks with a"
+	next "blinding light.@"
 
 SplashDescription:
 	db   "Has no effect"
@@ -881,8 +881,8 @@ FurySwipesDescription:
 	next "cal hit ratio.@"
 
 BonemerangDescription:
-	db   "An attack that"
-	next "strikes twice.@"
+	db   "Strikes twice. Able"
+	next "to hit FLYING foes.@"
 
 RestDescription:
 	db   "Sleep for 2 turns"
@@ -893,8 +893,8 @@ RockSlideDescription:
 	next "ACC/100@"
 
 HyperFangDescription:
-	db   "Bites foe with"
-	next "2/5 flinch rate.@"
+	db   "2/5 flinch rate."
+	next "May also poison.@"
 
 SharpenDescription:
 	db   "A move that raises"
@@ -1014,7 +1014,7 @@ BellyDrumDescription:
 
 SludgeBombDescription:
 	db   "An attack with a"
-	next "30% poison rate.@"
+	next "1/3 poison rate.@"
 
 MudSlapDescription:
 	db   "Reduces the foe's"

@@ -5759,22 +5759,20 @@ BattleCommand_Extra:
 	ld a, BATTLE_VARS_MOVE_EXTRA
 	and a
 	call GetBattleVar
-	;clear
 	push bc
 	dec a
 	ld c, a
 	ld b, 0
-;	call .GetBattleCommand
 	ld hl, BattleCommandPointers
-	;clear
+	;need these two or the command it loads will be off
 	add hl, bc
 	add hl, bc
 	pop bc
 	ld a, BANK(BattleCommandPointers)
-	;clear
 	call GetFarHalfword
-	;
+	;puts a into hl
 	jp hl
+;old code did	
 ;	sub a, 1
 	;need to make it load the extra bit, then use it to fetch the effect command
 	;need to make it use the ids in move effects pointers
@@ -5856,6 +5854,7 @@ BattleCommand_Recoil:
 	jr z, .got_hp
 	ld hl, wEnemyMonMaxHP
 .got_hp
+;check the accuracy stages here. if boosted, bypass recoil.
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVar
 	ld d, a
@@ -6752,9 +6751,11 @@ BattleCommand_DoubleMinimizeDamage:
 
 BattleCommand_SkipSunCharge:
 ; mimicsuncharge
+;doublesun
 	ld a, [wBattleWeather]
 	cp WEATHER_SUN
 	ret nz
+	call BattleCommand_Defrost
 	call DoubleDamage		;solarbeam deal double in sun
 	;jp SkipToBattleCommand
 	ret

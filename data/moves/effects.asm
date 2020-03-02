@@ -85,6 +85,7 @@ BurnHit:
 	stab
 	damagevariation
 	checkhit
+	extra		;before eff chance, so only things like defrost or sun
 	effectchance
 	moveanim
 	failuretext
@@ -190,7 +191,7 @@ AttackUp:
 	checkobedience
 	usedmovetext
 	doturn
-	attackup
+	extra; was attackup. can use this for anything since sharpen uses acc up now
 	lowersub
 	statupanim
 	raisesub
@@ -477,6 +478,9 @@ EvasionDown:
 	raisesub
 	statdownmessage
 	statdownfailtext
+	extra			;+1 spee for double team, +2 for sweet scent
+	statupmessage
+	statupfailtext
 	endmove
 
 AttackDown2:		;CHARM
@@ -550,8 +554,7 @@ AccuracyDown2:		;gen5 smokescreen hack. FLASH, SMOKESCREEN
 	doturn
 	checkhit
 	failuretext
-;	accuracydown2
-	speeddown
+	extra;	accuracydown2
 	lowersub
 	statdownanim
 	raisesub
@@ -578,7 +581,7 @@ EvasionDown2:	;NEW KINESIS
 	statdownfailtext
 	endmove
 
-AttackDownHit:	;PLAY ROUGH
+AttackDownHit:	;AURORABEAM, PLAY ROUGH
 	checkobedience
 	usedmovetext
 	doturn
@@ -598,6 +601,8 @@ AttackDownHit:	;PLAY ROUGH
 	buildopponentrage
 	attackdown
 	statdownmessage
+	extra			;AAbeam/tbolt can lower speed also, drill peck lowers def 
+	statdownmessage	;
 	endmove
 
 DefenseDownHit:		;iron tail, liquidation
@@ -730,6 +735,8 @@ EvasionDownHit:		;new: psychic? since the spdef drop is kinda wack
 	checkfaint
 	buildopponentrage
 	evasiondown
+	statdownmessage
+	extra			;speeddown for constrict/mudslap
 	statdownmessage
 	endmove
 
@@ -954,6 +961,7 @@ FlinchHit:
 	checkfaint
 	buildopponentrage
 	flinchtarget
+	extra			;for status shit
 	endmove
 
 OHKOHit:
@@ -1519,7 +1527,7 @@ FlameWheel:
 	stab
 	damagevariation
 	checkhit
-	extra			;see if we can reenable the burn chance to always happen by puttin this here.
+	speedup			;flame charge
 	effectchance
 	moveanim
 	failuretext
@@ -1529,7 +1537,7 @@ FlameWheel:
 	defrost
 	checkfaint
 	buildopponentrage
-	speedup			;Putting this in and removing burn chance makes this use the effect chance instead
+	extra			;Putting this in and removing burn chance makes this use the effect chance instead
 	statupmessage
 	;burntarget		;sacred fire is in here too anyway
 	endmove

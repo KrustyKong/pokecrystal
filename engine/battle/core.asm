@@ -831,6 +831,9 @@ GetMovePriority:
 	cp VITAL_THROW
 	ld a, 0
 	ret z
+	cp STRENGTH
+	ld a, 0
+	ret z
 
 	call GetMoveEffect
 	ld hl, MoveEffectPriorities

@@ -14,5 +14,6 @@ CriticalHitMoves:
 	db WITHDRAW
 	db CUT
 	db FIRE_PUNCH
+	db WING_ATTACK
 ;	db THUNDERPUNCH
 	db -1

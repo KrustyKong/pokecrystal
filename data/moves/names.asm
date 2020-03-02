@@ -117,7 +117,7 @@ MoveNames::
 	db "FOCUS ENERGY@"
 	db "BIDE@"
 	db "METRONOME@"
-	db "MIRROR MOVE@"
+	db "DRAGON DANCE@"		;MIRROR MOVE
 	db "SELFDESTRUCT@"
 	db "EGG BOMB@"
 	db "LICK@"
@@ -237,7 +237,7 @@ MoveNames::
 	db "MOONBLAST@"			;MOONLIGHT
 	db "HIDDEN POWER@"		;HIDDEN POWER
 	db "CROSS CHOP@"		;CROSS CHOP
-	db "DRAGON DANCE@"		;TWISTER
+	db "HURRICANE@"		;TWISTER
 	db "RAIN DANCE@"
 	db "SUNNY DAY@"
 	db "CRUNCH@"

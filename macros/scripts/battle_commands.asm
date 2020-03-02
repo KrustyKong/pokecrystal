@@ -19,17 +19,17 @@ ENDM
 	command raisesub                ; 0c
 	command failuretext             ; 0d
 	command applydamage             ; 0e
-	command criticaltext            ; 0f
-	command supereffectivetext      ; 10
+	command criticaltext            ; 0f			15
+	command supereffectivetext      ; 10			16
 	command checkfaint              ; 11
 	command buildopponentrage       ; 12
-	command poisontarget            ; 13
-	command sleeptarget             ; 14
+	command poisontarget            ; 13	PSN			19
+	command sleeptarget             ; 14	SLP
 	command draintarget             ; 15
 	command eatdream                ; 16
-	command burntarget              ; 17
-	command freezetarget            ; 18
-	command paralyzetarget          ; 19
+	command burntarget              ; 17	BRN	;23
+	command freezetarget            ; 18	FRZ	;
+	command paralyzetarget          ; 19	PRZ
 	command selfdestruct            ; 1a
 	command mirrormove              ; 1b
 	command statup                  ; 1c
@@ -39,9 +39,9 @@ ENDM
 	command resetstats              ; 20
 	command storeenergy             ; 21
 	command unleashenergy           ; 22
-	command forceswitch             ; 23
+	command forceswitch             ; 23	35	force switch
 	command endloop                 ; 24
-	command flinchtarget            ; 25
+	command flinchtarget            ; 25		;flinch
 	command ohko                    ; 26
 	command recoil                  ; 27
 	command mist                    ; 28
@@ -57,7 +57,7 @@ ENDM
 	command rechargenextturn        ; 32
 	command mimic                   ; 33
 	command metronome               ; 34
-	command leechseed               ; 35
+	command leechseed               ; 35	seeds 53
 	command splash                  ; 36
 	command disable                 ; 37
 	command cleartext               ; 38
@@ -69,7 +69,7 @@ ENDM
 	command checkrampage            ; 3e
 	command constantdamage          ; 3f
 	command counter                 ; 40
-	command encore                  ; 41
+	command encore                  ; 41	65
 	command painsplit               ; 42
 	command snore                   ; 43
 	command conversion2             ; 44
@@ -104,7 +104,7 @@ ENDM
 	command present                 ; 61
 	command damagecalc              ; 62
 	command frustrationpower        ; 63
-	command safeguard               ; 64
+	command safeguard               ; 64	;100
 	command checksafeguard          ; 65
 	command getmagnitude            ; 66
 	command batonpass               ; 67
@@ -116,29 +116,29 @@ ENDM
 	command hiddenpower             ; 6d
 	command startrain               ; 6e
 	command startsun                ; 6f
-	command attackup                ; 70
+	command attackup                ; 70	atkup 		112
 	command defenseup               ; 71
-	command speedup                 ; 72
+	command speedup                 ; 72				114
 	command specialattackup         ; 73
 	command specialdefenseup        ; 74
-	command accuracyup              ; 75
+	command accuracyup              ; 75	accup		117
 	command evasionup               ; 76
-	command attackup2               ; 77
+	command attackup2               ; 77	atk+2		119
 	command defenseup2              ; 78
-	command speedup2                ; 79
+	command speedup2                ; 79	speed+2
 	command specialattackup2        ; 7a
 	command specialdefenseup2       ; 7b
 	command accuracyup2             ; 7c
 	command evasionup2              ; 7d
 	command attackdown              ; 7e
-	command defensedown             ; 7f
-	command speeddown               ; 80
+	command defensedown             ; 7f	127		def-1
+	command speeddown               ; 80	speeddown	128
 	command specialattackdown       ; 81
 	command specialdefensedown      ; 82
 	command accuracydown            ; 83
 	command evasiondown             ; 84
-	command attackdown2             ; 85
-	command defensedown2            ; 86
+	command attackdown2             ; 85	133		atk-2
+	command defensedown2            ; 86	134		def-2
 	command speeddown2              ; 87
 	command specialattackdown2      ; 88
 	command specialdefensedown2     ; 89
@@ -162,7 +162,7 @@ ENDM
 	command checkfuturesight        ; 9b
 	command futuresight             ; 9c
 	command doubleminimizedamage    ; 9d
-	command skipsuncharge           ; 9e
+	command skipsuncharge           ; 9e	double sun 158
 	command thunderaccuracy         ; 9f
 	command teleport                ; a0
 	command beatup                  ; a1
