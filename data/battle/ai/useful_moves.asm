@@ -9,7 +9,7 @@ UsefulMoves:
 	db ICE_BEAM
 	db BLIZZARD
 ;	db HYPER_BEAM	;it aint 1996
-	db SLEEP_POWDER
+;	db SLEEP_POWDER	;stantler jus spams this
 	db LEECH_SEED	;+
 	db THUNDERBOLT
 	db THUNDER

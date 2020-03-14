@@ -9,7 +9,7 @@ MoveNames::
 	db "ICE PUNCH@"
 	db "THUNDERPUNCH@"
 	db "SCRATCH@"
-	db "VICEGRIP@"
+	db "AIR SLASH@"		;VICEGRIP
 	db "GUILLOTINE@"
 	db "RAZOR WIND@"
 	db "SWORDS DANCE@"
@@ -62,7 +62,7 @@ MoveNames::
 	db "BUBBLEBEAM@"
 	db "AURORA BEAM@"
 	db "HYPER BEAM@"
-	db "AIR SLASH@"			;PECK
+	db "U-TURN@"			;PECK
 	db "DRILL PECK@"
 	db "PLAY ROUGH@"		;SUBMISSION
 	db "LOW KICK@"
@@ -70,7 +70,7 @@ MoveNames::
 	db "SEISMIC TOSS@"
 	db "STRENGTH@"
 	db "QUIVER DANCE@"			;ABSORB
-	db "MEGA DRAIN@"
+	db "HORN LEECH@"		;MEGA DRAIN
 	db "LEECH SEED@"
 	db "WORK UP@"			;GROWTH
 	db "RAZOR LEAF@"
@@ -82,7 +82,7 @@ MoveNames::
 	db "STRING SHOT@"
 	db "DRAGON CLAW@"		;DRAGON RAGE
 	db "FIRE SPIN@"
-	db "THUNDERSHOCK@"
+	db "VOLT SWITCH@"		;THUNDERSHOCK
 	db "THUNDERBOLT@"
 	db "THUNDER WAVE@"
 	db "THUNDER@"
@@ -92,7 +92,7 @@ MoveNames::
 	db "DIG@"
 	db "TOXIC@"
 	db "MIND POWER@" 		;CONFUSION
-	db "PSYCHIC@"
+	db "PSYCHIC@"			;PSYCHIC
 	db "HYPNOSIS@"
 	db "CALM MIND@"			;MEDITATE
 	db "AGILITY@"
@@ -156,7 +156,7 @@ MoveNames::
 	db "BONEMERANG@"
 	db "REST@"
 	db "ROCK SLIDE@"
-	db "HYPER FANG@"
+	db "POISON FANG@"			;HYPER FANG
 	db "HONE CLAWS@"			;SHARPEN
 	db "CONVERSION@"
 	db "TRI ATTACK@"
@@ -169,7 +169,7 @@ MoveNames::
 	db "THIEF@"			;THIEF
 	db "SPIDER WEB@"
 	db "MIND READER@"
-	db "NIGHTMARE@"
+	db "SHADOW SNEAK@"			;NIGHTMARE
 	db "FLAME WHEEL@"
 	db "SNORE@"
 	db "CURSE@"
@@ -207,7 +207,7 @@ MoveNames::
 	db "FALSE SWIPE@"
 	db "SWAGGER@"
 	db "MILK DRINK@"
-	db "SPARK@"			;SPARK
+	db "WILD CHARGE@"			;SPARK
 	db "FURY CUTTER@"
 	db "STEEL WING@"
 	db "MEAN LOOK@"
@@ -231,11 +231,11 @@ MoveNames::
 	db "SWEET SCENT@"
 	db "IRON TAIL@"
 	db "METAL CLAW@"
-	db "VITAL THROW@"
+	db "CIRCLE THROW@"	;vital throw
 	db "MORNING SUN@"
 	db "SYNTHESIS@"
 	db "MOONBLAST@"			;MOONLIGHT
-	db "HIDDEN POWER@"		;HIDDEN POWER
+	db "NASTY PLOT@"		;HIDDEN POWER
 	db "CROSS CHOP@"		;CROSS CHOP
 	db "HURRICANE@"		;TWISTER
 	db "RAIN DANCE@"

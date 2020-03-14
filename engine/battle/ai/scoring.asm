@@ -2393,18 +2393,19 @@ AI_Smart_SunnyDay:
 	; fallthrough
 
 AI_Smart_WeatherMove:
+;i think tryna remove this made it fuck up whenever they sent out a mon w the wether stting move. thought it was just a thing w houndoom, but then this lanturn that i fought did it and this sudowoodo i gave sunny day to, but that one went away when i made it more normal w rockslide,agility instaead
+;
 ; Rain Dance, Sunny Day
 
 ; Greatly discourage this move if the enemy doesn't have
 ; one of the useful Rain Dance or Sunny Day moves.
-		;	removing these since we made these moves good
-;	call AIHasMoveInArray
-;	pop hl
-;	jr nc, AIBadWeatherType
+	call AIHasMoveInArray
+	pop hl
+	jr nc, AIBadWeatherType
 
 ; Greatly discourage this move if player's HP is below 50%.
-;	call AICheckPlayerHalfHP
-;	jr nc, AIBadWeatherType
+	call AICheckPlayerHalfHP
+	jr nc, AIBadWeatherType
 
 ; 50% chance to encourage this move otherwise.
 	call AI_50_50

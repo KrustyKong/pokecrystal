@@ -13,4 +13,5 @@ ResidualMoves:
 	db CONVERSION
 ;	db SUBSTITUTE
 	db SPIKES
+	db AGILITY	;whenever they do this i s2g
 	db -1 ; end

@@ -20,8 +20,6 @@ NormalHit:
 	checkfaint
 	buildopponentrage
 	kingsrock
-;	effectchance		;extra bit added
-	extra				;
 	endmove
 
 DoSleep:
@@ -84,8 +82,8 @@ BurnHit:
 	damagecalc
 	stab
 	damagevariation
+	extra		;before eff chance, so only things like defrost or double sun pow
 	checkhit
-	extra		;before eff chance, so only things like defrost or sun
 	effectchance
 	moveanim
 	failuretext
@@ -97,7 +95,7 @@ BurnHit:
 	burntarget
 	endmove
 
-FreezeHit:
+FreezeHit:	;normal, extra hit w effectchance
 	checkobedience
 	usedmovetext
 	doturn
@@ -115,7 +113,7 @@ FreezeHit:
 	supereffectivetext
 	checkfaint
 	buildopponentrage
-	freezetarget
+	extra
 	endmove
 
 ParalyzeHit:
@@ -269,9 +267,11 @@ AccuracyUp:
 	raisesub
 	statupmessage
 	statupfailtext
-	attackup		;hone claws
-	statupmessage
-	statupfailtext
+;	attackup		;hone claws
+;	speedup		;this could be cool. kinda an alt DD
+;	statupmessage
+;	statupfailtext
+	focusenergy		;
 	endmove
 
 SpecialAttackUpHit:	;EvasionUp:	;CHARGE beam, fiery dance
@@ -408,7 +408,7 @@ DefenseDown:
 	statdownfailtext
 	endmove
 
-SpeedDown:
+SpeedDown:	;was string shot, but they buffed that 
 	checkobedience
 	usedmovetext
 	doturn
@@ -672,7 +672,7 @@ SpecialAttackDownHit:	;moonblast
 	statdownmessage
 	endmove
 
-SpecialDefenseDownHit:	;acid spray (x2)
+SpecialDefenseDownHit:	;acid spray (x2) , new PSYBEAM
 	checkobedience
 	usedmovetext
 	doturn
@@ -961,15 +961,19 @@ FlinchHit:
 	checkfaint
 	buildopponentrage
 	flinchtarget
-	extra			;for status shit
 	endmove
 
-OHKOHit:
+OHKOHit:	;flinchhitExtra
 	checkobedience
 	usedmovetext
 	doturn
+	critical
+	damagestats
+	damagecalc
 	stab
-	ohko
+	damagevariation
+	checkhit
+	effectchance
 	moveanim
 	failuretext
 	applydamage
@@ -977,6 +981,8 @@ OHKOHit:
 	supereffectivetext
 	checkfaint
 	buildopponentrage
+	flinchtarget
+	extra			;for status shit
 	endmove
 
 RecoilHit:
@@ -1258,10 +1264,10 @@ Fly:
 	applydamage
 	criticaltext
 	supereffectivetext
-	checkfaint
-	buildopponentrage
 	speedup		;works :)
 	statupmessage
+	checkfaint
+	buildopponentrage
 	kingsrock
 	endmove
 
@@ -1517,7 +1523,7 @@ Nightmare:
 	nightmare
 	endmove
 
-FlameWheel:
+FlameWheel:	;(sacredfire dupe)
 	checkobedience
 	usedmovetext
 	doturn
@@ -1527,18 +1533,18 @@ FlameWheel:
 	stab
 	damagevariation
 	checkhit
-	speedup			;flame charge
-	effectchance
 	moveanim
 	failuretext
 	applydamage
 	criticaltext
 	supereffectivetext
 	defrost
+	speedup			;flame charge
+	statupmessage
+	effectchance
 	checkfaint
 	buildopponentrage
 	extra			;Putting this in and removing burn chance makes this use the effect chance instead
-	statupmessage
 	;burntarget		;sacred fire is in here too anyway
 	endmove
 	
@@ -1752,9 +1758,10 @@ SacredFire:
 	criticaltext
 	supereffectivetext
 	defrost
+	extra		;putting up sun before they die
 	checkfaint
 	buildopponentrage
-	burntarget
+	;burntarget
 	endmove
 
 Magnitude:
@@ -1881,6 +1888,9 @@ SunnyDay:
 	checkobedience
 	usedmovetext
 	doturn
+	specialdefenseup
+	statupmessage
+	statupfailtext
 	startsun
 	endmove
 
@@ -2068,6 +2078,9 @@ Solarbeam:
 	applydamage
 	criticaltext
 	supereffectivetext
+	effectchance	;speedup
+	speedup
+	statupmessage
 	checkfaint
 	buildopponentrage
 	kingsrock
@@ -2095,6 +2108,7 @@ Thunder:
 	;paralyzetarget
 	defenseup		;thunder armor bitches (also hurricane now like uses featherdance :D)
 	statupmessage
+	extra		;para for thunder, switch for hurricane
 	endmove
 
 Teleport:

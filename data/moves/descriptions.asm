@@ -289,7 +289,7 @@ PayDayDescription:
 	next "them back later.@"
 
 FirePunchDescription:
-	db   "Hi-crit chance."
+	db   "A firey punch."
 	next "1/3 SPATK drop.@"
 
 IcePunchDescription:
@@ -304,9 +304,9 @@ ScratchDescription:
 	db   "Scratches with"
 	next "sharp claws.@"
 
-VicegripDescription:
-	db   "Grips with power-"
-	next "ful pincers.@"
+VicegripDescription:		;AIRSLASH
+	db   "Slashes foe with"
+	next "1/3 flinch rate.@"
 
 GuillotineDescription:
 	db   "A one-hit KO,"
@@ -324,11 +324,11 @@ CutDescription:
 	db   "Cuts using claws,"
 	next "scythes, etc.@"
 
-GustDescription:
+GustDescription:		;silver wind
 	db   "1/4 chance to"
 	next "raise all stats.@"
 
-WingAttackDescription:
+WingAttackDescription:	;aerial ace
 	db   "1/4 chance to"
 	next "raise ACCURACY.@"
 
@@ -362,7 +362,7 @@ DoubleKickDescription:
 
 MegaKickDescription:
 	db   "2/5 chance to"
-	next "raise all stats.@"
+	next "raise crit rate.@"
 
 JumpKickDescription:
 	db   "Crash damage."
@@ -497,28 +497,28 @@ IceBeamDescription:
 	next "1/10 flinch rate.@"
 
 BlizzardDescription:
-	db   "1/10 freeze rate."
+	db   "2/10 freeze rate."
 	next "ACC/ 70@"
 
 PsybeamDescription:
-	db   "Lowers SPDEF"
+	db   "Lowers SP.DEF"
 	next "2/3 of the time.@"
 
 BubblebeamDescription:
-	db   "Lowers SPEED"
+	db   "Lowers EVA/SPEED"
 	next "2/3 of the time.@"
 
 AuroraBeamDescription:
-	db   "Lowers ATTACK"
+	db   "Lowers ATK/SPEED"
 	next "2/3 of the time.@"
 
 HyperBeamDescription:
 	db   "Needs recharge if"
 	next "foe is not KO'd.@"
 
-PeckDescription:
-	db   "Jabs the foe with"
-	next "a beak, etc.@"
+PeckDescription:		;UTURN
+	db   "Deals damage"
+	next "then switches out.@"
 
 DrillPeckDescription:
 	db   "A strong, spin-"
@@ -548,9 +548,9 @@ AbsorbDescription:
 	db   "Raises SP.ATK,"
 	next "SP.DEF and SPEED.@"
 
-MegaDrainDescription:
-	db   "Steals 1/2 of the"
-	next "damage inflicted.@"
+MegaDrainDescription:		;horn leech
+	db   "Summons Leech"
+	next "Seed."
 
 LeechSeedDescription:
 	db   "Steals HP from the"
@@ -577,8 +577,8 @@ StunSporeDescription:
 	next "paralyze the foe.@"
 
 SleepPowderDescription:
-	db   "May cause the foe"
-	next "to fall asleep.@"
+	db   "Inflicts sleep."
+	next "ACC/ 75.@"
 
 PetalDanceDescription:
 	db   "Works 2-3 turns"
@@ -596,12 +596,12 @@ FireSpinDescription:
 	db   "Traps foe in fire"
 	next "for 2-5 turns.@"
 
-ThundershockDescription:
-	db   "Has a 1/3"
-	next "paralysis rate.@"
+ThundershockDescription:		;volt swtich
+	db   "Deals damage"
+	next "then switches out.@"
 
 ThunderboltDescription:
-	db   "Raises DEF"
+	db   "Lowers ATK/SPEED"
 	next "1/3 of the time.@"
 
 ThunderWaveDescription:
@@ -841,8 +841,8 @@ TransformDescription:
 	next "the foe's guise.@"
 
 BubbleDescription:
-	db   "Thaws user. 1/3"
-	next "chance to burn.@"
+	db   "1/3 burn. Same"
+	next "damage in sun.@"
 
 DizzyPunchDescription:
 	db   "An attack that may"
@@ -876,7 +876,7 @@ ExplosionDescription:
 	db   "Very powerful but"
 	next "makes user faint.@"
 
-FurySwipesDescription:
+FurySwipesDescription:	;night slash
 	db   "Has a high criti-"
 	next "cal hit ratio.@"
 
@@ -892,13 +892,13 @@ RockSlideDescription:
 	db   "1/4 flinch rate."
 	next "ACC/100@"
 
-HyperFangDescription:
+HyperFangDescription:		;poison fang
 	db   "2/5 flinch rate."
 	next "May also poison.@"
 
-SharpenDescription:
-	db   "A move that raises"
-	next "the user's ATTACK.@"
+SharpenDescription:		;hone claws
+	db   "Ups the ACCURACY"
+	next "and ATTACK stats.@"
 
 ConversionDescription:
 	db   "Change user's type"
@@ -945,8 +945,8 @@ MindReaderDescription:
 	next "attack will hit.@"
 
 NightmareDescription:
-	db   "A sleeper loses"
-	next "1/4 HP every turn.@"
+	db   "Strikes first. Hi-"
+	next "crit ratio.@"
 
 FlameWheelDescription:
 	db   "Hi-crit ratio. "
@@ -1145,12 +1145,12 @@ PainSplitDescription:
 	next "HPs. Shares total.@"
 
 SacredFireDescription:
-	db   "An attack that may"
-	next "inflict a burn.@"
+	db   "1/2 chance to"
+	next "raise the sun up.@"
 
 MagnitudeDescription:
 	db   "A ground attack"
-	next "lowers Speed.@"
+	next "that lowers SPEED.@"
 
 DynamicpunchDescription:
 	db   "Steals 1/2 of the"
@@ -1208,25 +1208,25 @@ MoonlightDescription:
 	db   "Attack with 1/3"
 	next "SPATK drop rate.@"
 
-HiddenPowerDescription:
-	db   "The power varies"
-	next "with the #MON.@"
+HiddenPowerDescription:		;nasty plot
+	db   "Sharply raises the"
+	next "user's SPCL.ATK.@"
 
 CrossChopDescription:
 	db   "Has a high criti-"
 	next "cal hit ratio.@"
 
-TwisterDescription:
+TwisterDescription:			;hurricane
 	db   "Damage x2 in rain."
-	next "1/3 DEFENSE up.@"
+	next "1/3 force switch.@"
 
 RainDanceDescription:
 	db   "Rains for 5 turns."
 	next "Raises SPEED.@"
 
 SunnyDayDescription:
-	db   "Boosts fire-type"
-	next "moves for 5 turns.@"
+	db   "Strong sun for 5"
+	next "turns. SPDEF up.@"
 
 CrunchDescription:
 	db   "Lowers SPDEF"
@@ -1261,8 +1261,8 @@ RockSmashDescription:
 	next "raises ATTACK.@"
 
 WhirlpoolDescription:
-	db   "Traps the foe for"
-	next "2-5 turns.@"
+	db   "Traps foe."
+	next "1/3 SPEED down.@"
 
 BeatUpDescription:
 	db   "Flinches 1/5"

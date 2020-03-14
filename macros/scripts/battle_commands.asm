@@ -45,10 +45,10 @@ ENDM
 	command ohko                    ; 26
 	command recoil                  ; 27
 	command mist                    ; 28
-	command focusenergy             ; 29
+	command focusenergy             ; 29	focusenergy	41
 	command confuse                 ; 2a
 	command confusetarget           ; 2b
-	command heal                    ; 2c
+	command heal                    ; 2c				44
 	command transform               ; 2d
 	command screen                  ; 2e
 	command poison                  ; 2f
@@ -87,7 +87,7 @@ ENDM
 	command thief                   ; 50
 	command arenatrap               ; 51
 	command nightmare               ; 52
-	command defrost                 ; 53
+	command defrost                 ; 53		83
 	command curse                   ; 54
 	command protect                 ; 55
 	command spikes                  ; 56
@@ -107,20 +107,20 @@ ENDM
 	command safeguard               ; 64	;100
 	command checksafeguard          ; 65
 	command getmagnitude            ; 66
-	command batonpass               ; 67
+	command batonpass               ; 67	bPass		103
 	command pursuit                 ; 68
 	command clearhazards            ; 69
 	command healmorn                ; 6a
 	command healday                 ; 6b
 	command healnite                ; 6c
 	command hiddenpower             ; 6d
-	command startrain               ; 6e
-	command startsun                ; 6f
-	command attackup                ; 70	atkup 		112
+	command startrain               ; 6e	rain		110	
+	command startsun                ; 6f	sun			111
+	command attackup                ; 70	atk+1 		112
 	command defenseup               ; 71
-	command speedup                 ; 72				114
+	command speedup                 ; 72	speed+1		114
 	command specialattackup         ; 73
-	command specialdefenseup        ; 74
+	command specialdefenseup        ; 74	spdef+1		116
 	command accuracyup              ; 75	accup		117
 	command evasionup               ; 76
 	command attackup2               ; 77	atk+2		119
@@ -132,11 +132,11 @@ ENDM
 	command evasionup2              ; 7d
 	command attackdown              ; 7e
 	command defensedown             ; 7f	127		def-1
-	command speeddown               ; 80	speeddown	128
+	command speeddown               ; 80	speed-1	128
 	command specialattackdown       ; 81
-	command specialdefensedown      ; 82
+	command specialdefensedown      ; 82	130		spdef-1
 	command accuracydown            ; 83
-	command evasiondown             ; 84
+	command evasiondown             ; 84	eva-1	132
 	command attackdown2             ; 85	133		atk-2
 	command defensedown2            ; 86	134		def-2
 	command speeddown2              ; 87

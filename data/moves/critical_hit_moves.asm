@@ -8,12 +8,16 @@ CriticalHitMoves:
 	db CROSS_CHOP
 	db ICE_BEAM
 	db FLAME_WHEEL
+	db SPARK
 	db POISONPOWDER
 	db HORN_DRILL
 	db FURY_SWIPES
 	db WITHDRAW
 	db CUT
-	db FIRE_PUNCH
+;	db FIRE_PUNCH	;just make it 85 damage, since flare blitz not in.
 	db WING_ATTACK
-;	db THUNDERPUNCH
+	db THUNDERPUNCH
+	db NIGHTMARE	;shadow sneak that sometimes does 80 dmg
+	db VICEGRIP	;	UTURN
+	db THUNDERSHOCK	;VOLTSWITCH
 	db -1

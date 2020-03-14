@@ -3207,11 +3207,11 @@ INCLUDE "data/types/type_boost_items.asm"
 BattleCommand_ConstantDamage:
 ; constantdamage
 
-	ld hl, wBattleMonLevel
+	ld hl, 100;wBattleMonLevel | 
 	ldh a, [hBattleTurn]
 	and a
 	jr z, .got_turn
-	ld hl, wEnemyMonLevel
+	ld hl, 100;wEnemyMonLevel
 
 .got_turn
 	ld a, BATTLE_VARS_MOVE_EFFECT
@@ -5758,6 +5758,7 @@ BattleCommand_Charge:
 BattleCommand_Extra:
 	ld a, BATTLE_VARS_MOVE_EXTRA
 	and a
+	jp z, .end
 	call GetBattleVar
 	push bc
 	dec a
@@ -5783,7 +5784,7 @@ BattleCommand_Extra:
 ;	jp z, BattleCommand_BurnTarget
 ;	sub a, 3
 ;	jp z, BattleCommand_ParalyzeTarget
-	ret
+.end	
 
 BattleCommand_TrapTarget:
 ; traptarget
@@ -6752,10 +6753,10 @@ BattleCommand_DoubleMinimizeDamage:
 BattleCommand_SkipSunCharge:
 ; mimicsuncharge
 ;doublesun
+	call BattleCommand_Defrost
 	ld a, [wBattleWeather]
 	cp WEATHER_SUN
 	ret nz
-	call BattleCommand_Defrost
 	call DoubleDamage		;solarbeam deal double in sun
 	;jp SkipToBattleCommand
 	ret
