@@ -3207,13 +3207,14 @@ INCLUDE "data/types/type_boost_items.asm"
 BattleCommand_ConstantDamage:
 ; constantdamage
 
-	ld hl, 100;wBattleMonLevel | 
+	ld hl, wBattleMonLevel 
 	ldh a, [hBattleTurn]
 	and a
 	jr z, .got_turn
-	ld hl, 100;wEnemyMonLevel
+	ld hl, wEnemyMonLevel
 
 .got_turn
+;vanilla seismic toss
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 	cp EFFECT_LEVEL_DAMAGE

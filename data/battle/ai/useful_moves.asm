@@ -21,4 +21,6 @@ UsefulMoves:
 	db FIRE_BLAST
 	db SOFTBOILED
 	db SUPER_FANG
+;	db PECK			;uturn
+;	db THUNDERSHOCK	;Voltswitch
 	db -1 ; end

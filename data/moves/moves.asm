@@ -21,7 +21,7 @@ Moves: ; 41afb
 	move KARATE_CHOP,  EFFECT_NORMAL_HIT,         50, FIGHTING, PHYSICAL, 100, 25,   0, 0
 	move DOUBLESLAP,   EFFECT_MULTI_HIT,          15, NORMAL,   PHYSICAL,  85, 10,   0, 0
 	move COMET_PUNCH,  EFFECT_PRIORITY_HIT,       60, STEEL,    PHYSICAL, 100, 40,   0, 0		;bullet punch
-	move MEGA_PUNCH,   EFFECT_FREEZE_HIT,      80, FIGHTING, PHYSICAL, 100, 20, 30,41		;attackup>crit up
+	move MEGA_PUNCH,   EFFECT_FREEZE_HIT,         80, FIGHTING, PHYSICAL, 100, 20, 30,41		;attackup>crit up
 ;tried to make it enact focus energy, but it may only take decimal values? 
 	move PAY_DAY,      EFFECT_PAY_DAY,            40, NORMAL,   PHYSICAL, 100, 20,   0, 0
 	move FIRE_PUNCH,   EFFECT_SP_ATK_DOWN_HIT,    85, FIRE,     PHYSICAL, 100, 15,  35, 0	;drops spatk
@@ -86,7 +86,7 @@ Moves: ; 41afb
 	move SUBMISSION,   EFFECT_NORMAL_HIT,         85, FAIRY,    PHYSICAL, 100, 10,   0, 0		;Play Rough
 	move LOW_KICK,     EFFECT_FLINCH_HIT,         50, FIGHTING, PHYSICAL, 90,  20,  30, 0
 	move COUNTER,      EFFECT_COUNTER,             1, FIGHTING, PHYSICAL, 100, 20,   0, 0
-	move SEISMIC_TOSS, EFFECT_LEVEL_DAMAGE,        1, FIGHTING, PHYSICAL, 100, 20,   0, 0
+	move SEISMIC_TOSS, EFFECT_STATIC_DAMAGE,     100, FIGHTING, PHYSICAL, 100, 20,   0, 0
 	move STRENGTH,     EFFECT_FREEZE_HIT,         80, NORMAL,   PHYSICAL, 100, 15,  50,35	;oh my god it forces em out just like the boulders
 	move ABSORB,       EFFECT_ACCURACY_DOWN,       0, BUG,      STATUS,   100, 20,   0, 0	;quiver dance
 	move MEGA_DRAIN,   EFFECT_FREEZE_HIT,         75, GRASS,    PHYSICAL, 100, 15,   0, 53	;seeds horn leech
@@ -262,8 +262,8 @@ Moves: ; 41afb
 	move CRUNCH,       EFFECT_DEFENSE_DOWN_HIT,   80, DARK,     PHYSICAL,  100, 15,  20, 0
 	move MIRROR_COAT,  EFFECT_MIRROR_COAT,         1, PSYCHIC,  SPECIAL,  100, 20,   0, 0
 	move PSYCH_UP,     EFFECT_PSYCH_UP,            0, NORMAL,   STATUS,   100, 10,   0, 0
-	move EXTREMESPEED, EFFECT_PRIORITY_HIT,       80, NORMAL,   PHYSICAL, 100, 15,   0, 0
-	move ANCIENTPOWER, EFFECT_ALL_UP_HIT,         60, ROCK,     SPECIAL,  100,  5,  30, 0
+	move EXTREMESPEED, EFFECT_PRIORITY_HIT,       80, NORMAL,   PHYSICAL, 100, 5,   0, 0
+	move ANCIENTPOWER, EFFECT_ALL_UP_HIT,         60, ROCK,     SPECIAL,  100,  5,  20, 0
 	move SHADOW_BALL,  EFFECT_SP_DEF_DOWN_HIT,    80, GHOST,    SPECIAL,  100, 15,  20, 0
 	move FUTURE_SIGHT, EFFECT_FLINCH_HIT,         80, PSYCHIC,  PHYSICAL,  100, 15,  20, 0		;zen headbutt
 	move ROCK_SMASH,   EFFECT_ATTACK_UP_HIT,      40, FIGHTING, PHYSICAL, 100, 15, 100, 0	;Power-up punch
