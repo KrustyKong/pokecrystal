@@ -139,7 +139,7 @@ ENDM
 	command evasiondown             ; 84	eva-1	132
 	command attackdown2             ; 85	133		atk-2
 	command defensedown2            ; 86	134		def-2
-	command speeddown2              ; 87
+	command speeddown2              ; 87	speed-2		135
 	command specialattackdown2      ; 88
 	command specialdefensedown2     ; 89
 	command accuracydown2           ; 8a

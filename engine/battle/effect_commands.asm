@@ -1197,7 +1197,7 @@ BattleCommand_Critical:
 
 ; +2 critical level
 	inc c
-	inc c
+;	inc c
 
 .ScopeLens:
 	push bc
